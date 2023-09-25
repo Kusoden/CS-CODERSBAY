@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "4-Selection_Sort-KC/1.0.0": {
+        "runtime": {
+          "4-Selection_Sort-KC.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "4-Selection_Sort-KC/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,22 @@
+1             Sorting algorithms and multidimensional arrays
+Aufgabe: Bingo Card Generator
+Die Regeln für eine Bingo-Karte sind einfach: Eine Bingo Karte besteht aus 24 eindeutigen zufälligen Nummern:
+
+5 Zahlen für die B Spalte im Bereich 1 bis 15
+5 Zahlen für die I Spalte im Bereich 16 bis 30
+4 Zahlen für die N Spalte im Bereich 31 bis 45
+5 Zahlen für die G Spalte im Bereich 46 bis 60
+5 Zahlen für die O Spalte im Bereich 61 bis 75
+https://raw.githubusercontent.com/CODERS-BAY/java-06-7-bingo-card-generator-PaulDeveloped/master/bingo.png
+
+Schreibe ein kleines Programm, dass eine Bingo-Karte zufällig erzeugt und formattiert auf die Konsole druckt.
+
+
+
+2
+Sortier Algorithmen
+Aufgabe: Insertion Sort
+Implementiere einen Insertion Sort Algorithmus!
+
+Eine super Visualisierung zu Sortieralgorithmen findest du auf https://sortvisualizer.com/insertionsort/. Eine gute Erklärung zur Vorgehensweise des Insertion sort findest du auf Wikipedia: https://de.wikipedia.org/wiki/Insertionsort
+

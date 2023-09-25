@@ -1,0 +1,14 @@
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\2-Insertion_Sort\2-Insertion_Sort\bin\Debug\net7.0\2-Insertion_Sort.exe
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\2-Insertion_Sort\2-Insertion_Sort\bin\Debug\net7.0\2-Insertion_Sort.deps.json
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\2-Insertion_Sort\2-Insertion_Sort\bin\Debug\net7.0\2-Insertion_Sort.runtimeconfig.json
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\2-Insertion_Sort\2-Insertion_Sort\bin\Debug\net7.0\2-Insertion_Sort.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\2-Insertion_Sort\2-Insertion_Sort\bin\Debug\net7.0\2-Insertion_Sort.pdb
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\2-Insertion_Sort\2-Insertion_Sort\obj\Debug\net7.0\2-Insertion_Sort.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\2-Insertion_Sort\2-Insertion_Sort\obj\Debug\net7.0\2-Insertion_Sort.AssemblyInfoInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\2-Insertion_Sort\2-Insertion_Sort\obj\Debug\net7.0\2-Insertion_Sort.AssemblyInfo.cs
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\2-Insertion_Sort\2-Insertion_Sort\obj\Debug\net7.0\2-Insertion_Sort.csproj.CoreCompileInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\2-Insertion_Sort\2-Insertion_Sort\obj\Debug\net7.0\2-Insertion_Sort.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\2-Insertion_Sort\2-Insertion_Sort\obj\Debug\net7.0\refint\2-Insertion_Sort.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\2-Insertion_Sort\2-Insertion_Sort\obj\Debug\net7.0\2-Insertion_Sort.pdb
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\2-Insertion_Sort\2-Insertion_Sort\obj\Debug\net7.0\2-Insertion_Sort.genruntimeconfig.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\2-Insertion_Sort\2-Insertion_Sort\obj\Debug\net7.0\ref\2-Insertion_Sort.dll

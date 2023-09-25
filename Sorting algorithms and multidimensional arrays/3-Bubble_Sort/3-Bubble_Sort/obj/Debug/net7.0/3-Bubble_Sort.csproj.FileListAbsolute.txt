@@ -1,0 +1,14 @@
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\3-Bubble_Sort\3-Bubble_Sort\bin\Debug\net7.0\3-Bubble_Sort.exe
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\3-Bubble_Sort\3-Bubble_Sort\bin\Debug\net7.0\3-Bubble_Sort.deps.json
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\3-Bubble_Sort\3-Bubble_Sort\bin\Debug\net7.0\3-Bubble_Sort.runtimeconfig.json
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\3-Bubble_Sort\3-Bubble_Sort\bin\Debug\net7.0\3-Bubble_Sort.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\3-Bubble_Sort\3-Bubble_Sort\bin\Debug\net7.0\3-Bubble_Sort.pdb
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\3-Bubble_Sort\3-Bubble_Sort\obj\Debug\net7.0\3-Bubble_Sort.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\3-Bubble_Sort\3-Bubble_Sort\obj\Debug\net7.0\3-Bubble_Sort.AssemblyInfoInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\3-Bubble_Sort\3-Bubble_Sort\obj\Debug\net7.0\3-Bubble_Sort.AssemblyInfo.cs
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\3-Bubble_Sort\3-Bubble_Sort\obj\Debug\net7.0\3-Bubble_Sort.csproj.CoreCompileInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\3-Bubble_Sort\3-Bubble_Sort\obj\Debug\net7.0\3-Bubble_Sort.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\3-Bubble_Sort\3-Bubble_Sort\obj\Debug\net7.0\refint\3-Bubble_Sort.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\3-Bubble_Sort\3-Bubble_Sort\obj\Debug\net7.0\3-Bubble_Sort.pdb
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\3-Bubble_Sort\3-Bubble_Sort\obj\Debug\net7.0\3-Bubble_Sort.genruntimeconfig.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\3-Bubble_Sort\3-Bubble_Sort\obj\Debug\net7.0\ref\3-Bubble_Sort.dll

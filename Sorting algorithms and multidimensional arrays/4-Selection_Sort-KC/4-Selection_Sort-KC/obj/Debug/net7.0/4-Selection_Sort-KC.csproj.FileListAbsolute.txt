@@ -1,0 +1,14 @@
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\4-Selection_Sort-KC\4-Selection_Sort-KC\bin\Debug\net7.0\4-Selection_Sort-KC.exe
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\4-Selection_Sort-KC\4-Selection_Sort-KC\bin\Debug\net7.0\4-Selection_Sort-KC.deps.json
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\4-Selection_Sort-KC\4-Selection_Sort-KC\bin\Debug\net7.0\4-Selection_Sort-KC.runtimeconfig.json
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\4-Selection_Sort-KC\4-Selection_Sort-KC\bin\Debug\net7.0\4-Selection_Sort-KC.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\4-Selection_Sort-KC\4-Selection_Sort-KC\bin\Debug\net7.0\4-Selection_Sort-KC.pdb
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\4-Selection_Sort-KC\4-Selection_Sort-KC\obj\Debug\net7.0\4-Selection_Sort-KC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\4-Selection_Sort-KC\4-Selection_Sort-KC\obj\Debug\net7.0\4-Selection_Sort-KC.AssemblyInfoInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\4-Selection_Sort-KC\4-Selection_Sort-KC\obj\Debug\net7.0\4-Selection_Sort-KC.AssemblyInfo.cs
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\4-Selection_Sort-KC\4-Selection_Sort-KC\obj\Debug\net7.0\4-Selection_Sort-KC.csproj.CoreCompileInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\4-Selection_Sort-KC\4-Selection_Sort-KC\obj\Debug\net7.0\4-Selection_Sort-KC.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\4-Selection_Sort-KC\4-Selection_Sort-KC\obj\Debug\net7.0\refint\4-Selection_Sort-KC.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\4-Selection_Sort-KC\4-Selection_Sort-KC\obj\Debug\net7.0\4-Selection_Sort-KC.pdb
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\4-Selection_Sort-KC\4-Selection_Sort-KC\obj\Debug\net7.0\4-Selection_Sort-KC.genruntimeconfig.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\4-Selection_Sort-KC\4-Selection_Sort-KC\obj\Debug\net7.0\ref\4-Selection_Sort-KC.dll
