@@ -1,0 +1,126 @@
+1_1             Variables and Datatypes
+Exercise 1.1 - Tell me about yourself
+Declare variables to express your age, first name, gender, last name, birthday, average grade and whether you are married or not. Think which datatype is well suited for which variable.
+
+Print all variables to the console with System.out.println
+
+
+
+1_2
+Exercise 1.2 - Simple Calculations
+Declare two numeric variables with arbitary values. Calculate their sum, difference, product and quotient and print the calculation with the result on the console with System.out.println/System.out.printf. Perform all calculations with whole numbers and fractional numbers.
+
+Bonus: Try to limit the decimal places of your calculations with the fractional numbers.
+
+Your output should look like this:
+
+138 + 235 = 373
+
+138 - 235 = -97
+
+
+
+1_3
+Exercise 1.3 - Working with Strings [🤓 Advanced]
+Create a variable of type String with “ Hello World! ” as its content (contains leading and trailing spaces).
+
+Print the String and its length to the console.
+Print the String with some variations:
+all letters in uppercase
+all letters in lowercase
+replace “World” with “Codersbay”
+without the leading spaces
+Repeat the printed String 15 times seperated with linebreaks (don't copy the code 15 times 😉)
+
+
+
+2_1             Assignment and logical operators
+Exercise 2.1 Characteristics of a number
+Write a program that reads a number from the console and calculates and prints characteristics of it:
+
+is the number round
+is the number even
+does the number equal your lucky number (choose any lucky number for this and print it to the console at the start of the program)
+does it have two digits
+Hint: You might find the modulo operation helpful for the first two exercises.
+
+
+
+2_2
+Exercise 2.2 free time or work time?
+At CODERS.BAY we usually work from 8 to 16 o'clock. Write a program, that reads a number from the console and prints whether that hour is during our work time or not.
+
+Bonus: We go for a lunch break between 12 and 13 o'clock, print that info in case the given number is between 12 and 13.
+
+
+
+2_3
+Conditionals
+Exercise: Translating grades
+Write a program that translates grades from its numerical form to a word representation.
+
+Print "Very good" in case of a 1.
+Print "Good" in case of a 2.
+Print "Satisfactory" in case of a 3.
+Print "Sufficient" in case of a 4.
+Print "Not sufficient" in case of a 5.
+
+
+
+3_1             Repetitions
+Exercise: FizzBuzz
+FizzBuzz is a game to explain divisions to children. The rules are simple - Starting with the number one players count up by one. Is the number dividable by three, you are not allowed to say the number but say "Fizz". Is it dividable by five "Buzz" needs to be said and if it's dividable by both three and five "FizzBuzz" needs to be said.
+
+A round would start like this: “One! Two! Fizz(3)! Four! Buzz(5)! Fizz(6)! Seven! Eight! Fizz(9)! Buzz(10)!”
+
+Write a program, that prints the numbers from 1 to 100 by those rules. You don't have to print the numbers as words, the numerical representation is sufficient.
+
+
+
+3_2
+Exercise: Multiplications
+Use loops to print the 1 x 1 to the console. Your result should look something like this:
+
+times 1:
+1 * 1 = 1
+2 * 1 = 2
+...
+10 * 1 = 10
+times 2:
+1 * 2 = 2
+...
+9 * 10 = 90
+10 * 10 = 100
+
+
+
+3_3
+Exercise: Caesar Chiffre
+We know that every letter in Java has a unique code. In detail the numerical representation of a character is the Unicode.
+
+The caesar chiffre is a simple encryption algorithm, that rotates every letter with an offset X. When you reach the Z you should start again with the A for the purpose of this exercise. Moreover we will ignore all special characters for now.
+
+With a Caesar Chiffre of 6 the following text
+
+Ein Charakter namens Caesar!
+would be encrypted to:
+
+Kot Ingxgqzkx tgskty Igkygx!
+when an encrypted again with a key of 6 we get:
+
+Quz Otmdmwfqd zmyqze Omqemd!
+Write a program that reads any text from the console, generates a key between 1 and 26 and prints the encrypted message.
+
+
+
+3_4
+Exercise: Maxima calculation
+Provide a program that reads numbers from the console until it reads the letter 'q'. Calculate the maximum of all values and print it to the console.
+
+
+
+4_1             Kompetenzcheck
+Exercise: Leetspeak
+Provide a program that reads a String from the console. Translate it to Leetspeak and print the value to the console. You can choose any configuration you like, if you need inspiration, my example: If you choose a different one please provide a Markdown file with the mapping ;)
+
+A => '@' B => '8' C => '(' D => 'D' E => '3' F => 'F' G => '6' H => '#' I => '!' J => 'J' K => 'K' L => '1' M => 'M' N => 'N' O => '0' P => 'P' Q => 'Q' R => 'R' S => '$' T => '7' U => 'U' V => 'V' W => 'W' X => 'X' Y => 'Y' Z => '2'
