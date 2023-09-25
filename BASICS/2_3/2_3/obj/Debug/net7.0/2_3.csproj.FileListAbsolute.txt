@@ -1,0 +1,14 @@
+C:\Users\Codersbay\source\repos\2_3\2_3\bin\Debug\net7.0\2_3.exe
+C:\Users\Codersbay\source\repos\2_3\2_3\bin\Debug\net7.0\2_3.deps.json
+C:\Users\Codersbay\source\repos\2_3\2_3\bin\Debug\net7.0\2_3.runtimeconfig.json
+C:\Users\Codersbay\source\repos\2_3\2_3\bin\Debug\net7.0\2_3.dll
+C:\Users\Codersbay\source\repos\2_3\2_3\bin\Debug\net7.0\2_3.pdb
+C:\Users\Codersbay\source\repos\2_3\2_3\obj\Debug\net7.0\2_3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Codersbay\source\repos\2_3\2_3\obj\Debug\net7.0\2_3.AssemblyInfoInputs.cache
+C:\Users\Codersbay\source\repos\2_3\2_3\obj\Debug\net7.0\2_3.AssemblyInfo.cs
+C:\Users\Codersbay\source\repos\2_3\2_3\obj\Debug\net7.0\2_3.csproj.CoreCompileInputs.cache
+C:\Users\Codersbay\source\repos\2_3\2_3\obj\Debug\net7.0\2_3.dll
+C:\Users\Codersbay\source\repos\2_3\2_3\obj\Debug\net7.0\refint\2_3.dll
+C:\Users\Codersbay\source\repos\2_3\2_3\obj\Debug\net7.0\2_3.pdb
+C:\Users\Codersbay\source\repos\2_3\2_3\obj\Debug\net7.0\2_3.genruntimeconfig.cache
+C:\Users\Codersbay\source\repos\2_3\2_3\obj\Debug\net7.0\ref\2_3.dll

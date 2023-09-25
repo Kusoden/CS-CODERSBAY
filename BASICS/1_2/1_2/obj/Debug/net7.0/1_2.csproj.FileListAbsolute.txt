@@ -1,0 +1,14 @@
+C:\Users\Codersbay\source\repos\1_2\1_2\bin\Debug\net7.0\1_2.exe
+C:\Users\Codersbay\source\repos\1_2\1_2\bin\Debug\net7.0\1_2.deps.json
+C:\Users\Codersbay\source\repos\1_2\1_2\bin\Debug\net7.0\1_2.runtimeconfig.json
+C:\Users\Codersbay\source\repos\1_2\1_2\bin\Debug\net7.0\1_2.dll
+C:\Users\Codersbay\source\repos\1_2\1_2\bin\Debug\net7.0\1_2.pdb
+C:\Users\Codersbay\source\repos\1_2\1_2\obj\Debug\net7.0\1_2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Codersbay\source\repos\1_2\1_2\obj\Debug\net7.0\1_2.AssemblyInfoInputs.cache
+C:\Users\Codersbay\source\repos\1_2\1_2\obj\Debug\net7.0\1_2.AssemblyInfo.cs
+C:\Users\Codersbay\source\repos\1_2\1_2\obj\Debug\net7.0\1_2.csproj.CoreCompileInputs.cache
+C:\Users\Codersbay\source\repos\1_2\1_2\obj\Debug\net7.0\1_2.dll
+C:\Users\Codersbay\source\repos\1_2\1_2\obj\Debug\net7.0\refint\1_2.dll
+C:\Users\Codersbay\source\repos\1_2\1_2\obj\Debug\net7.0\1_2.pdb
+C:\Users\Codersbay\source\repos\1_2\1_2\obj\Debug\net7.0\1_2.genruntimeconfig.cache
+C:\Users\Codersbay\source\repos\1_2\1_2\obj\Debug\net7.0\ref\1_2.dll
