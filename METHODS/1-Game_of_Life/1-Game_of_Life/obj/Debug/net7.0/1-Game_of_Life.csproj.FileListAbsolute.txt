@@ -1,0 +1,28 @@
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\1-Game_of_Life\1-Game_of_Life\bin\Debug\net7.0\1-Game_of_Life.exe
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\1-Game_of_Life\1-Game_of_Life\bin\Debug\net7.0\1-Game_of_Life.deps.json
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\1-Game_of_Life\1-Game_of_Life\bin\Debug\net7.0\1-Game_of_Life.runtimeconfig.json
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\1-Game_of_Life\1-Game_of_Life\bin\Debug\net7.0\1-Game_of_Life.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\1-Game_of_Life\1-Game_of_Life\bin\Debug\net7.0\1-Game_of_Life.pdb
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\1-Game_of_Life.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\1-Game_of_Life.AssemblyInfoInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\1-Game_of_Life.AssemblyInfo.cs
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\1-Game_of_Life.csproj.CoreCompileInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\1-Game_of_Life.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\refint\1-Game_of_Life.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\1-Game_of_Life.pdb
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\1-Game_of_Life.genruntimeconfig.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\ref\1-Game_of_Life.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\1-Game_of_Life\1-Game_of_Life\bin\Debug\net7.0\1-Game_of_Life.exe
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\1-Game_of_Life\1-Game_of_Life\bin\Debug\net7.0\1-Game_of_Life.deps.json
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\1-Game_of_Life\1-Game_of_Life\bin\Debug\net7.0\1-Game_of_Life.runtimeconfig.json
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\1-Game_of_Life\1-Game_of_Life\bin\Debug\net7.0\1-Game_of_Life.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\1-Game_of_Life\1-Game_of_Life\bin\Debug\net7.0\1-Game_of_Life.pdb
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\1-Game_of_Life.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\1-Game_of_Life.AssemblyInfoInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\1-Game_of_Life.AssemblyInfo.cs
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\1-Game_of_Life.csproj.CoreCompileInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\1-Game_of_Life.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\refint\1-Game_of_Life.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\1-Game_of_Life.pdb
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\1-Game_of_Life.genruntimeconfig.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\ref\1-Game_of_Life.dll

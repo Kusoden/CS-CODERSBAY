@@ -1,0 +1,4 @@
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\2-Divide_&_Conquer\2-Divide_&_Conquer\obj\Debug\net6.0\2-Divide_&_Conquer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\2-Divide_&_Conquer\2-Divide_&_Conquer\obj\Debug\net6.0\2-Divide_&_Conquer.AssemblyInfoInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\2-Divide_&_Conquer\2-Divide_&_Conquer\obj\Debug\net6.0\2-Divide_&_Conquer.AssemblyInfo.cs
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\2-Divide_&_Conquer\2-Divide_&_Conquer\obj\Debug\net6.0\2-Divide_&_Conquer.csproj.CoreCompileInputs.cache

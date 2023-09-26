@@ -20,3 +20,23 @@ Implementiere einen Insertion Sort Algorithmus!
 
 Eine super Visualisierung zu Sortieralgorithmen findest du auf https://sortvisualizer.com/insertionsort/. Eine gute Erklärung zur Vorgehensweise des Insertion sort findest du auf Wikipedia: https://de.wikipedia.org/wiki/Insertionsort
 
+
+
+3
+Sortier Algorithmen
+Aufgabe: Bubble Sort
+Implementiere einen Bubble Sort Algorithmus!
+
+Eine super Schritt-für-Schritt Visualisierung zu Sortieralgorithmen findest du auf https://www.hackerearth.com/practice/algorithms/sorting/bubble-sort/visualize/. Eine gute Erklärung zur Vorgehensweise des Bubble sort findest du auf Wikipedia: https://de.wikipedia.org/wiki/Bubblesort
+
+
+
+4
+Kompetenzcheck
+Aufgabe: Selection Sort
+Implementiere einen Selection Sort Algorithmus!
+
+Eine super Visualisierung zu Sortieralgorithmen findest du auf https://sortvisualizer.com/selectionsort/. Eine gute Erklärung zur Vorgehensweise des Selection Sort findest du auf Wikipedia: https://en.wikipedia.org/wiki/Selection_sort
+
+Welcher der drei Sortieralgorithmen (Bubblesort, Selection Sort, Insertion Sort) ist am schnellsten? Wie skaliert die Laufzeit mit steigender Arraygröße?
+
