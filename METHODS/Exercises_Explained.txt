@@ -19,3 +19,14 @@ Write a program that finds the maximum in an array of numbers. Since this array 
 You can create the array of numbers directly, you don't have to read them in from the console.
 
 We should implement the maximum search using the Divide & Conquer principle. As long as the array retains 2 or more elements, the array is split in the middle and the maximum is sought for both arrays. Solve the problem using recursion.
+
+
+
+3
+Aufgabe: Merge Sort             KompetenzCheck
+Implementiere einen Merge Sort Algorithmus!
+
+Eine super Visualisierung zu Sortieralgorithmen findest du auf https://visualgo.net/en/sorting/. Eine gute Erklärung zur Vorgehensweise des Merge Sortfindest du auf Wikipedia: https://de.wikipedia.org/wiki/Mergesort
+
+Video Erklärung: https://www.youtube.com/watch?v=Pr2Jf83_kG0
+
