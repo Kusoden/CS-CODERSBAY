@@ -1,0 +1,14 @@
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\3-Merge_Sort-KC\3-Merge_Sort-KC\obj\Debug\net7.0\3-Merge_Sort-KC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\3-Merge_Sort-KC\3-Merge_Sort-KC\obj\Debug\net7.0\3-Merge_Sort-KC.AssemblyInfoInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\3-Merge_Sort-KC\3-Merge_Sort-KC\obj\Debug\net7.0\3-Merge_Sort-KC.AssemblyInfo.cs
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\3-Merge_Sort-KC\3-Merge_Sort-KC\obj\Debug\net7.0\3-Merge_Sort-KC.csproj.CoreCompileInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\3-Merge_Sort-KC\3-Merge_Sort-KC\bin\Debug\net7.0\3-Merge_Sort-KC.exe
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\3-Merge_Sort-KC\3-Merge_Sort-KC\bin\Debug\net7.0\3-Merge_Sort-KC.deps.json
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\3-Merge_Sort-KC\3-Merge_Sort-KC\bin\Debug\net7.0\3-Merge_Sort-KC.runtimeconfig.json
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\3-Merge_Sort-KC\3-Merge_Sort-KC\bin\Debug\net7.0\3-Merge_Sort-KC.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\3-Merge_Sort-KC\3-Merge_Sort-KC\bin\Debug\net7.0\3-Merge_Sort-KC.pdb
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\3-Merge_Sort-KC\3-Merge_Sort-KC\obj\Debug\net7.0\3-Merge_Sort-KC.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\3-Merge_Sort-KC\3-Merge_Sort-KC\obj\Debug\net7.0\refint\3-Merge_Sort-KC.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\3-Merge_Sort-KC\3-Merge_Sort-KC\obj\Debug\net7.0\3-Merge_Sort-KC.pdb
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\3-Merge_Sort-KC\3-Merge_Sort-KC\obj\Debug\net7.0\3-Merge_Sort-KC.genruntimeconfig.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\METHODS\3-Merge_Sort-KC\3-Merge_Sort-KC\obj\Debug\net7.0\ref\3-Merge_Sort-KC.dll
