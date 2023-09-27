@@ -1,0 +1,32 @@
+1             Methoden
+Aufgabe: Game of Life
+Conways Game of Life ist ein beliebter Algorithmus der Automatentheorie. Dabei hat man ein beliebig großes Feld (e.g. 100 x 100 Zellen). Jede der Zelle kann entweder lebendig oder tod sein. Eine Zelle hat immer acht Nachbarzellen (Moor). Die Anfangspopulation wird zufällig gewählt, danach entwickelt sich der Algorithmus in Generationen nach folgenden Regeln:
+
+ist eine Zelle tot und hat genau 3 lebende Nachbarn, wird sie in der nächsten Generation geboren 👶
+ist eine Zelle am Leben und hat weniger als 2 Nachbarn stirbt sie an Einsamkeit 😔
+ist eine Zelle am Leben und hat 2 oder 3 Nachbarn, bleibt sie am Leben 🤝‍
+ist eine Zelle am Leben und hat mehr als 3 Nachbarn, stirbt sie an Überbevölkerung 💀
+Eine schöne Visualisierung des Algorithmus findet ihr auf https://bitstorm.org/gameoflife/.
+
+Schreib einen Algorithmus der ein N X N Feld visualisert (z.B. # für lebende Zellen und Leerzeichen/'.' für tote Zellen) und Generationen durchlaufen lässt. Entweder X Generationen oder bis das Programm abgebrochen wird.
+
+                //<<\\ Thread.Sleep(1000);  to wait for the next execution of code and Console. Clear() to clear the console //>>\\
+
+2
+Task: Divide & Conquer - Find Maximum 
+Write a program that finds the maximum in an array of numbers. Since this array can get very, very large, we want to use the Divide & Conquer principle.
+
+You can create the array of numbers directly, you don't have to read them in from the console.
+
+We should implement the maximum search using the Divide & Conquer principle. As long as the array retains 2 or more elements, the array is split in the middle and the maximum is sought for both arrays. Solve the problem using recursion.
+
+
+
+3
+Aufgabe: Merge Sort             KompetenzCheck
+Implementiere einen Merge Sort Algorithmus!
+
+Eine super Visualisierung zu Sortieralgorithmen findest du auf https://visualgo.net/en/sorting/. Eine gute Erklärung zur Vorgehensweise des Merge Sortfindest du auf Wikipedia: https://de.wikipedia.org/wiki/Mergesort
+
+Video Erklärung: https://www.youtube.com/watch?v=Pr2Jf83_kG0
+

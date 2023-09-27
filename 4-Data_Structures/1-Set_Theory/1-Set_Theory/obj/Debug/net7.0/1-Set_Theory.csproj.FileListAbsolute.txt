@@ -1,0 +1,14 @@
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\1-Set_Theory\1-Set_Theory\bin\Debug\net7.0\1-Set_Theory.exe
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\1-Set_Theory\1-Set_Theory\bin\Debug\net7.0\1-Set_Theory.deps.json
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\1-Set_Theory\1-Set_Theory\bin\Debug\net7.0\1-Set_Theory.runtimeconfig.json
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\1-Set_Theory\1-Set_Theory\bin\Debug\net7.0\1-Set_Theory.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\1-Set_Theory\1-Set_Theory\bin\Debug\net7.0\1-Set_Theory.pdb
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\1-Set_Theory\1-Set_Theory\obj\Debug\net7.0\1-Set_Theory.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\1-Set_Theory\1-Set_Theory\obj\Debug\net7.0\1-Set_Theory.AssemblyInfoInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\1-Set_Theory\1-Set_Theory\obj\Debug\net7.0\1-Set_Theory.AssemblyInfo.cs
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\1-Set_Theory\1-Set_Theory\obj\Debug\net7.0\1-Set_Theory.csproj.CoreCompileInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\1-Set_Theory\1-Set_Theory\obj\Debug\net7.0\1-Set_Theory.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\1-Set_Theory\1-Set_Theory\obj\Debug\net7.0\refint\1-Set_Theory.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\1-Set_Theory\1-Set_Theory\obj\Debug\net7.0\1-Set_Theory.pdb
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\1-Set_Theory\1-Set_Theory\obj\Debug\net7.0\1-Set_Theory.genruntimeconfig.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\1-Set_Theory\1-Set_Theory\obj\Debug\net7.0\ref\1-Set_Theory.dll
