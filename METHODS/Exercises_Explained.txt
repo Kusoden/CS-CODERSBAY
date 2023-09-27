@@ -10,7 +10,7 @@ Eine schöne Visualisierung des Algorithmus findet ihr auf https://bitstorm.org/
 
 Schreib einen Algorithmus der ein N X N Feld visualisert (z.B. # für lebende Zellen und Leerzeichen/'.' für tote Zellen) und Generationen durchlaufen lässt. Entweder X Generationen oder bis das Programm abgebrochen wird.
 
-
+                //<<\\ Thread.Sleep(1000);  to wait for the next execution of code and Console. Clear() to clear the console //>>\\
 
 2
 Task: Divide & Conquer - Find Maximum 

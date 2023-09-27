@@ -22,6 +22,8 @@ do
 
 void PrintField(int[,] field)/*Print the current status of the field*/
 {
+    Thread.Sleep(200);
+    Console.Clear();
     Console.WriteLine("Next Generation:");
     for (int v = 0; v < field.GetLength(0); v++)
     {
