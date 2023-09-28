@@ -1,32 +1,26 @@
-1             Methoden
-Aufgabe: Game of Life
-Conways Game of Life ist ein beliebter Algorithmus der Automatentheorie. Dabei hat man ein beliebig großes Feld (e.g. 100 x 100 Zellen). Jede der Zelle kann entweder lebendig oder tod sein. Eine Zelle hat immer acht Nachbarzellen (Moor). Die Anfangspopulation wird zufällig gewählt, danach entwickelt sich der Algorithmus in Generationen nach folgenden Regeln:
+1             Datenstrukturen
+Aufgabe: Mengenlehre
+Gegeben sind drei Zahlenmengen A, B, C.
 
-ist eine Zelle tot und hat genau 3 lebende Nachbarn, wird sie in der nächsten Generation geboren 👶
-ist eine Zelle am Leben und hat weniger als 2 Nachbarn stirbt sie an Einsamkeit 😔
-ist eine Zelle am Leben und hat 2 oder 3 Nachbarn, bleibt sie am Leben 🤝‍
-ist eine Zelle am Leben und hat mehr als 3 Nachbarn, stirbt sie an Überbevölkerung 💀
-Eine schöne Visualisierung des Algorithmus findet ihr auf https://bitstorm.org/gameoflife/.
+A = { 1, 3, 5 }
+B = { 3, 5, 7 }
+C = { 5, 7, 9 }
+Berechne möglichst effizient die Vereinigungsmenge von A ∪ B ∪ C sowie alle möglichen Schnittmengen und Differenzmengen der drei Zahlenmengen. Du kannst davon ausgehen, dass alle Mengen gleich groß sind.
 
-Schreib einen Algorithmus der ein N X N Feld visualisert (z.B. # für lebende Zellen und Leerzeichen/'.' für tote Zellen) und Generationen durchlaufen lässt. Entweder X Generationen oder bis das Programm abgebrochen wird.
+Verwende dazu die bereits vorhandene Klasse "HashSet" und deren Methoden. Du sollst die Logik, wie sich z.B. eine Vereinigungsmenge bildet NICHT selbst programmieren. Die Klasse HashSet kann das schon.
 
-                //<<\\ Thread.Sleep(1000);  to wait for the next execution of code and Console. Clear() to clear the console //>>\\
+Gestalte deine Methoden so, dass sie zur Berechnung der Ergebnismenge den selben return Typ haben wie die Parameter. Dadurch können die Methodenaufrufe beliebig oft geschachtelt werden.
+
+z.B.: getUnionList(a, getIntersectionList(b,c)); // das sollte funktionieren und heißt A ∪ (B ∩ C)
+
+
 
 2
-Task: Divide & Conquer - Find Maximum 
-Write a program that finds the maximum in an array of numbers. Since this array can get very, very large, we want to use the Divide & Conquer principle.
+Aufgabe: Wörterbuch
+Erstelle ein Programm welches ein Wörterbuch zum Übersetzen von Wörtern zwischen Englisch und Deutsch implementiert (bi-direktional). Es soll folgende Funktionalitäten umfassen:
 
-You can create the array of numbers directly, you don't have to read them in from the console.
-
-We should implement the maximum search using the Divide & Conquer principle. As long as the array retains 2 or more elements, the array is split in the middle and the maximum is sought for both arrays. Solve the problem using recursion.
-
-
-
-3
-Aufgabe: Merge Sort             KompetenzCheck
-Implementiere einen Merge Sort Algorithmus!
-
-Eine super Visualisierung zu Sortieralgorithmen findest du auf https://visualgo.net/en/sorting/. Eine gute Erklärung zur Vorgehensweise des Merge Sortfindest du auf Wikipedia: https://de.wikipedia.org/wiki/Mergesort
-
-Video Erklärung: https://www.youtube.com/watch?v=Pr2Jf83_kG0
+Hinzufügen eines neuen Wort-Paars (Englisch und Deutsch)
+Entfernen eines Wort-Paars aus dem Wörterbuch
+Suchen der Übersetzung eines Wortes (in beide Richtungen)
+Um diese Aufgabe zu lösen ist das Map Interface gut geeignet.
 

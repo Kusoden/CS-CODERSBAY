@@ -1,0 +1,17 @@
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\2-Dictionary\2-Dictionary\bin\Debug\net7.0\2-Dictionary.exe
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\2-Dictionary\2-Dictionary\bin\Debug\net7.0\2-Dictionary.deps.json
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\2-Dictionary\2-Dictionary\bin\Debug\net7.0\2-Dictionary.runtimeconfig.json
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\2-Dictionary\2-Dictionary\bin\Debug\net7.0\2-Dictionary.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\2-Dictionary\2-Dictionary\bin\Debug\net7.0\2-Dictionary.pdb
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\2-Dictionary\2-Dictionary\bin\Debug\net7.0\YamlDotNet.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\2-Dictionary\2-Dictionary\obj\Debug\net7.0\2-Dictionary.csproj.AssemblyReference.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\2-Dictionary\2-Dictionary\obj\Debug\net7.0\2-Dictionary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\2-Dictionary\2-Dictionary\obj\Debug\net7.0\2-Dictionary.AssemblyInfoInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\2-Dictionary\2-Dictionary\obj\Debug\net7.0\2-Dictionary.AssemblyInfo.cs
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\2-Dictionary\2-Dictionary\obj\Debug\net7.0\2-Dictionary.csproj.CoreCompileInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\2-Dictionary\2-Dictionary\obj\Debug\net7.0\2-Dictionary.csproj.CopyComplete
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\2-Dictionary\2-Dictionary\obj\Debug\net7.0\2-Dictionary.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\2-Dictionary\2-Dictionary\obj\Debug\net7.0\refint\2-Dictionary.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\2-Dictionary\2-Dictionary\obj\Debug\net7.0\2-Dictionary.pdb
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\2-Dictionary\2-Dictionary\obj\Debug\net7.0\2-Dictionary.genruntimeconfig.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\2-Dictionary\2-Dictionary\obj\Debug\net7.0\ref\2-Dictionary.dll
