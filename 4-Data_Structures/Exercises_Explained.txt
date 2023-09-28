@@ -24,3 +24,11 @@ Entfernen eines Wort-Paars aus dem Wörterbuch
 Suchen der Übersetzung eines Wortes (in beide Richtungen)
 Um diese Aufgabe zu lösen ist das Map Interface gut geeignet.
 
+
+
+3
+Aufgabe: Liste sortieren
+Wähle einen der bereits mit Arrays implementierten Sortieralgorithmus und ändere die Implementation derart, dass statt Arrays Listen verwendet werden. Wichtig: Es soll NICHT die eingebaute Sortierfunktion des Listen Interface, sondern euer eigener Algorithmus verwendet werden.
+
+
+

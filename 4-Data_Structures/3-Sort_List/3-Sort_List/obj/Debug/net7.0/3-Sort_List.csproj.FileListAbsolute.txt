@@ -1,0 +1,14 @@
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\3-Sort_List\3-Sort_List\bin\Debug\net7.0\3-Sort_List.exe
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\3-Sort_List\3-Sort_List\bin\Debug\net7.0\3-Sort_List.deps.json
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\3-Sort_List\3-Sort_List\bin\Debug\net7.0\3-Sort_List.runtimeconfig.json
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\3-Sort_List\3-Sort_List\bin\Debug\net7.0\3-Sort_List.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\3-Sort_List\3-Sort_List\bin\Debug\net7.0\3-Sort_List.pdb
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\3-Sort_List\3-Sort_List\obj\Debug\net7.0\3-Sort_List.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\3-Sort_List\3-Sort_List\obj\Debug\net7.0\3-Sort_List.AssemblyInfoInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\3-Sort_List\3-Sort_List\obj\Debug\net7.0\3-Sort_List.AssemblyInfo.cs
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\3-Sort_List\3-Sort_List\obj\Debug\net7.0\3-Sort_List.csproj.CoreCompileInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\3-Sort_List\3-Sort_List\obj\Debug\net7.0\3-Sort_List.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\3-Sort_List\3-Sort_List\obj\Debug\net7.0\refint\3-Sort_List.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\3-Sort_List\3-Sort_List\obj\Debug\net7.0\3-Sort_List.pdb
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\3-Sort_List\3-Sort_List\obj\Debug\net7.0\3-Sort_List.genruntimeconfig.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\4-Data_Structures\3-Sort_List\3-Sort_List\obj\Debug\net7.0\ref\3-Sort_List.dll

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\METHODS\\3-Merge_Sort-KC\\3-Merge_Sort-KC\\3-Merge_Sort-KC.csproj": {}
+    "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\3-Methods\\3-Merge_Sort-KC\\3-Merge_Sort-KC\\3-Merge_Sort-KC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\METHODS\\3-Merge_Sort-KC\\3-Merge_Sort-KC\\3-Merge_Sort-KC.csproj": {
+    "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\3-Methods\\3-Merge_Sort-KC\\3-Merge_Sort-KC\\3-Merge_Sort-KC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\METHODS\\3-Merge_Sort-KC\\3-Merge_Sort-KC\\3-Merge_Sort-KC.csproj",
+        "projectUniqueName": "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\3-Methods\\3-Merge_Sort-KC\\3-Merge_Sort-KC\\3-Merge_Sort-KC.csproj",
         "projectName": "3-Merge_Sort-KC",
-        "projectPath": "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\METHODS\\3-Merge_Sort-KC\\3-Merge_Sort-KC\\3-Merge_Sort-KC.csproj",
+        "projectPath": "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\3-Methods\\3-Merge_Sort-KC\\3-Merge_Sort-KC\\3-Merge_Sort-KC.csproj",
         "packagesPath": "C:\\Users\\Codersbay\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\METHODS\\3-Merge_Sort-KC\\3-Merge_Sort-KC\\obj\\",
+        "outputPath": "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\3-Methods\\3-Merge_Sort-KC\\3-Merge_Sort-KC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Codersbay\\AppData\\Roaming\\NuGet\\NuGet.Config",
