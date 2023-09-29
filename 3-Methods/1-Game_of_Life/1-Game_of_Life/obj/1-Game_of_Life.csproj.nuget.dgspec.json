@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\METHODS\\1-Game_of_Life\\1-Game_of_Life\\1-Game_of_Life.csproj": {}
+    "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\3-Methods\\1-Game_of_Life\\1-Game_of_Life\\1-Game_of_Life.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\METHODS\\1-Game_of_Life\\1-Game_of_Life\\1-Game_of_Life.csproj": {
+    "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\3-Methods\\1-Game_of_Life\\1-Game_of_Life\\1-Game_of_Life.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\METHODS\\1-Game_of_Life\\1-Game_of_Life\\1-Game_of_Life.csproj",
+        "projectUniqueName": "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\3-Methods\\1-Game_of_Life\\1-Game_of_Life\\1-Game_of_Life.csproj",
         "projectName": "1-Game_of_Life",
-        "projectPath": "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\METHODS\\1-Game_of_Life\\1-Game_of_Life\\1-Game_of_Life.csproj",
+        "projectPath": "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\3-Methods\\1-Game_of_Life\\1-Game_of_Life\\1-Game_of_Life.csproj",
         "packagesPath": "C:\\Users\\Codersbay\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\METHODS\\1-Game_of_Life\\1-Game_of_Life\\obj\\",
+        "outputPath": "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\3-Methods\\1-Game_of_Life\\1-Game_of_Life\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Codersbay\\AppData\\Roaming\\NuGet\\NuGet.Config",

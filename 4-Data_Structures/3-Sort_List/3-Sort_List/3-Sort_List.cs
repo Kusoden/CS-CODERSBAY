@@ -7,7 +7,7 @@ namespace _3_Sort_List
     {
         static void Main()
         {
-            List<int> list = new List<int>() { 5, 3, 4, 7, 1, 2, 1 }; 
+            List<int> list = new() { 5, 3, 4, 7, 1, 2, 1 }; 
 
             Console.WriteLine("Original List: ");
             Write(list);
@@ -24,7 +24,7 @@ namespace _3_Sort_List
 
         static void MergeSort(List<int> list)
         {
-            int lengthOfList = list.Count; /* .Length => .Coun */
+            int lengthOfList = list.Count; /* .Length => .Count */
             if (lengthOfList <= 1) return;
 
             int middle = lengthOfList / 2;

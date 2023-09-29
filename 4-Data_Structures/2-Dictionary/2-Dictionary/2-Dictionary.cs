@@ -1,35 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Xml.Serialization;
 
 Dictionary<string, string> pocketBook = new();
+Dictionary<string, string> GermanFirstPocketBook = new();
+string? choice = "";
 
-while (true)
+do
 {
+    Thread.Sleep(1000);
+    Console.Clear();
     Console.WriteLine("Dictionary Menu:");
     Console.WriteLine("1. Add Word Pair");
     Console.WriteLine("2. Remove Word Pair");
     Console.WriteLine("3. Translate Word");
     Console.WriteLine("4. Exit");
     Console.Write("Enter a number (1/2/3/4): ");
+    choice = Console.ReadLine();
 
-    switch ()
+    switch (choice)
     {
-        case 1:
+        case "1":
             AddWordPair();
             break;
-        case 2:
+        case "2":
             RemoveWordPair();
             break;
-        case 3:
+        case "3":
             TranslateWord();
             break;
-        case 4:
-            return;
+        case "4":
+            break;
         default:
             Console.WriteLine("Invalid choice. Please select a valid option.");
             break;
     }
-}
+} while (choice != "4");
 
 void AddWordPair()
 {
@@ -41,6 +48,7 @@ void AddWordPair()
     if (!pocketBook.ContainsKey(englishWord))
     {
         pocketBook[englishWord] = germanWord;
+        GermanFirstPocketBook[germanWord] = englishWord;
         Console.WriteLine("Word translation added successfully.");
     }
     else
@@ -49,16 +57,37 @@ void AddWordPair()
 
 void RemoveWordPair()
 {
-    Console.Write("Enter English word to remove: ");
-    string englishWord = Console.ReadLine().ToLower();
+    Console.WriteLine("Do you want to delete the word by giving the German word or English word?");
+    string choiceOfPath = Console.ReadLine().ToLower();
 
-    if (pocketBook.ContainsKey(englishWord))
+    if (choiceOfPath == "english")
     {
-        pocketBook.Remove(englishWord);
-        Console.WriteLine("Word pair removed successfully.");
+        Console.Write("Enter English word to remove: ");
+        string englishWord = Console.ReadLine().ToLower();
+        string germanWord = pocketBook[englishWord];
+        if (pocketBook.ContainsKey(englishWord))
+        {
+            pocketBook.Remove(englishWord);
+            GermanFirstPocketBook.Remove(germanWord);
+            Console.WriteLine("Word pair removed successfully.");
+        }
+        else
+            Console.WriteLine("Word not found in the pocketBook.");
     }
     else
-        Console.WriteLine("Word not found in the pocketBook.");
+    {
+        Console.Write("Enter German word to remove: ");
+        string germanWord = Console.ReadLine().ToLower();
+        string englishWord = GermanFirstPocketBook[germanWord];
+        if (GermanFirstPocketBook.ContainsKey(germanWord))
+        {
+            pocketBook.Remove(englishWord);
+            GermanFirstPocketBook.Remove(germanWord);
+            Console.WriteLine("Word pair removed successfully.");
+        }
+        else
+            Console.WriteLine("Word not found in the pocketBook.");
+    }
 }
 
 void TranslateWord()
@@ -71,6 +100,12 @@ void TranslateWord()
         string germanTranslation = pocketBook[word];
         Console.WriteLine($"English: {word} =>>> German: {germanTranslation}");
     }
+    else if (GermanFirstPocketBook.ContainsKey(word))
+    {
+        string englishTranslation = GermanFirstPocketBook[word];
+        Console.WriteLine($"German: {word} =>>> English: {englishTranslation}");
+    }
+
     else
         Console.WriteLine("Word not found in the pocketBook.");
 }

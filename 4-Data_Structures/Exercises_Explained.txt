@@ -32,3 +32,9 @@ Wähle einen der bereits mit Arrays implementierten Sortieralgorithmus und ände
 
 
 
+
+Entwurfsmuster / Design Patterns
+Weitere Informationen zu Entwurfsmustern findet ihr hier: https://refactoring.guru/design-patterns https://sourcemaking.com/design_patterns
+
+Anwendungen von Datenstrukturen
+https://www.youtube.com/watch?v=ouipSd_5ivQ
