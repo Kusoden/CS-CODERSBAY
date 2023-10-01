@@ -40,3 +40,17 @@ C:\Users\Codersbay\Downloads\CS-CODERSBAY\3-Methods\1-Game_of_Life\1-Game_of_Lif
 C:\Users\Codersbay\Downloads\CS-CODERSBAY\3-Methods\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\1-Game_of_Life.pdb
 C:\Users\Codersbay\Downloads\CS-CODERSBAY\3-Methods\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\1-Game_of_Life.genruntimeconfig.cache
 C:\Users\Codersbay\Downloads\CS-CODERSBAY\3-Methods\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\ref\1-Game_of_Life.dll
+D:\Coding_Files_Github\CS-CODERSBAY\3-Methods\1-Game_of_Life\1-Game_of_Life\bin\Debug\net7.0\1-Game_of_Life.exe
+D:\Coding_Files_Github\CS-CODERSBAY\3-Methods\1-Game_of_Life\1-Game_of_Life\bin\Debug\net7.0\1-Game_of_Life.deps.json
+D:\Coding_Files_Github\CS-CODERSBAY\3-Methods\1-Game_of_Life\1-Game_of_Life\bin\Debug\net7.0\1-Game_of_Life.runtimeconfig.json
+D:\Coding_Files_Github\CS-CODERSBAY\3-Methods\1-Game_of_Life\1-Game_of_Life\bin\Debug\net7.0\1-Game_of_Life.dll
+D:\Coding_Files_Github\CS-CODERSBAY\3-Methods\1-Game_of_Life\1-Game_of_Life\bin\Debug\net7.0\1-Game_of_Life.pdb
+D:\Coding_Files_Github\CS-CODERSBAY\3-Methods\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\1-Game_of_Life.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding_Files_Github\CS-CODERSBAY\3-Methods\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\1-Game_of_Life.AssemblyInfoInputs.cache
+D:\Coding_Files_Github\CS-CODERSBAY\3-Methods\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\1-Game_of_Life.AssemblyInfo.cs
+D:\Coding_Files_Github\CS-CODERSBAY\3-Methods\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\1-Game_of_Life.csproj.CoreCompileInputs.cache
+D:\Coding_Files_Github\CS-CODERSBAY\3-Methods\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\1-Game_of_Life.dll
+D:\Coding_Files_Github\CS-CODERSBAY\3-Methods\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\refint\1-Game_of_Life.dll
+D:\Coding_Files_Github\CS-CODERSBAY\3-Methods\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\1-Game_of_Life.pdb
+D:\Coding_Files_Github\CS-CODERSBAY\3-Methods\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\1-Game_of_Life.genruntimeconfig.cache
+D:\Coding_Files_Github\CS-CODERSBAY\3-Methods\1-Game_of_Life\1-Game_of_Life\obj\Debug\net7.0\ref\1-Game_of_Life.dll

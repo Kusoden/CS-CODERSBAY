@@ -58,6 +58,7 @@ void AddWordPair()
 void RemoveWordPair()
 {
     Console.WriteLine("Do you want to delete the word by giving the German word or English word?");
+    Console.WriteLine("english for English, german for German");
     string choiceOfPath = Console.ReadLine().ToLower();
 
     if (choiceOfPath == "english")

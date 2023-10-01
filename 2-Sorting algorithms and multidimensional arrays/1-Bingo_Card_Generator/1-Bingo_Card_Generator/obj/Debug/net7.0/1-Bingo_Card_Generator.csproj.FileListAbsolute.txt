@@ -12,3 +12,17 @@ C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensiona
 C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\1-Bingo_Card_Generator\1-Bingo_Card_Generator\obj\Debug\net7.0\1-Bingo_Card_Generator.pdb
 C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\1-Bingo_Card_Generator\1-Bingo_Card_Generator\obj\Debug\net7.0\1-Bingo_Card_Generator.genruntimeconfig.cache
 C:\Users\Codersbay\Downloads\CS-CODERSBAY\Sorting algorithms and multidimensional arrays\1-Bingo_Card_Generator\1-Bingo_Card_Generator\obj\Debug\net7.0\ref\1-Bingo_Card_Generator.dll
+D:\Coding_Files_Github\CS-CODERSBAY\2-Sorting algorithms and multidimensional arrays\1-Bingo_Card_Generator\1-Bingo_Card_Generator\bin\Debug\net7.0\1-Bingo_Card_Generator.exe
+D:\Coding_Files_Github\CS-CODERSBAY\2-Sorting algorithms and multidimensional arrays\1-Bingo_Card_Generator\1-Bingo_Card_Generator\bin\Debug\net7.0\1-Bingo_Card_Generator.deps.json
+D:\Coding_Files_Github\CS-CODERSBAY\2-Sorting algorithms and multidimensional arrays\1-Bingo_Card_Generator\1-Bingo_Card_Generator\bin\Debug\net7.0\1-Bingo_Card_Generator.runtimeconfig.json
+D:\Coding_Files_Github\CS-CODERSBAY\2-Sorting algorithms and multidimensional arrays\1-Bingo_Card_Generator\1-Bingo_Card_Generator\bin\Debug\net7.0\1-Bingo_Card_Generator.dll
+D:\Coding_Files_Github\CS-CODERSBAY\2-Sorting algorithms and multidimensional arrays\1-Bingo_Card_Generator\1-Bingo_Card_Generator\bin\Debug\net7.0\1-Bingo_Card_Generator.pdb
+D:\Coding_Files_Github\CS-CODERSBAY\2-Sorting algorithms and multidimensional arrays\1-Bingo_Card_Generator\1-Bingo_Card_Generator\obj\Debug\net7.0\1-Bingo_Card_Generator.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding_Files_Github\CS-CODERSBAY\2-Sorting algorithms and multidimensional arrays\1-Bingo_Card_Generator\1-Bingo_Card_Generator\obj\Debug\net7.0\1-Bingo_Card_Generator.AssemblyInfoInputs.cache
+D:\Coding_Files_Github\CS-CODERSBAY\2-Sorting algorithms and multidimensional arrays\1-Bingo_Card_Generator\1-Bingo_Card_Generator\obj\Debug\net7.0\1-Bingo_Card_Generator.AssemblyInfo.cs
+D:\Coding_Files_Github\CS-CODERSBAY\2-Sorting algorithms and multidimensional arrays\1-Bingo_Card_Generator\1-Bingo_Card_Generator\obj\Debug\net7.0\1-Bingo_Card_Generator.csproj.CoreCompileInputs.cache
+D:\Coding_Files_Github\CS-CODERSBAY\2-Sorting algorithms and multidimensional arrays\1-Bingo_Card_Generator\1-Bingo_Card_Generator\obj\Debug\net7.0\1-Bingo_Card_Generator.dll
+D:\Coding_Files_Github\CS-CODERSBAY\2-Sorting algorithms and multidimensional arrays\1-Bingo_Card_Generator\1-Bingo_Card_Generator\obj\Debug\net7.0\refint\1-Bingo_Card_Generator.dll
+D:\Coding_Files_Github\CS-CODERSBAY\2-Sorting algorithms and multidimensional arrays\1-Bingo_Card_Generator\1-Bingo_Card_Generator\obj\Debug\net7.0\1-Bingo_Card_Generator.pdb
+D:\Coding_Files_Github\CS-CODERSBAY\2-Sorting algorithms and multidimensional arrays\1-Bingo_Card_Generator\1-Bingo_Card_Generator\obj\Debug\net7.0\1-Bingo_Card_Generator.genruntimeconfig.cache
+D:\Coding_Files_Github\CS-CODERSBAY\2-Sorting algorithms and multidimensional arrays\1-Bingo_Card_Generator\1-Bingo_Card_Generator\obj\Debug\net7.0\ref\1-Bingo_Card_Generator.dll
