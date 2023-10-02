@@ -1,0 +1,14 @@
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\obj\Debug\net7.0\2-Linked_List.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\obj\Debug\net7.0\2-Linked_List.AssemblyInfoInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\obj\Debug\net7.0\2-Linked_List.AssemblyInfo.cs
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\obj\Debug\net7.0\2-Linked_List.csproj.CoreCompileInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\bin\Debug\net7.0\2-Linked_List.exe
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\bin\Debug\net7.0\2-Linked_List.deps.json
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\bin\Debug\net7.0\2-Linked_List.runtimeconfig.json
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\bin\Debug\net7.0\2-Linked_List.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\bin\Debug\net7.0\2-Linked_List.pdb
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\obj\Debug\net7.0\2-Linked_List.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\obj\Debug\net7.0\refint\2-Linked_List.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\obj\Debug\net7.0\2-Linked_List.pdb
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\obj\Debug\net7.0\2-Linked_List.genruntimeconfig.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\obj\Debug\net7.0\ref\2-Linked_List.dll
