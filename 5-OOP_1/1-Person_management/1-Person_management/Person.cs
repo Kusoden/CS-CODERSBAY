@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PersonManager
+namespace _1_Person_management
 {
     public class Person
     {
@@ -13,14 +13,12 @@ namespace PersonManager
         public enum Gender
         {
             Male,
-            Female
+            Female,
+            Unknown
         }
 
-        public Person(string name, string lastName)
-        {
-            Name = name;
-            LastName = lastName;
-        }
+        public Person(string name, string lastName) : this(name, lastName, "N/A", null, Gender.Unknown)/*recommendation by Coach Alex, this way it will be automatically updated after the source gets updated.*/
+        { }
 
         public Person(string name, string lastName, string birthday, Address address, Gender gender)
         {
@@ -31,15 +29,8 @@ namespace PersonManager
             PersonGender = gender;
         }
 
-        public Person(string name, string lastName, Gender gender, string birthday)
-        {
-            Name = name;
-            LastName = lastName;
-            Birthday = birthday;
-            PersonGender = gender;
-        }
-
-
+        public Person(string name, string lastName, Gender gender, string birthday) : this(name,lastName, birthday, null, gender) 
+        { }
     }
 
 }

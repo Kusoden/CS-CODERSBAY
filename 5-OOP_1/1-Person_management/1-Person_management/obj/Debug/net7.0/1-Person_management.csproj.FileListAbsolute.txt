@@ -12,3 +12,17 @@ D:\Coding_Files_Github\CS-CODERSBAY\5-OOP_1\1-Person_management\1-Person_managem
 D:\Coding_Files_Github\CS-CODERSBAY\5-OOP_1\1-Person_management\1-Person_management\obj\Debug\net7.0\1-Person_management.pdb
 D:\Coding_Files_Github\CS-CODERSBAY\5-OOP_1\1-Person_management\1-Person_management\obj\Debug\net7.0\1-Person_management.genruntimeconfig.cache
 D:\Coding_Files_Github\CS-CODERSBAY\5-OOP_1\1-Person_management\1-Person_management\obj\Debug\net7.0\ref\1-Person_management.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\1-Person_management\1-Person_management\bin\Debug\net7.0\1-Person_management.exe
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\1-Person_management\1-Person_management\bin\Debug\net7.0\1-Person_management.deps.json
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\1-Person_management\1-Person_management\bin\Debug\net7.0\1-Person_management.runtimeconfig.json
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\1-Person_management\1-Person_management\bin\Debug\net7.0\1-Person_management.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\1-Person_management\1-Person_management\bin\Debug\net7.0\1-Person_management.pdb
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\1-Person_management\1-Person_management\obj\Debug\net7.0\1-Person_management.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\1-Person_management\1-Person_management\obj\Debug\net7.0\1-Person_management.AssemblyInfoInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\1-Person_management\1-Person_management\obj\Debug\net7.0\1-Person_management.AssemblyInfo.cs
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\1-Person_management\1-Person_management\obj\Debug\net7.0\1-Person_management.csproj.CoreCompileInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\1-Person_management\1-Person_management\obj\Debug\net7.0\1-Person_management.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\1-Person_management\1-Person_management\obj\Debug\net7.0\refint\1-Person_management.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\1-Person_management\1-Person_management\obj\Debug\net7.0\1-Person_management.pdb
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\1-Person_management\1-Person_management\obj\Debug\net7.0\1-Person_management.genruntimeconfig.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\1-Person_management\1-Person_management\obj\Debug\net7.0\ref\1-Person_management.dll

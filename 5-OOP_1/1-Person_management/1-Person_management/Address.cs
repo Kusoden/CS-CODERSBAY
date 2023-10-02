@@ -1,4 +1,4 @@
-﻿namespace PersonManager
+﻿namespace _1_Person_management
 {
     public class Address
     {
