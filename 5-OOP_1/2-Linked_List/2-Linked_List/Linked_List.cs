@@ -1,7 +1,8 @@
-﻿using _2_Linked_List;
+﻿
 using System;
 using System.Text;
 
+namespace _2_Linked_List;
 public class LinkedList<T>
 {
     private Node<T> head;
@@ -15,7 +16,7 @@ public class LinkedList<T>
 
     public bool Add(T value)
     {
-        Node<T> newNode = new Node<T>(value);
+        Node<T> newNode = new(value);
 
         if (head == null)
             head = newNode;
@@ -32,10 +33,7 @@ public class LinkedList<T>
 
     public void Add(int index, T value)
     {
-        if (index < 0 || index > size)
-            throw new IndexOutOfRangeException("Index is out of range.");
-
-        Node<T> newNode = new Node<T>(value);
+        Node<T> newNode = new(value);
 
         if (index == 0)
         {
@@ -44,7 +42,7 @@ public class LinkedList<T>
         }
         else
         {
-            Node<T> previous = null;
+            Node<T>? previous = null;
             Node<T> current = head;
             int currentIndex = 0;
 
@@ -82,9 +80,6 @@ public class LinkedList<T>
 
     public T Remove(int index)
     {
-        if (index < 0 || index >= size)
-            throw new IndexOutOfRangeException("Index is out of range.");
-
         if (index == 0)
         {
             T removedValue = head.Value;
@@ -94,18 +89,15 @@ public class LinkedList<T>
         }
         else
         {
-            Node<T> previous = null;
             Node<T> current = head;
             int currentIndex = 0;
 
             while (currentIndex < index)
             {
-                previous = current;
                 current = current.Next;
                 currentIndex++;
             }
 
-            previous.Next = current.Next;
             size--;
             return current.Value;
         }
@@ -114,7 +106,7 @@ public class LinkedList<T>
     public override string ToString()
     {
         if (size == 0)
-            return "empty";
+            return "none, it's empty";
 
         Node<T> current = head;
         StringBuilder result = new();

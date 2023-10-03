@@ -57,69 +57,9 @@ String  toStringReverse() # Output the elements expected from toString in revers
 Wie auch bei der einfach verketteten Liste kannst du gerne Generics verwenden.
 
 
-
+                                        //<<<<<<exercise 2 and 3 are in the same file{2-Linked_List};>>>>>>\\
 
 
 Tag 2
 Aufgabe: Personenverwaltung
 Erweitere deine Personenverwaltung um Access Modifier und Datenkapselung https://wiki.streampy.at/index.php?title=Java_-_OOP_1#Personenverwaltung
-
-
-
-
-using System;
-using System.Collections.Generic;
-
-namespace _1_Person_management
-{
-    public class PersonManager
-    {
-        private readonly List<Person> personList;
-
-        public PersonManager()
-        {
-            personList = new List<Person>();
-        }
-
-        public void AddPerson(Person person)
-        {
-            personList.Add(person);
-        }
-
-        public void DisplayAllPersons()
-        {
-            foreach (Person person in personList)
-            {
-                Console.WriteLine($"{person.Name} {person.LastName} {person.Birthday} {person.Address} {person.PersonGender}");
-            }
-        }
-
-        public void CreatePerson(string name, string lastName)
-        {
-            Person person = new(name, lastName);
-            personList.Add(person);
-        }
-
-        public void CreatePerson(string name, string lastName, string birthday, Address address, Person.Gender gender)
-        {
-            Person person = new(name, lastName, birthday, address, gender);
-            personList.Add(person);
-        }
-
-        public void CreatePerson(string name, string lastName, Person.Gender gender, string birthday)
-        {
-            Person person = new(name, lastName, gender, birthday);
-            personList.Add(person);
-        }
-
-        public void RemovePerson(string name)
-        {
-            for (int i = personList.Count - 1; i >= 0; i--)
-            {
-                Person p = personList[i];
-                if (p.Name.Equals(name))
-                    personList.RemoveAt(i);
-            }
-        }
-    }
-}
