@@ -14,14 +14,14 @@ class Program
         numberList.Add(2);
         numberList.Add(3);
         numberList.Add(4);
-        int removableIndex = 0;
+        int removableIndex = 1;
         Console.WriteLine("Elements inside Linked List: " + numberList.ToString());/* Display the list*/
        
         Console.WriteLine("\nSize of the Linked List: " + numberList.Size());/* Get the size of the list*/
        
         Console.WriteLine("\nElements inside Empty List: " + emptyList.ToString());
        
-        int element = numberList.Get(1);
+        int element = numberList.GetValue(1);
         Console.WriteLine("\nElement at index 1: " + element);
        
         int removedElement = numberList.Remove(removableIndex);/* Remove an element at a specific index*/
@@ -38,27 +38,39 @@ class Program
         Console.WriteLine("DoublyLinkedList");
 
         Doubly_Linked_List<int> numberList2 = new();
+        
+        /*
+        if(numberList.Remove(4) != null) { numberList.Remove(4); }
 
-        numberList2.Doubly_Add(1);
-        numberList2.Doubly_Add(2);
-        numberList2.Doubly_Add(3);
-        numberList2.Doubly_Add(4);
-        Console.WriteLine("Elements inside Linked List: " + numberList2.Doubly_ToString());/* Display the list*/
+        try {
+            numberList.Remove(4);
+        } catch     (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
+        */
+
+        numberList2.Add(1);
+        numberList2.Add(2);
+        numberList2.Add(3);
+        numberList2.Add(4);
+        numberList2.Add(5);
+        Console.WriteLine("\nElements inside Linked List: " + numberList2.ToString());/* Display the list*/
        
-        Console.WriteLine("\nSize of the Linked List: " + numberList2.Doubly_Size());/* Get the size of the list*/
+        Console.WriteLine("\nSize of the Linked List: " + numberList2.Size());/* Get the size of the list*/
 
-        int element2 = numberList2.Doubly_Get(1);
+        int element2 = numberList2.Get(3).Value;
         Console.WriteLine("\nElement at index 1: " + element2);
        
-        int removedElement2 = numberList2.Doubly_Remove(removableIndex);/* Remove an element at a specific index*/
+        int removedElement2 = numberList2.Remove(removableIndex);/* Remove an element at a specific index*/
         Console.WriteLine("\n----Removed element at index " + removableIndex + ": " + removedElement2);
        
-        Console.WriteLine("\n+Updated Linked List: " + numberList2.Doubly_ToString());/*Display the updated list*/
-        Console.WriteLine("\n LinkedReversed List: " + numberList2.Doubly_ToStringReverse());
-        numberList2.Doubly_Add(1, 77);        /*Add elements at specific index*/
-        numberList2.Doubly_Add(3, 999);
+        Console.WriteLine("\n+Updated Linked List: " + numberList2.ToString());/*Display the updated list*/
+        Console.WriteLine("\n LinkedReversed List: " + numberList2.ToStringReverse());           
+        numberList2.Add(2, 55);        /*Add elements at specific index*/
+        numberList2.Add(3, 999);
        
-        Console.WriteLine("\nLinked List after adding elements at specific indices: " + numberList2.Doubly_ToString());
+        Console.WriteLine("\nLinked List after adding elements at specific indices: " + numberList2.ToString());
 
     }
 }

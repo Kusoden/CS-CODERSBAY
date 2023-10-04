@@ -16,7 +16,7 @@ public class Doubly_Linked_List<T>
         size = 0;
     }
 
-    public bool Doubly_Add(T value)
+    public bool Add(T value)
     {
         DoublyNode<T>? newNode = new(value);
 
@@ -28,34 +28,61 @@ public class Doubly_Linked_List<T>
         else
         {
             newNode.Previous = tail;
+            if (tail == null)
+            {
+                throw new ArgumentNullException(nameof(value)); //TODO
+            }
+            else 
+            { 
             tail.Next = newNode;
             tail = newNode;
+            }
         }
 
         size++;
         return true;
     }
 
-    public void Doubly_Add(int index, T value)
+    public void Add(int index, T value)
     {
+        if (index < 0 || index > size)
+        {
+            throw new ArgumentOutOfRangeException(nameof(index), "Index is out of range.");
+        }
+
         DoublyNode<T>? newNode = new(value);
 
         if (index == 0)
         {
+            if (head == null)
+            {
+                throw new InvalidOperationException("Head is null.");
+            }
+
             newNode.Next = head;
             head.Previous = newNode;
             head = newNode;
         }
         else if (index == size)
         {
+            if (tail == null)
+            {
+                throw new InvalidOperationException("Tail is null.");
+            }
+
             newNode.Previous = tail;
             tail.Next = newNode;
             tail = newNode;
         }
         else
         {
-            DoublyNode<T>? current = Doubly_Get(index);
-            DoublyNode<T>? previous = current.Previous;
+            DoublyNode<T>? current = Get(index);
+            DoublyNode<T>? previous = current?.Previous;
+
+            if (previous == null || current == null)
+            {
+                throw new InvalidOperationException("Previous or current node is null.");
+            }
 
             previous.Next = newNode;
             newNode.Previous = previous;
@@ -66,14 +93,14 @@ public class Doubly_Linked_List<T>
         size++;
     }
 
-    public int Doubly_Size()
+    public int Size()
     {
         return size;
     }
 
-    public T Doubly_Remove(int index)
+    public T Remove(int index)
     {
-        DoublyNode<T> nodeToRemove = Doubly_Get(index);
+        DoublyNode<T> nodeToRemove = Get(index);
 
         if (nodeToRemove.Previous != null)
             nodeToRemove.Previous.Next = nodeToRemove.Next;
@@ -89,16 +116,36 @@ public class Doubly_Linked_List<T>
         return nodeToRemove.Value;
     }
 
-    public DoublyNode<T> Doubly_Get(int index)
-    {
-        DoublyNode<T>? current = head;
-        for (int i = 0; i < index; i++)
-            current = current.Next;
 
-        return current;
+    public DoublyNode<T> Get(int index)
+    {
+        if (index < 0 || index >= size)
+        {
+            throw new ArgumentOutOfRangeException(nameof(index), "Index is out of range.");
+        }
+        if (index < size / 2) /*Start from the front*/
+        {
+            DoublyNode<T>? current = head;
+            for (int i = 0; i < index; i++)
+                current = current?.Next;
+
+            if (current == null)
+                throw new InvalidOperationException("Node is null.");
+            return current;
+        }
+        else/*Start from the back*/
+        {
+            DoublyNode<T>? current = tail;
+            for (int i = size - 1; i > index; i--)
+                current = current?.Previous;
+
+            if (current == null)
+                throw new InvalidOperationException("Node is null.");
+            return current;
+        }
     }
 
-    public string Doubly_ToString()
+    public override string ToString()
     {
         if (size == 0)
             return "none, it's empty";
@@ -115,7 +162,7 @@ public class Doubly_Linked_List<T>
         return result.ToString();
     }
 
-    public string Doubly_ToStringReverse()
+    public string ToStringReverse()
     {
         if (size == 0)
             return "none, it's empty";
