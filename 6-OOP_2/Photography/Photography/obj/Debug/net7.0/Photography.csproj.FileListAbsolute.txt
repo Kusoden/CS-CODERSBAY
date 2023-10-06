@@ -1,0 +1,14 @@
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\6-OOP_2\Photography\Photography\bin\Debug\net7.0\Photography.exe
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\6-OOP_2\Photography\Photography\bin\Debug\net7.0\Photography.deps.json
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\6-OOP_2\Photography\Photography\bin\Debug\net7.0\Photography.runtimeconfig.json
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\6-OOP_2\Photography\Photography\bin\Debug\net7.0\Photography.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\6-OOP_2\Photography\Photography\bin\Debug\net7.0\Photography.pdb
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\6-OOP_2\Photography\Photography\obj\Debug\net7.0\Photography.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\6-OOP_2\Photography\Photography\obj\Debug\net7.0\Photography.AssemblyInfoInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\6-OOP_2\Photography\Photography\obj\Debug\net7.0\Photography.AssemblyInfo.cs
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\6-OOP_2\Photography\Photography\obj\Debug\net7.0\Photography.csproj.CoreCompileInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\6-OOP_2\Photography\Photography\obj\Debug\net7.0\Photography.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\6-OOP_2\Photography\Photography\obj\Debug\net7.0\refint\Photography.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\6-OOP_2\Photography\Photography\obj\Debug\net7.0\Photography.pdb
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\6-OOP_2\Photography\Photography\obj\Debug\net7.0\Photography.genruntimeconfig.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\6-OOP_2\Photography\Photography\obj\Debug\net7.0\ref\Photography.dll
