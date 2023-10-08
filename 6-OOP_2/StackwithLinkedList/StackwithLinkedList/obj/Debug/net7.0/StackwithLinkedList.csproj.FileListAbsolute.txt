@@ -12,3 +12,17 @@ C:\Users\Codersbay\Downloads\CS-CODERSBAY\6-OOP_2\StackwithLinkedList\StackwithL
 C:\Users\Codersbay\Downloads\CS-CODERSBAY\6-OOP_2\StackwithLinkedList\StackwithLinkedList\obj\Debug\net7.0\StackwithLinkedList.pdb
 C:\Users\Codersbay\Downloads\CS-CODERSBAY\6-OOP_2\StackwithLinkedList\StackwithLinkedList\obj\Debug\net7.0\StackwithLinkedList.genruntimeconfig.cache
 C:\Users\Codersbay\Downloads\CS-CODERSBAY\6-OOP_2\StackwithLinkedList\StackwithLinkedList\obj\Debug\net7.0\ref\StackwithLinkedList.dll
+D:\Coding_Files_Github\CS-CODERSBAY\6-OOP_2\StackwithLinkedList\StackwithLinkedList\bin\Debug\net7.0\StackwithLinkedList.exe
+D:\Coding_Files_Github\CS-CODERSBAY\6-OOP_2\StackwithLinkedList\StackwithLinkedList\bin\Debug\net7.0\StackwithLinkedList.deps.json
+D:\Coding_Files_Github\CS-CODERSBAY\6-OOP_2\StackwithLinkedList\StackwithLinkedList\bin\Debug\net7.0\StackwithLinkedList.runtimeconfig.json
+D:\Coding_Files_Github\CS-CODERSBAY\6-OOP_2\StackwithLinkedList\StackwithLinkedList\bin\Debug\net7.0\StackwithLinkedList.dll
+D:\Coding_Files_Github\CS-CODERSBAY\6-OOP_2\StackwithLinkedList\StackwithLinkedList\bin\Debug\net7.0\StackwithLinkedList.pdb
+D:\Coding_Files_Github\CS-CODERSBAY\6-OOP_2\StackwithLinkedList\StackwithLinkedList\obj\Debug\net7.0\StackwithLinkedList.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding_Files_Github\CS-CODERSBAY\6-OOP_2\StackwithLinkedList\StackwithLinkedList\obj\Debug\net7.0\StackwithLinkedList.AssemblyInfoInputs.cache
+D:\Coding_Files_Github\CS-CODERSBAY\6-OOP_2\StackwithLinkedList\StackwithLinkedList\obj\Debug\net7.0\StackwithLinkedList.AssemblyInfo.cs
+D:\Coding_Files_Github\CS-CODERSBAY\6-OOP_2\StackwithLinkedList\StackwithLinkedList\obj\Debug\net7.0\StackwithLinkedList.csproj.CoreCompileInputs.cache
+D:\Coding_Files_Github\CS-CODERSBAY\6-OOP_2\StackwithLinkedList\StackwithLinkedList\obj\Debug\net7.0\StackwithLinkedList.dll
+D:\Coding_Files_Github\CS-CODERSBAY\6-OOP_2\StackwithLinkedList\StackwithLinkedList\obj\Debug\net7.0\refint\StackwithLinkedList.dll
+D:\Coding_Files_Github\CS-CODERSBAY\6-OOP_2\StackwithLinkedList\StackwithLinkedList\obj\Debug\net7.0\StackwithLinkedList.pdb
+D:\Coding_Files_Github\CS-CODERSBAY\6-OOP_2\StackwithLinkedList\StackwithLinkedList\obj\Debug\net7.0\StackwithLinkedList.genruntimeconfig.cache
+D:\Coding_Files_Github\CS-CODERSBAY\6-OOP_2\StackwithLinkedList\StackwithLinkedList\obj\Debug\net7.0\ref\StackwithLinkedList.dll

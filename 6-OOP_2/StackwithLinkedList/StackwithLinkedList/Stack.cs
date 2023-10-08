@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace StackwithLinkedList;
 
-internal class Stack
+public class Stack
 {
     int size;
-    private class Game
+    public class Game
     {
         public string? data;
         public Game? link;
@@ -30,6 +30,7 @@ internal class Stack
         size++;
     }
 
+
     public int Size()
     {
         return size;
@@ -41,11 +42,11 @@ internal class Stack
             throw new NullReferenceException("it's Empty");
         else
         {
+            string poppedData = top.data; // Save the data of the top to return it
             top = top.link;
             size--;
-            return top.data;
+            return poppedData;
         }
-
 
     }
 
@@ -59,9 +60,9 @@ internal class Stack
                 throw new NullReferenceException("no data found");
             else
                 return top.data;
-        }
-
     }
+
+}
 
     public void Display()
     {

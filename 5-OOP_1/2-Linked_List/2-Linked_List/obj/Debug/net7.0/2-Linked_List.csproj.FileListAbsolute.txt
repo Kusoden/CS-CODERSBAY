@@ -12,3 +12,17 @@ C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\ob
 C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\obj\Debug\net7.0\2-Linked_List.pdb
 C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\obj\Debug\net7.0\2-Linked_List.genruntimeconfig.cache
 C:\Users\Codersbay\Downloads\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\obj\Debug\net7.0\ref\2-Linked_List.dll
+D:\Coding_Files_Github\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\bin\Debug\net7.0\2-Linked_List.exe
+D:\Coding_Files_Github\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\bin\Debug\net7.0\2-Linked_List.deps.json
+D:\Coding_Files_Github\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\bin\Debug\net7.0\2-Linked_List.runtimeconfig.json
+D:\Coding_Files_Github\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\bin\Debug\net7.0\2-Linked_List.dll
+D:\Coding_Files_Github\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\bin\Debug\net7.0\2-Linked_List.pdb
+D:\Coding_Files_Github\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\obj\Debug\net7.0\2-Linked_List.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding_Files_Github\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\obj\Debug\net7.0\2-Linked_List.AssemblyInfoInputs.cache
+D:\Coding_Files_Github\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\obj\Debug\net7.0\2-Linked_List.AssemblyInfo.cs
+D:\Coding_Files_Github\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\obj\Debug\net7.0\2-Linked_List.csproj.CoreCompileInputs.cache
+D:\Coding_Files_Github\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\obj\Debug\net7.0\2-Linked_List.dll
+D:\Coding_Files_Github\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\obj\Debug\net7.0\refint\2-Linked_List.dll
+D:\Coding_Files_Github\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\obj\Debug\net7.0\2-Linked_List.pdb
+D:\Coding_Files_Github\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\obj\Debug\net7.0\2-Linked_List.genruntimeconfig.cache
+D:\Coding_Files_Github\CS-CODERSBAY\5-OOP_1\2-Linked_List\2-Linked_List\obj\Debug\net7.0\ref\2-Linked_List.dll

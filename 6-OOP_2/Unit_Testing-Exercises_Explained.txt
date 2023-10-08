@@ -1,0 +1,12 @@
+Tag 1
+JUnit           // HAVENT DONE THAT SINCE IT IS FOR JAVA, instead looked for other sources.
+Aufgabe: Potenzberechnung TDD
+Klone das Projekt von Github: [1] Wie das geht findest du hier: [2]
+
+Alle weiteren Informationen findest du im Projekt in der Klasse SquareTest.
+
+Kompetenzcheck
+Aufgabe: Unit Tests Stack und Queue
+In der letzten Kompetenz hast du mit deiner eigenen Liste einen Stack und eine Queue implementieret.
+
+Schreibe nun Tests für diese beiden Klassen. Achte dabei darauf, dass alle Methoden getestet werden, auch Randfälle und Exceptions solltest du berücksichtigen.

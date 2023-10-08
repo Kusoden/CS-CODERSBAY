@@ -5,39 +5,39 @@ class Program
 
     static void Main()
     {
-        Stack obj = new();
+        Stack library = new();
 
-        obj.Push("Destiny");
-        obj.Push("Warcraft 3");
-        obj.Push("League of Legends");
-        obj.Push("Forza Horizon");
-        obj.Push("Final Fantasy XV");
-        obj.Push("Assassin's Creed");
-        obj.Push("Baldur's Gate");
-        obj.Push("Victoria 3");
+        library.Push("Destiny");
+        library.Push("Warcraft 3");
+        library.Push("League of Legends");
+        library.Push("Forza Horizon");
+        library.Push("Final Fantasy XV");
+        library.Push("Assassin's Creed");
+        library.Push("Baldur's Gate");
+        library.Push("Victoria 3");
 
         Console.WriteLine("size of the Library");
 
-        Console.WriteLine(obj.Size()+"\n");
+        Console.WriteLine(library.Size()+"\n");
         
 
-        obj.Display();
+        library.Display();
 
-        Console.WriteLine("\nGame at the top: {0}\n", obj.Peek());
+        Console.WriteLine("\nGame at the top: {0}\n", library.Peek());
 
-        obj.Pop();
-        obj.Pop();
+        library.Pop();
+        library.Pop();
 
         Console.WriteLine("\nafter 2 popings Library:");
-        obj.Display();
+        library.Display();
 
-        Console.WriteLine("\nGame at the top: {0}\n", obj.Peek());
+        Console.WriteLine("\nGame at the top: {0}\n", library.Peek());
 
         Console.WriteLine("size of the Library");
 
-        Console.WriteLine(obj.Size() + "\n");
+        Console.WriteLine(library.Size() + "\n");
 
-        string[] poppedGames = obj.Pop(2);
+        string[] poppedGames = library.Pop(2);
         Console.WriteLine("PoppedGames: ");
 
         foreach(var game in poppedGames) Console.WriteLine(game);
