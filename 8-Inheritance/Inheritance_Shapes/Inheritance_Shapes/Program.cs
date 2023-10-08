@@ -5,7 +5,7 @@ class Program
     static void Main()
     {
         Shape circle = new Circle("Green", true, 5.0);
-        Shape rectangle = new Rectangle("White", false, 0, 0);
+        Shape rectangle = new Rectangle("White", false, 4, 6);
         Shape square = new Square("Red", true, 11.0);
 
         Console.WriteLine($"Circle Area: {circle.GetArea()}, Perimeter: {circle.GetPerimeter()}\nit's {circle.Color} colored\nis it filled? Answer: {circle.IsFilled}\n");

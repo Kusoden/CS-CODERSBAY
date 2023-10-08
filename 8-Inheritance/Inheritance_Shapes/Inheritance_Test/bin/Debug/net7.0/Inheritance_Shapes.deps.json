@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Inheritance_Shapes/1.0.0": {
+        "runtime": {
+          "Inheritance_Shapes.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Inheritance_Shapes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
