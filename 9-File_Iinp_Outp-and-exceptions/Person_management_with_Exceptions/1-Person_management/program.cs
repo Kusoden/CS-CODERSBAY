@@ -1,6 +1,4 @@
-﻿using System;
-using System.Threading;
-using System.Linq; // Add this for name validation
+﻿using _1_Person_management;
 using static _1_Person_management.PersonManager;
 
 namespace _1_Person_management
@@ -21,8 +19,7 @@ namespace _1_Person_management
             catch (InvalidPersonNameException ex)
             {
                 Console.WriteLine($"Error: {ex.Message}");
-                Console.WriteLine("Please enter a valid name.");
-                /*put the code  to take user input for the name.*/
+                Console.WriteLine("Please enter a valid name. (without any numbers)");
             }
 
             Console.WriteLine("+__+__+__+__+__+__+__+__+__+__+\n me in CODERSBAY PV");
@@ -40,6 +37,30 @@ namespace _1_Person_management
             Console.WriteLine("removed Alex + created with only F/Lname:");
             magi.RemovePerson("Alex");
             magi.CreatePerson("Beni", "Bjerni");
+
+            // 
+
+            bool found;
+
+            do
+            {
+                Console.WriteLine("Enter a name to search for a person:");
+
+                string searchName = Console.ReadLine();
+                try
+                {
+                    Person foundPerson = magi.FindPersonByName(searchName);
+                    Console.WriteLine("Found person: " + foundPerson.Name +"last Name: "+ foundPerson.LastName);
+                    found = false;
+                }
+                catch (NullReferenceException ex)
+                {
+                    Console.WriteLine($"Error: {ex.Message}");
+                    Console.WriteLine("Person not found.");
+                    found = true;
+                }
+            } while (found == true);
+
             PersonManager linz = new();
             Thread.Sleep(1000);
 
@@ -49,5 +70,8 @@ namespace _1_Person_management
 
             linz.DisplayAllPersons();
         }
+
     }
 }
+
+
