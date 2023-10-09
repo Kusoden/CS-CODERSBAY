@@ -1,0 +1,14 @@
+D:\Coding_Files_Github\CS-CODERSBAY\9-File_Iinp_Outp-and-exceptions\File_input-output\File_input-output\obj\Debug\net7.0\File_input-output.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding_Files_Github\CS-CODERSBAY\9-File_Iinp_Outp-and-exceptions\File_input-output\File_input-output\obj\Debug\net7.0\File_input-output.AssemblyInfoInputs.cache
+D:\Coding_Files_Github\CS-CODERSBAY\9-File_Iinp_Outp-and-exceptions\File_input-output\File_input-output\obj\Debug\net7.0\File_input-output.AssemblyInfo.cs
+D:\Coding_Files_Github\CS-CODERSBAY\9-File_Iinp_Outp-and-exceptions\File_input-output\File_input-output\obj\Debug\net7.0\File_input-output.csproj.CoreCompileInputs.cache
+D:\Coding_Files_Github\CS-CODERSBAY\9-File_Iinp_Outp-and-exceptions\File_input-output\File_input-output\bin\Debug\net7.0\File_input-output.exe
+D:\Coding_Files_Github\CS-CODERSBAY\9-File_Iinp_Outp-and-exceptions\File_input-output\File_input-output\bin\Debug\net7.0\File_input-output.deps.json
+D:\Coding_Files_Github\CS-CODERSBAY\9-File_Iinp_Outp-and-exceptions\File_input-output\File_input-output\bin\Debug\net7.0\File_input-output.runtimeconfig.json
+D:\Coding_Files_Github\CS-CODERSBAY\9-File_Iinp_Outp-and-exceptions\File_input-output\File_input-output\bin\Debug\net7.0\File_input-output.dll
+D:\Coding_Files_Github\CS-CODERSBAY\9-File_Iinp_Outp-and-exceptions\File_input-output\File_input-output\bin\Debug\net7.0\File_input-output.pdb
+D:\Coding_Files_Github\CS-CODERSBAY\9-File_Iinp_Outp-and-exceptions\File_input-output\File_input-output\obj\Debug\net7.0\File_input-output.dll
+D:\Coding_Files_Github\CS-CODERSBAY\9-File_Iinp_Outp-and-exceptions\File_input-output\File_input-output\obj\Debug\net7.0\refint\File_input-output.dll
+D:\Coding_Files_Github\CS-CODERSBAY\9-File_Iinp_Outp-and-exceptions\File_input-output\File_input-output\obj\Debug\net7.0\File_input-output.pdb
+D:\Coding_Files_Github\CS-CODERSBAY\9-File_Iinp_Outp-and-exceptions\File_input-output\File_input-output\obj\Debug\net7.0\File_input-output.genruntimeconfig.cache
+D:\Coding_Files_Github\CS-CODERSBAY\9-File_Iinp_Outp-and-exceptions\File_input-output\File_input-output\obj\Debug\net7.0\ref\File_input-output.dll

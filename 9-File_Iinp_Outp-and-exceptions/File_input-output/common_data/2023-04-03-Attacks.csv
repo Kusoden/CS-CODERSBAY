@@ -1,0 +1,218 @@
+﻿#;Name;Effect;Type;Kind;Power;Accuracy;PP
+1;Pound;Deals damage with no additional effect.;Normal;Physical;40;100%;35
+2;Karate Chop;Has a high critical hit ratio.;Fighting;Physical;50;100%;25
+3;DoubleSlap;Attacks 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Normal;Physical;15;85%;10
+4;Comet Punch;Attacks 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Normal;Physical;18;85%;15
+5;Mega Punch;Deals damage with no additional effect.;Normal;Physical;80;85%;20
+6;Pay Day;The player picks up extra money after in-game battles. the money received is equal to: [user's level * 5 * number of times Pay Day is used]. The player does not lose money if the opponent uses Pay Day but the player wins the battle.;Normal;Physical;40;100%;20
+7;Fire Punch;Has a 10% chance to burn the target.;Fire;Physical;75;100%;15
+8;Ice Punch;Has a 10% chance to freeze the target.;Ice;Physical;75;100%;15
+9;ThunderPunch;Has a 10% chance to paralyze the target.;Electric;Physical;75;100%;15
+10;Scratch;Deals damage with no additional effect.;Normal;Physical;40;100%;35
+11;ViceGrip;Deals damage with no additional effect.;Normal;Physical;55;100%;30
+12;Guillotine;The target faints. doesn't work on higher-leveled Pokemon.;Normal;Physical;0;30%;5
+13;Razor Wind;The user prepares on turn one becoming uncontrollable and then attacks on turn two. Has a high critical hit ratio.;Normal;Special;80;100%;10
+14;Cut;Deals damage with no additional effect.;Normal;Physical;50;95%;30
+15;Gust;Power doubles if the target is in mid-air via Fly or Bounce.;Flying;Special;40;100%;35
+16;Wing Attack;Deals damage with no additional effect.;Flying;Physical;60;100%;35
+17;Fly;On the first turn the user flies into the air becoming uncontrollable and evades most attacks. Gust Twister Thunder and Sky Uppercut have normal accuracy against a mid-air Pokemon with Gust and Twister also gaining doubled power. The user may also be hit in mid-air if it was previously targeted by Lock-On or Mind Reader or if it is attacked by a Pokemon with No Guard. On the second turn the user attacks.;Flying;Physical;90;95%;15
+18;Bind;Traps the target for 5-6 turns causing damage equal to 1/16 of its max HP each turn. this trapped effect can be broken by Rapid Spin. The target can still switch out if it is holding Shed Shell or uses Baton Pass or U-Turn.;Normal;Physical;15;85%;20
+19;Slam;Deals damage with no additional effect.;Normal;Physical;80;75%;20
+20;Vine Whip;Deals damage with no additional effect.;Grass;Physical;35;100%;15
+21;Stomp;Has a 30% chance to make the target flinch. also retains its normal accuracy and gains doubled power against Minimized Pokemon.;Normal;Physical;65;100%;20
+22;Double Kick;Strikes twice. if the first hit breaks the target's Substitute the real Pokemon will take damage from the second hit.;Fighting;Physical;30;100%;30
+23;Mega Kick;Deals damage with no additional effect.;Normal;Physical;120;75%;5
+24;Jump Kick;If this attack misses the target the user half of its max health in recoil damage.;Fighting;Physical;100;95%;10
+25;Rolling Kick;Has a 30% chance to make the target flinch.;Fighting;Physical;60;85%;15
+26;Headbutt;Has a 30% chance to make the target flinch.;Normal;Physical;70;100%;15
+27;Horn Attack;Deals damage with no additional effect.;Normal;Physical;65;100%;25
+28;Fury Attack;Attacks 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Normal;Physical;15;85%;20
+29;Horn Drill;The target faints. doesn't work on higher-leveled Pokemon.;Normal;Physical;0;30%;5
+30;Tackle;Deals damage with no additional effect.;Normal;Physical;50;100%;35
+31;Body Slam;Has a 30% chance to paralyze the target.;Normal;Physical;85;100%;15
+32;Wrap;Traps the target for 5-6 turns causing damage equal to 1/16 of its max HP each turn. this trapped effect can be broken by Rapid Spin. The target can still switch out if it is holding Shed Shell or uses Baton Pass or U-Turn.;Normal;Physical;15;90%;20
+33;Take Down;The user receives 1/4 recoil damage.;Normal;Physical;90;85%;20
+34;Thrash;The user attacks uncontrollably for 2-3 turns and then gets confused.;Normal;Physical;120;100%;10
+35;Double-Edge;The user receives 1/3 recoil damage.;Normal;Physical;120;100%;15
+36;Poison Sting;Has a 30% chance to poison the target.;Poison;Physical;15;100%;35
+37;Twineedle;Strikes twice. if the first hit breaks the target's Substitute the real Pokemon will take damage from the second hit. Has a 20% chance to poison the target .;Bug;Physical;25;100%;20
+38;Pin Missile;Attacks 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Bug;Physical;14;85%;20
+39;Bite;Has a 30% chance to make the target flinch.;Dark;Physical;60;100%;25
+40;SonicBoom;Always deals 20 points of damage.;Normal;Special;20;90%;20
+41;Acid;Has a 10% chance to lower the target's Special Defense by 1 stage.;Poison;Special;40;100%;30
+42;Ember;Has a 10% chance to burn the target.;Fire;Special;40;100%;25
+43;Flamethrower;Has a 10% chance to burn the target.;Fire;Special;95;100%;15
+44;Water Gun;Deals damage with no additional effect.;Water;Special;40;100%;25
+45;Hydro Pump;Deals damage with no additional effect.;Water;Special;120;80%;5
+46;Surf;Power doubles against a target who is in the middle of using Dive.;Water;Special;95;100%;15
+47;Ice Beam;Has a 10% chance to freeze the target.;Ice;Special;95;100%;10
+48;Blizzard;Has a 10% chance to freeze the target. During Hail this move will never miss under normal circumstances and has a 30% chance to hit through a target's Protect or Detect.;Ice;Special;120;70%;5
+49;Psybeam;Has a 10% chance to confuse the target.;Psychic;Special;65;100%;20
+50;BubbleBeam;Has a 10% chance to lower the target's Speed by 1 stage.;Water;Special;65;100%;20
+51;Aurora Beam;Has a 10% chance to lower the target's Attack by 1 stage.;Ice;Special;65;100%;20
+52;Hyper Beam;The user recharges during its next turn. as a result until the end of the next turn the user becomes uncontrollable.;Normal;Special;150;90%;5
+53;Peck;Deals damage with no additional effect.;Flying;Physical;35;100%;35
+54;Drill Peck;Deals damage with no additional effect.;Flying;Physical;80;100%;20
+55;Submission;The user receives 1/4 recoil damage.;Fighting;Physical;80;80%;25
+56;Low Kick;Base power increases as the target's weight increases.;Fighting;Physical;50;100%;20
+57;Counter;Almost always goes last. if an opponent strikes with a Physical attack before the user's turn the user retaliates for twice the damage it had endured. In double battles this attack targets the last opponent to hit the user with a Physical attack and cannot hit the user's teammate.;Fighting;Physical;50;100%;20
+58;Seismic Toss;Does damage equal to user's level.;Fighting;Physical;50;100%;20
+59;Strength;Deals damage with no additional effect.;Normal;Physical;80;100%;15
+60;Absorb;Restores the user's HP by 1/2 of the damage inflicted on the target.;Grass;Special;20;100%;25
+61;Mega Drain;Restores the user's HP by 1/2 of the damage inflicted on the target.;Grass;Special;40;100%;15
+62;Razor Leaf;Has a high critical hit ratio.;Grass;Physical;55;95%;25
+63;SolarBeam;The user prepares on turn one becoming uncontrollable and then attacks on turn two. During Sunny Day this move fires immediately. during Rain Dance Sandstorm and Hail this move has half power.;Grass;Special;120;100%;10
+64;Petal Dance;The user attacks uncontrollably for 2-3 turns and then gets confused.;Grass;Special;120;100%;10
+65;Dragon Rage;Always deals 40 points of damage.;Dragon;Special;40;100%;10
+66;Fire Spin;Traps the target for 5-6 turns causing damage equal to 1/16 of its max HP each turn. this trapped effect can be broken by Rapid Spin. The target can still switch out if it is holding Shed Shell or uses Baton Pass or it uses U-Turn.;Fire;Special;35;85%;15
+67;ThunderShock;Has a 10% chance to paralyze the target.;Electric;Special;40;100%;30
+68;Thunderbolt;Has a 10% chance to paralyze the target.;Electric;Special;95;100%;15
+69;Thunder;Has a 30% chance to paralyze the target. It also has normal accuracy against mid-air Pokemon who have used Fly or Bounce. During Sunny Day this move has 50% accuracy. During Rain Dance this move will never miss under normal circumstances and has a 30% chance to hit through a target's Protect or Detect.;Electric;Special;120;70%;10
+70;Rock Throw;Deals damage with no additional effect.;Rock;Physical;50;90%;15
+71;Earthquake;Power doubles when performed against Pokemon using Dig.;Ground;Physical;100;100%;10
+72;Fissure;The target faints. doesn't work on higher-leveled Pokemon.;Ground;Physical;0;30%;5
+73;Dig;On the first turn the user digs underground becoming uncontrollable and evades all attacks. Earthquake and Magnitude can hit underground and gain doubled power. The user may also be hit underground if it was previously targeted by Lock-On or Mind Reader or if it is attacked by a Pokemon with No Guard. On the second turn the user attacks.;Ground;Physical;80;100%;10
+74;Confusion;Has a 10% chance to confuse the target.;Psychic;Special;50;100%;25
+75;Psychic;Has a 10% chance to lower the target's Special Defense by 1 stage.;Psychic;Special;90;100%;10
+76;Quick Attack;Usually goes first.;Normal;Physical;40;100%;30
+77;Rage;The user's Attack rises by 1 stage if attacked before its next move.;Normal;Physical;20;100%;20
+78;Night Shade;Does damage equal to user's level.;Ghost;Special;50;100%;15
+79;Bide;Usually goes first for the duration of the move. The user absorbs all damage for two turns and then during the third turn the user inflicts twice the absorbed damage on its target. This move ignores the target's type and even hits Ghost-type Pokemon.;Normal;Physical;50;100%;10
+80;Selfdestruct;Causes the user to faint.;Normal;Physical;200;100%;5
+81;Egg Bomb;Deals damage with no additional effect.;Normal;Physical;100;75%;10
+82;Lick;Has a 30% chance to paralyze the target.;Ghost;Physical;20;100%;30
+83;Smog;Has a 40% chance to poison the target.;Poison;Special;20;70%;20
+84;Sludge;Has a 30% chance to poison the target.;Poison;Special;65;100%;20
+85;Bone Club;Has a 10% chance to make the target flinch.;Ground;Physical;65;85%;20
+86;Fire Blast;Has a 10% chance to burn the target.;Fire;Special;120;85%;5
+87;Waterfall;Has a 20% chance to make the target flinch.;Water;Physical;80;100%;15
+88;Clamp;Traps the target for 5-6 turns causing damage equal to 1/16 of its max HP each turn. this trapped effect can be broken by Rapid Spin. The target can still switch out if it is holding Shed Shell or uses Baton Pass or U-Turn.;Water;Physical;35;85%;10
+89;Swift;Ignores Evasion and Accuracy modifiers and never misses except against Protect Detect or a target in the middle of Dig Fly Dive or Bounce.;Fairy;Special;60;101%;20
+90;Skull Bash;The user prepares on turn one raising its Defense by 1 stage and becoming uncontrollable and then attacks on turn two.;Normal;Physical;100;100%;15
+91;Spike Cannon;Attacks 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Normal;Physical;20;100%;15
+92;Constrict;Has a 10% chance to lower the target's Speed by 1 stage.;Normal;Physical;10;100%;35
+93;Hi Jump Kick;If this attack misses the target the user half of its max health in recoil damage.;Fighting;Physical;130;90%;10
+94;Dream Eater;Restores the user's HP by 1/2 of the damage inflicted on the target but only works on a sleeping target.;Psychic;Special;100;100%;15
+95;Barrage;Attacks 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Normal;Physical;15;85%;20
+96;Leech Life;Restores the user's HP by 1/2 of the damage inflicted on the target.;Bug;Physical;20;100%;15
+97;Sky Attack;The user prepares on turn one becoming uncontrollable and then attacks on turn two. Also has a 30% chance to make the target flinch.;Flying;Physical;140;90%;5
+98;Bubble;Has a 10% chance to lower the target's Speed by 1 stage.;Water;Special;20;100%;30
+99;Dizzy Punch;Has a 20% chance to confuse the target.;Normal;Physical;70;100%;10
+100;Psywave;Randomly inflicts set damage equal to .5x .6x .7x .8x .9x 1.0x 1.1x 1.2x 1.3x 1.4x or 1.5x the user's level.;Psychic;Special;50;80%;15
+101;Crabhammer;Has a high critical hit ratio.;Water;Physical;90;90%;10
+102;Explosion;Causes the user to faint.;Normal;Physical;250;100%;5
+103;Fury Swipes;Attacks 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Normal;Physical;18;80%;15
+104;Bonemerang;Strikes twice. if the first hit breaks the target's Substitute the real Pokemon will take damage from the second hit.;Ground;Physical;50;90%;10
+105;Rock Slide;Has a 30% chance to make the target flinch.;Rock;Physical;75;90%;10
+106;Hyper Fang;Has a 10% chance to make the target flinch.;Normal;Physical;80;90%;15
+107;Tri Attack;Has a 20% chance to burn paralyze or freeze the target.;Normal;Special;80;100%;10
+108;Super Fang;This move halves the target's current HP.;Normal;Physical;50;90%;10
+109;Slash;Has a high critical hit ratio.;Normal;Physical;70;100%;20
+110;Struggle;Used automatically when all of the user's other moves have run out of PP or are otherwise inaccessible. The user receives recoil damage equal to 1/4 of its max HP. Struggle is classified as a typeless move and will hit any Pokemon for normal damage.;Typeless;Physical;50;100%;1
+111;Triple Kick;Attacks three times in one turn adding 10 BP for each kick. If a kick misses the move ends instantly. if one of the kicks breaks a target's Substitute the real Pokemon will take damage for the remaining kicks.;Fighting;Physical;10;90%;10
+112;Thief;Steals the target's held item unless the user is already holding an item or the target has Sticky Hold or Multitype. A stolen item cannot be recovered by using Recycle.;Dark;Physical;40;100%;10
+113;Flame Wheel;Has a 10% chance to burn the target. can be used while frozen which both attacks the target normally and thaws the user.;Fire;Physical;60;100%;25
+114;Snore;Has a 30% chance to make the target flinch. fails if user is awake.;Normal;Special;40;100%;15
+115;Flail;Base power increases as the user's HP decreases.;Normal;Physical;50;100%;15
+116;Aeroblast;Has a high critical hit ratio.;Flying;Special;100;95%;5
+117;Reversal;Base power increases as the user's HP decreases.;Fighting;Physical;50;100%;15
+118;Powder Snow;Has a 10% chance to freeze the target.;Ice;Special;40;100%;25
+119;Mach Punch;Usually goes first.;Fighting;Physical;40;100%;30
+120;Faint Attack;Ignores Evasion and Accuracy modifiers and never misses except against Protect Detect or a target in the middle of Dig Fly Dive or Bounce.;Dark;Physical;60;101%;20
+121;Sludge Bomb;Has a 30% chance to poison the target.;Poison;Special;90;100%;10
+122;Mud-Slap;Has a 30% chance to lower the target's Accuracy by 1 stage.;Ground;Special;20;100%;10
+123;Octazooka;Has a 50% chance to lower the target's Accuracy by 1 stage.;Water;Special;65;85%;10
+124;Zap Cannon;Paralyzes the target.;Electric;Special;120;50%;5
+125;Icy Wind;Lowers the target's Speed by 1 stage.;Ice;Special;55;95%;15
+126;Bone Rush;Attacks 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Ground;Physical;25;80%;10
+127;Outrage;The user attacks uncontrollably for 2-3 turns and then gets confused.;Dragon;Physical;120;100%;15
+128;Giga Drain;Restores the user's HP by 1/2 of the damage inflicted on the target.;Grass;Special;75;100%;10
+129;Rollout;The user attacks uncontrollably for five turns. this move's power doubles after each turn and also if Defense Curl was used beforehand. Its power resets after five turns have ended or if the attack misses.;Rock;Physical;30;90%;20
+130;False Swipe;Leaves the target with at least 1 HP.;Normal;Physical;40;100%;40
+131;Spark;Has a 30% chance to paralyze the target.;Electric;Physical;65;100%;20
+132;Fury Cutter;The base power of this move doubles with each consecutive hit. however power is capped at a maximum 160 BP and remains there for any subsequent uses. If this move misses base power will be reset to 10 BP on the next turn. The user can also select other attacks without resetting this move's power. it will continue to double after each use until it either misses or reaches the 160 BP cap.;Bug;Physical;20;95%;20
+133;Steel Wing;Has a 10% chance to raise the user's Defense by 1 stage.;Steel;Physical;70;90%;25
+134;Return;Power increases as user's happiness increases. maximum 102 BP.;Normal;Physical;50;100%;20
+135;Present;Randomly either attacks with a variable power between 40 base power and 120 base power or heals the target by 80 HP.;Fairy;Physical;50;90%;15
+136;Frustration;Power increases as user's happiness decreases. maximum 102 BP.;Normal;Physical;50;100%;20
+137;Sacred Fire;Has a 50% chance to burn the target. can be used while frozen which both attacks the target normally and thaws the user.;Fire;Physical;100;95%;5
+138;Magnitude;Deals variable damage between 10 base power and 130 base power as well as double damage against Digging Pokemon.;Ground;Physical;50;100%;30
+139;DynamicPunch;Confuses the target.;Fighting;Physical;100;50%;5
+140;Megahorn;Deals damage with no additional effect.;Bug;Physical;120;85%;10
+141;DragonBreath;Has a 30% chance to paralyze the target.;Dragon;Special;60;100%;20
+142;Pursuit;If the target switches out on the current turn this move strikes with doubled power before the switch. Baton Passers still escape safely. When a faster Pokemon uses Pursuit against a U-Turner the U-Turner is hit for normal damage. when a slower Pokemon uses Pursuit against a U-Turner the U-Turner makes its attack then is hit by Pursuit for double power and switches out.;Dark;Physical;80;100%;20
+143;Rapid Spin;Removes Spikes Stealth Rock Toxic Spikes and Leech Seed from the user's side of the field. also frees the user from Bind Clamp Fire Spin Magma Storm Sand Tomb Whirlpool and Wrap. These effects do not occur if the move misses or is used against Ghost-type Pokemon.;Normal;Physical;20;100%;40
+144;Iron Tail;Has a 30% chance to lower the target's Defense by 1 stage.;Steel;Physical;100;75%;15
+145;Metal Claw;Has a 10% chance to raise the user's Attack by 1 stage.;Steel;Physical;50;95%;35
+146;Vital Throw;This move usually goes last. It ignores Evasion and Accuracy modifiers and never misses except against Protect Detect or a target in the middle of Dig Fly Dive or Bounce.;Fighting;Physical;70;100%;10
+147;Hidden Power;Varies in power and type depending on the user's IVs. maximum 70 BP.;Normal;Special;70;100%;15
+148;Cross Chop;Has a high critical hit ratio.;Fighting;Physical;100;80%;5
+149;Twister;Has a 20% chance to make the target flinch. power doubles while the target is in mid-air via Fly or Bounce.;Dragon;Special;40;100%;20
+150;Crunch;Has a 20% chance to lower the target's Defense by 1 stage.;Dark;Physical;80;100%;15
+151;Mirror Coat;Almost always goes last. if an opponent strikes with a Special attack before the user's turn the user retaliates for twice the damage it had endured. In double battles this attack targets the last opponent to hit the user with a Special attack and cannot hit the user's teammate.;Psychic;Special;50;100%;20
+152;ExtremeSpeed;Usually goes first.;Normal;Physical;80;100%;5
+153;AncientPower;Has a 10% chance to raise all of the user's stats by 1 stage.;Rock;Special;60;100%;5
+154;Shadow Ball;Has a 20% chance to lower the target's Special Defense by 1 stage.;Ghost;Special;80;100%;15
+155;Future Sight;This move even if the user and/or the target switch out will strike the active target at the end of the second turn after its use. Only one instance of Future Sight or Doom Desire may be active at a time.;Psychic;Special;100;100%;10
+156;Rock Smash;Has a 50% chance to lower the target's Defense by 1 stage.;Fighting;Physical;40;100%;15
+157;Whirlpool;Traps the target for 5-6 turns causing damage equal to 1/16 of its max HP each turn. this trapped effect can be broken by Rapid Spin. The target can still switch out if it is holding Shed Shell or uses Baton Pass or U-Turn. Base power also doubles when performed against a Pokemon in the middle of using Dive.;Water;Special;35;85%;15
+158;Beat Up;Each healthy (i.e. not fainted nor inflicted with a status condition) Pokemon in your party contributes a typeless 10 base power hit determined solely by their base Attack and Defense stats.;Dark;Physical;50;100%;10
+159;Fake Out;If this is the user's first move after being sent or switched into battle the target flinches. this move fails otherwise and against targets with Inner Focus.;Normal;Physical;40;100%;10
+160;Uproar;The user causes an Uproar and attacks uncontrollably for 3 turns. During the effects of the Uproar active Pokemon cannot fall asleep and sleeping Pokemon sent into battle will wake up.;Normal;Special;90;100%;10
+161;Spit Up;Power increases with user's Stockpile count. fails with zero Stockpiles.;Normal;Special;50;100%;10
+162;Heat Wave;Has a 10% chance to burn the target.;Fire;Special;100;90%;10
+163;Facade;Power doubles if the user is inflicted with burn paralysis or poison.;Normal;Physical;50;100%;20
+164;Focus Punch;At the beginning of the round the user tightens its focus. the attack itself usually goes last and will fail if the user is attacked by any other Pokemon during the turn.;Fighting;Physical;150;100%;20
+165;SmellingSalt;If the target is paralyzed power is doubled but the target will be cured.;Normal;Physical;60;100%;10
+166;Nature Power (Wifi);Earthquake.;Ground;Physical;100;95%;20
+167;Superpower;Lowers the user's Attack and Defense by 1 stage each after use.;Fighting;Physical;120;100%;5
+168;Revenge;Almost always goes last even after another Pokemon's Focus Punch. this move's base power doubles if the user is damaged before its turn.;Fighting;Physical;60;100%;10
+169;Brick Break;Reflect and Light Screen are removed from the target's field even if the attack misses or the target is a Ghost-type.;Fighting;Physical;75;100%;15
+170;Knock Off;Disables the target's held item unless it has Sticky Hold or Multitype. Items lost to this move cannot be recovered by using Recycle.;Dark;Physical;20;100%;20
+171;Endeavor;Inflicts damage equal to the target's current HP Varthe user's current HP.;Normal;Physical;50;100%;5
+172;Eruption;Base power decreases as the user's HP decreases.;Fire;Special;50;100%;5
+173;Secret Power;This move has a 30% chance to inflict a side effect depending on the battle's current terrain. The target may be put to sleep in any type of grass (or in puddles) its Attack may be lowered by 1 stage while surfing on any body of water its Speed may be lowered by 1 stage while on marshy terrain its Accuracy may be lowered by 1 stage on beach sand desert sand and dirt paths (and also in Wifi battles) it may flinch in caves or on rocky outdoor terrain it may become frozen on snowy terrain and it may become paralyzed everywhere else.;Normal;Physical;70;100%;20
+174;Dive;On the first turn the user dives underwater becoming uncontrollable and evades all attacks except for Surf and Whirlpool which have doubled power. the user may also be hit underwater if it was previously targeted by Lock-On or Mind Reader or if it is attacked by a Pokemon with No Guard. On the second turn the user attacks.;Water;Physical;80;100%;10
+175;Arm Thrust;Attacks 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Fighting;Physical;15;100%;20
+176;Luster Purge;Has a 50% chance to lower the target's Special Defense by 1 stage.;Psychic;Special;70;100%;5
+177;Mist Ball;Has a 50% chance to lower the target's Special Attack by 1 stage.;Psychic;Special;70;100%;5
+178;Blaze Kick;Has a high critical hit ratio and a 10% chance to burn the target.;Fire;Physical;85;90%;10
+179;Ice Ball;The user attacks uncontrollably for five turns. this move's power doubles after each turn and also if Defense Curl was used beforehand. Its power resets after five turns have ended or if the attack misses.;Ice;Physical;30;90%;20
+180;Needle Arm;Has a 30% chance to make the target flinch.;Grass;Physical;60;100%;15
+181;Hyper Voice;Deals damage with no additional effect.;Normal;Special;90;100%;10
+182;Poison Fang;Has a 30% chance to inflict Toxic poison on the target.;Poison;Physical;50;100%;15
+183;Crush Claw;Has a 50% chance to lower the target's Defense by 1 stage.;Normal;Physical;75;95%;10
+184;Blast Burn;The user recharges during its next turn. as a result until the end of the next turn the user becomes uncontrollable.;Fire;Special;150;90%;5
+185;Hydro Cannon;The user recharges during its next turn. as a result until the end of the next turn the user becomes uncontrollable.;Water;Special;150;90%;5
+186;Meteor Mash;Has a 20% chance to raise the user's Attack by 1 stage.;Steel;Physical;100;85%;10
+187;Astonish;Has a 30% chance to make the target flinch.;Ghost;Physical;30;100%;15
+188;Weather Ball;Base power is 50. Base power doubles and move's type changes during weather effects: becomes Fire-type during Sunny Day Water-type during Rain Dance Ice-type during Hail and Rock-type during Sandstorm.;Normal;Special;50;100%;10
+189;Air Cutter;Has a high critical hit ratio.;Flying;Special;55;95%;25
+190;Overheat;Lowers the user's Special Attack by 2 stages after use.;Fire;Special;140;90%;5
+191;Rock Tomb;Lowers the target's Speed by 1 stage.;Rock;Physical;50;80%;10
+192;Silver Wind;Has a 10% chance to raise all of the user's stats by 1 stage.;Bug;Special;60;100%;5
+193;Water Spout;Base power decreases as the user's HP decreases.;Water;Special;50;100%;5
+194;Signal Beam;Has a 10% chance to confuse the target.;Bug;Special;75;100%;15
+195;Shadow Punch;Ignores Evasion and Accuracy modifiers and never misses except against Protect Detect or a target in the middle of Dig Fly Dive or Bounce.;Ghost;Physical;60;101%;20
+196;Extrasensory;Has a 10% chance to make the target flinch.;Psychic;Special;80;100%;30
+197;Sky Uppercut;Also hits targets in mid-air via Fly or Bounce.;Fighting;Physical;85;90%;15
+198;Sand Tomb;Traps the target for 5-6 turns causing damage equal to 1/16 of its max HP each turn. this trapped effect can be broken by Rapid Spin. The target can still switch out if it is holding Shed Shell or uses Baton Pass or U-Turn.;Ground;Physical;35;85%;15
+199;Sheer Cold;The target faints. doesn't work on higher-leveled Pokemon.;Ice;Special;0;30%;5
+200;Muddy Water;Lowers the target's Accuracy by 1 stage.;Water;Special;95;85%;10
+201;Bullet Seed;Attacks 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Grass;Physical;25;100%;30
+202;Aerial Ace;Ignores Evasion and Accuracy modifiers and never misses except against Protect Detect or a target in the middle of Dig Fly Dive or Bounce.;Flying;Physical;60;101%;20
+203;Icicle Spear;Attacks 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Ice;Physical;25;100%;30
+204;Dragon Claw;Deals damage with no additional effect.;Dragon;Physical;80;100%;15
+205;Frenzy Plant;The user recharges during its next turn. as a result until the end of the next turn the user becomes uncontrollable.;Grass;Special;150;90%;5
+206;Bounce;On the first turn the user bounces into the air becoming uncontrollable and evades most attacks. Gust Twister Thunder and Sky Uppercut have normal accuracy against a mid-air Pokemon with Gust and Twister also gaining doubled power. The user may also be hit in mid-air if it was previously targeted by Lock-On or Mind Reader or if it is attacked by a Pokemon with No Guard. On the second turn the user descends and has a 30% chance to paralyze the target.;Flying;Physical;85;85%;5
+207;Mud Shot;Lowers the target's Speed by 1 stage.;Ground;Special;55;95%;15
+208;Poison Tail;Has a high critical hit ratio and a 10% chance to poison the target.;Poison;Physical;50;100%;25
+209;Covet;Steals the target's held item unless the user is already holding an item or the target has Sticky Hold or Multitype. Recycle cannot recover the stolen item.;Normal;Physical;60;100%;40
+210;Volt Tackle;The user receives 1/3 recoil damage. has a 10% chance to paralyze the target.;Electric;Physical;120;100%;15
+211;Magical Leaf;Ignores Evasion and Accuracy modifiers and never misses except against Protect Detect or a target in the middle of Dig Fly Dive or Bounce.;Grass;Special;60;101%;20
+212;Leaf Blade;Has a high critical hit ratio.;Grass;Physical;90;100%;15
+213;Rock Blast;Attacks 2-5 times in one turn. if one of these attacks breaks a target's Substitute the target will take damage for the rest of the hits. This move has a 3/8 chance to hit twice a 3/8 chance to hit three times a 1/8 chance to hit four times and a 1/8 chance to hit five times. If the user of this move has Skill Link this move will always strike five times.;Rock;Physical;25;90%;10
+214;Shock Wave;Ignores Evasion and Accuracy modifiers and never misses except against Protect Detect or a target in the middle of Dig Fly Dive or Bounce.;Electric;Special;60;101%;20
+215;Water Pulse;Has a 20% chance to confuse the target.;Water;Special;60;100%;20
+216;Doom Desire;This move even if the user and/or the target switch out will strike the active target at the end of the second turn after its use.  Only one instance of Doom Desire or Future Sight may be active at a time.;Steel;Special;140;100%;5
+217;Psycho Boost;Lowers the user's Special Attack by 2 stages after use.;Psychic;Special;140;90%;5
