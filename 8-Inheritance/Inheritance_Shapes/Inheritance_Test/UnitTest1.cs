@@ -23,13 +23,15 @@ public class ShapesTests
         [Fact]
         public void CircleNegativeRadiusException()
         {
-            Assert.Throws<ArgumentException>(() => new Circle("Green", true, -5.0));
+            Exception ex = Assert.Throws<ArgumentException>(() => new Circle("Green", true, -5.0));
+            Assert.Equal("\nERROR: Radius must be greater than 0.\n", ex.Message);
         }
 
         [Fact]
         public void CircleZeroRadiusException()
         {
-            Assert.Throws<ArgumentException>(() => new Circle("Green", true, 0));
+            Exception ex = Assert.Throws<ArgumentException>(() => new Circle("Green", true, 0));
+            Assert.Equal("\nERROR: Radius must be greater than 0.\n", ex.Message);
         }
     }
 
@@ -52,7 +54,8 @@ public class ShapesTests
         [Fact]
         public void RectangleNegativeWidthException()
         {
-            Assert.Throws<ArgumentException>(() => new Rectangle("White", false, -4.0, 6.0));
+            Exception ex = Assert.Throws<ArgumentException>(() => new Rectangle("White", false, -4.0, 6.0));
+            Assert.Equal("\nERROR: Width must be greater than 0.\n", ex.Message);
         }
 
         [Fact]
@@ -87,7 +90,8 @@ public class ShapesTests
         [Fact]
         public void SquareZeroSideException()
         {
-            Assert.Throws<ArgumentException>(() => new Square("Red", true, 0));
+            Exception ex = Assert.Throws<ArgumentException>(() => new Square("Red", true, 0));
+            Assert.Equal("\nERROR: Side must be greater than 0.\n", ex.Message);
         }
     }
 

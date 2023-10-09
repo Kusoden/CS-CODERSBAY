@@ -55,14 +55,8 @@ public class Stack
         if (top == null)
             throw new NullReferenceException("it's Empty!");
         else
-        {
-            if (top.data == null)
-                throw new NullReferenceException("no data found");
-            else
-                return top.data;
+            return top.data;
     }
-
-}
 
     public void Display()
     {

@@ -40,3 +40,17 @@ D:\Coding_Files_Github\CS-CODERSBAY\7-Unit_testing\StackwithLinkedList\obj\Debug
 D:\Coding_Files_Github\CS-CODERSBAY\7-Unit_testing\StackwithLinkedList\obj\Debug\net7.0\StackwithLinkedList.pdb
 D:\Coding_Files_Github\CS-CODERSBAY\7-Unit_testing\StackwithLinkedList\obj\Debug\net7.0\StackwithLinkedList.genruntimeconfig.cache
 D:\Coding_Files_Github\CS-CODERSBAY\7-Unit_testing\StackwithLinkedList\obj\Debug\net7.0\ref\StackwithLinkedList.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\7-Unit_testing\StackwithLinkedList\bin\Debug\net7.0\StackwithLinkedList.exe
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\7-Unit_testing\StackwithLinkedList\bin\Debug\net7.0\StackwithLinkedList.deps.json
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\7-Unit_testing\StackwithLinkedList\bin\Debug\net7.0\StackwithLinkedList.runtimeconfig.json
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\7-Unit_testing\StackwithLinkedList\bin\Debug\net7.0\StackwithLinkedList.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\7-Unit_testing\StackwithLinkedList\bin\Debug\net7.0\StackwithLinkedList.pdb
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\7-Unit_testing\StackwithLinkedList\obj\Debug\net7.0\StackwithLinkedList.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\7-Unit_testing\StackwithLinkedList\obj\Debug\net7.0\StackwithLinkedList.AssemblyInfoInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\7-Unit_testing\StackwithLinkedList\obj\Debug\net7.0\StackwithLinkedList.AssemblyInfo.cs
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\7-Unit_testing\StackwithLinkedList\obj\Debug\net7.0\StackwithLinkedList.csproj.CoreCompileInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\7-Unit_testing\StackwithLinkedList\obj\Debug\net7.0\StackwithLinkedList.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\7-Unit_testing\StackwithLinkedList\obj\Debug\net7.0\refint\StackwithLinkedList.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\7-Unit_testing\StackwithLinkedList\obj\Debug\net7.0\StackwithLinkedList.pdb
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\7-Unit_testing\StackwithLinkedList\obj\Debug\net7.0\StackwithLinkedList.genruntimeconfig.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\7-Unit_testing\StackwithLinkedList\obj\Debug\net7.0\ref\StackwithLinkedList.dll

@@ -69,14 +69,16 @@ public class StackTests
     public void ExcPop_Test()/* VERIFY whats inside <> thrown when attempting to do whats after arrow*/
     {
         Stack library = new();
-        Assert.Throws<NullReferenceException>(() => library.Pop()); 
+        Exception ex = Assert.Throws<NullReferenceException>(() => library.Pop());
+        Assert.Equal("it's Empty", ex.Message);
     }
 
     [Fact]
     public void ExcPeek_Test()
     {
         Stack library = new();
-        Assert.Throws<NullReferenceException>(() => library.Peek());
+        Exception ex = Assert.Throws<NullReferenceException>(() => library.Peek());
+        Assert.Equal("it's Empty!", ex.Message);
     }
 
     [Fact]
@@ -88,7 +90,8 @@ public class StackTests
 
         string[] poppedGames = library.Pop(2);
 
-        Assert.Throws<IndexOutOfRangeException>(() => library.Pop(3)); /*Verify outofrange exception*/
+        Exception ex = Assert.Throws<IndexOutOfRangeException>(() => library.Pop(3)); /*Verify outofrange exception*/
+        Assert.Equal("Index out of Bound!", ex.Message);
 
         Assert.Equal(new [] { "Warcraft 3", "The Sims 4" }, poppedGames); /*check if the library includes same games as the new array*/
     }

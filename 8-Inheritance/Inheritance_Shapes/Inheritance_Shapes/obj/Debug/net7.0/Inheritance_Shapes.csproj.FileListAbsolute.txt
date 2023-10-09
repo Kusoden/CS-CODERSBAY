@@ -12,3 +12,17 @@ D:\Coding_Files_Github\CS-CODERSBAY\8-Inheritance\Inheritance_Shapes\Inheritance
 D:\Coding_Files_Github\CS-CODERSBAY\8-Inheritance\Inheritance_Shapes\Inheritance_Shapes\obj\Debug\net7.0\Inheritance_Shapes.pdb
 D:\Coding_Files_Github\CS-CODERSBAY\8-Inheritance\Inheritance_Shapes\Inheritance_Shapes\obj\Debug\net7.0\Inheritance_Shapes.genruntimeconfig.cache
 D:\Coding_Files_Github\CS-CODERSBAY\8-Inheritance\Inheritance_Shapes\Inheritance_Shapes\obj\Debug\net7.0\ref\Inheritance_Shapes.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\8-Inheritance\Inheritance_Shapes\Inheritance_Shapes\bin\Debug\net7.0\Inheritance_Shapes.exe
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\8-Inheritance\Inheritance_Shapes\Inheritance_Shapes\bin\Debug\net7.0\Inheritance_Shapes.deps.json
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\8-Inheritance\Inheritance_Shapes\Inheritance_Shapes\bin\Debug\net7.0\Inheritance_Shapes.runtimeconfig.json
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\8-Inheritance\Inheritance_Shapes\Inheritance_Shapes\bin\Debug\net7.0\Inheritance_Shapes.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\8-Inheritance\Inheritance_Shapes\Inheritance_Shapes\bin\Debug\net7.0\Inheritance_Shapes.pdb
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\8-Inheritance\Inheritance_Shapes\Inheritance_Shapes\obj\Debug\net7.0\Inheritance_Shapes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\8-Inheritance\Inheritance_Shapes\Inheritance_Shapes\obj\Debug\net7.0\Inheritance_Shapes.AssemblyInfoInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\8-Inheritance\Inheritance_Shapes\Inheritance_Shapes\obj\Debug\net7.0\Inheritance_Shapes.AssemblyInfo.cs
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\8-Inheritance\Inheritance_Shapes\Inheritance_Shapes\obj\Debug\net7.0\Inheritance_Shapes.csproj.CoreCompileInputs.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\8-Inheritance\Inheritance_Shapes\Inheritance_Shapes\obj\Debug\net7.0\Inheritance_Shapes.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\8-Inheritance\Inheritance_Shapes\Inheritance_Shapes\obj\Debug\net7.0\refint\Inheritance_Shapes.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\8-Inheritance\Inheritance_Shapes\Inheritance_Shapes\obj\Debug\net7.0\Inheritance_Shapes.pdb
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\8-Inheritance\Inheritance_Shapes\Inheritance_Shapes\obj\Debug\net7.0\Inheritance_Shapes.genruntimeconfig.cache
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\8-Inheritance\Inheritance_Shapes\Inheritance_Shapes\obj\Debug\net7.0\ref\Inheritance_Shapes.dll
