@@ -1,18 +1,53 @@
-
 using _1_Person_management;
+using System;
+using System.Xml.Linq;
+using Xunit;
+using static _1_Person_management.PersonManager;
 
-namespace PersonManagement_Test;
-
-public class UnitTest1
+namespace YourNamespace.Tests
 {
-    [Fact]
-    public void DisplayAllPersons()
+    public class PersonManagerTests
     {
-        Address address1 = new("kaplanstr", 1, 4020, "Linz");
+/*        [Fact]
+        public void DisplayAllPersons_Test()
+        {
 
-        PersonManager magi = new();
+            var personManager = new PersonManager();
+            personManager.CreatePerson("John", "Doe");
 
-        Exception ex = Assert.Throws<NullReferenceException>(() => magi.DisplayAllPersons()); /*Verify outofrange exception*/
-        Assert.Equal("it's Empty!", ex.Message);
+            personManager.RemovePerson("John");
+            Exception ex = Assert.Throws<NullReferenceException>(() => personManager.DisplayAllPersons());
+            Assert.Equal("it's Empty!", ex.Message);
+        }*/
+
+        [Fact]
+        public void CreatePerson_Test()
+        {
+            
+            var personManager = new PersonManager();
+
+            Exception ex = Assert.Throws<InvalidPersonNameException>(() => personManager.CreatePerson("John1", "Doe"));
+            Assert.Equal("Invalid name: Name should not contain numbers.", ex.Message);
+        }
+
+        [Fact]
+        public void RemovePerson_Test()
+        {
+            var personManager = new PersonManager();
+            personManager.CreatePerson("John", "Doe");
+
+            Exception ex = Assert.Throws<InvalidPersonNameException>(() => personManager.RemovePerson("J0hn"));
+            Assert.Equal("Invalid name: Name should not contain numbers.", ex.Message);
+
+        }
+
+        [Fact]
+        public void FindPersonByName_Test()
+        {
+            var personManager = new PersonManager();
+
+            Exception ex = Assert.Throws<NullReferenceException>(() => personManager.FindPersonByName("AAAA"));
+            Assert.Equal("Person not found: "+ "AAAA", ex.Message);
+        }
     }
 }

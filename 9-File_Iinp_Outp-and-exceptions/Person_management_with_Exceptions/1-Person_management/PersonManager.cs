@@ -16,13 +16,13 @@ public class PersonManager
 
     public void DisplayAllPersons()
     {
-        if (personList == null)
-            throw new NullReferenceException("it's Empty!");
-        else
-        {
-            foreach (Person person in personList)
-                Console.WriteLine($"{person.Name} {person.LastName} {person.Birthday} {person.Address} {person.PersonGender}");
-        }
+        /*        if (personList == null)
+                    throw new NullReferenceException("it's Empty!");
+                else
+                {*/
+        foreach (Person person in personList)
+            Console.WriteLine($"{person.Name} {person.LastName} {person.Birthday} {person.Address} {person.PersonGender}");
+        /*        }*/
     }
 
     public void CreatePerson(string name, string lastName)
@@ -65,11 +65,14 @@ public class PersonManager
     {
         if (name.Any(char.IsDigit))
             throw new InvalidPersonNameException("Invalid name: Name should not contain numbers.");
-        for (int personIndex = personList.Count - 1; personIndex >= 0; personIndex--)
+        else
         {
-            Person p = personList[personIndex];
-            if (p.Name.Equals(name))
-                personList.RemoveAt(personIndex);
+            for (int personIndex = personList.Count - 1; personIndex >= 0; personIndex--)
+            {
+                Person p = personList[personIndex];
+                if (p.Name.Equals(name))
+                    personList.RemoveAt(personIndex);
+            }
         }
     }
 

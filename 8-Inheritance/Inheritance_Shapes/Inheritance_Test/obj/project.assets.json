@@ -5534,19 +5534,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Codersbay\\.nuget\\packages\\": {}
+    "C:\\Users\\Ferzan Abdullahzadeh\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\8-Inheritance\\Inheritance_Shapes\\Inheritance_Test\\Inheritance_Test.csproj",
+      "projectUniqueName": "D:\\Coding_Files_Github\\CS-CODERSBAY\\8-Inheritance\\Inheritance_Shapes\\Inheritance_Test\\Inheritance_Test.csproj",
       "projectName": "Inheritance_Test",
-      "projectPath": "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\8-Inheritance\\Inheritance_Shapes\\Inheritance_Test\\Inheritance_Test.csproj",
-      "packagesPath": "C:\\Users\\Codersbay\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\8-Inheritance\\Inheritance_Shapes\\Inheritance_Test\\obj\\",
+      "projectPath": "D:\\Coding_Files_Github\\CS-CODERSBAY\\8-Inheritance\\Inheritance_Shapes\\Inheritance_Test\\Inheritance_Test.csproj",
+      "packagesPath": "C:\\Users\\Ferzan Abdullahzadeh\\.nuget\\packages\\",
+      "outputPath": "D:\\Coding_Files_Github\\CS-CODERSBAY\\8-Inheritance\\Inheritance_Shapes\\Inheritance_Test\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Codersbay\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ferzan Abdullahzadeh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5554,14 +5559,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\8-Inheritance\\Inheritance_Shapes\\Inheritance_Shapes\\Inheritance_Shapes.csproj": {
-              "projectPath": "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\8-Inheritance\\Inheritance_Shapes\\Inheritance_Shapes\\Inheritance_Shapes.csproj"
+            "D:\\Coding_Files_Github\\CS-CODERSBAY\\8-Inheritance\\Inheritance_Shapes\\Inheritance_Shapes\\Inheritance_Shapes.csproj": {
+              "projectPath": "D:\\Coding_Files_Github\\CS-CODERSBAY\\8-Inheritance\\Inheritance_Shapes\\Inheritance_Shapes\\Inheritance_Shapes.csproj"
             }
           }
         }
@@ -5613,7 +5619,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
