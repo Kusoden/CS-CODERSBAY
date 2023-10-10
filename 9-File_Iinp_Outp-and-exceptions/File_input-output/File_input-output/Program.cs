@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace File_input_output;
+﻿namespace File_input_output;
 
 class Program
 {

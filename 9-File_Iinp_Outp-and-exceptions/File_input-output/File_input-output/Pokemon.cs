@@ -3,19 +3,83 @@
 public class Pokemon
 {
     private readonly int id;
+    public int ID
+    {
+        get { return id; }
+    }
     private readonly string name;
+    public string Name
+    {
+        get { return name; }
+    }
     private readonly string type1;
-    private readonly string type2;
-    private readonly int total;
-    private int hp;
-    private readonly int attack;
-    private readonly int defense;
-    private readonly int spAtk;
-    private readonly int spDef;
-    private readonly int speed;
+    public string Type1
+    {
+        get { return type1; }
+    }
 
-    private Attack attackPrimary;
-    private Attack attackSecondary;
+    private readonly string type2;
+    public string Type2
+    {
+        get { return type2; }
+    }
+
+    private readonly int total;
+    public int Total
+    {
+        get { return total; }
+    }
+
+    private int hp;
+    public int Hp
+    {
+        get { return hp; }
+        set { hp = value; }
+    }
+
+    private readonly int attack;
+    public int Attack
+    {
+        get { return attack; }
+    }
+
+    private readonly int defense;
+    public int Defense
+    {
+        get { return defense; }
+    }
+
+    private readonly int spAtk;
+    public int SpAtk
+    {
+        get { return spAtk; }
+    }
+
+    private readonly int spDef;
+    public int SpDef
+    {
+        get { return spDef; }
+    }
+
+    private readonly int speed;
+    public int Speed
+    {
+        get { return speed; }
+    }
+
+    private Attack? attackPrimary;
+    public Attack? AttackPrim
+    {
+        get { return attackPrimary; }
+        set { attackPrimary = value; }
+    }
+
+    private Attack? attackSecondary;
+    public Attack? AttackSec
+    {
+        get { return attackSecondary; }
+        set { attackSecondary = value; }
+    }
 
     public Pokemon(int id, string name, string type1, string type2, int total, int hp, int attack, int defense, int spAtk, int spDef, int speed)
     {
@@ -30,73 +94,5 @@ public class Pokemon
         this.spAtk = spAtk;
         this.spDef = spDef;
         this.speed = speed;
-    }
-
-    public Attack AttackPrimary
-    {
-        get { return attackPrimary; }
-        set { attackPrimary = value; }
-    }
-
-    public Attack AttackSecondary
-    {
-        get { return attackSecondary; }
-        set { attackSecondary = value; }
-    }
-
-    public int ID
-    {
-        get { return id; }
-    }
-
-    public string Name
-    {
-        get { return name; }
-    }
-
-    public string Type1
-    {
-        get { return type1; }
-    }
-
-    public string Type2
-    {
-        get { return type2; }
-    }
-
-    public int Total
-    {
-        get { return total; }
-    }
-
-    public int Hp
-    {
-        get { return hp; }
-        set { hp = value; }
-    }
-
-    public int Attack
-    {
-        get { return attack; }
-    }
-
-    public int Defense
-    {
-        get { return defense; }
-    }
-
-    public int SpAtk
-    {
-        get { return spAtk; }
-    }
-
-    public int SpDef
-    {
-        get { return spDef; }
-    }
-
-    public int Speed
-    {
-        get { return speed; }
     }
 }
