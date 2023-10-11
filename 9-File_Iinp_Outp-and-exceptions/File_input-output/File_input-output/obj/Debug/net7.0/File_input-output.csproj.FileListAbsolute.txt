@@ -26,6 +26,6 @@ C:\Users\Codersbay\Downloads\CS-CODERSBAY\9-File_Iinp_Outp-and-exceptions\File_i
 C:\Users\Codersbay\Downloads\CS-CODERSBAY\9-File_Iinp_Outp-and-exceptions\File_input-output\File_input-output\obj\Debug\net7.0\File_input-output.pdb
 C:\Users\Codersbay\Downloads\CS-CODERSBAY\9-File_Iinp_Outp-and-exceptions\File_input-output\File_input-output\obj\Debug\net7.0\File_input-output.genruntimeconfig.cache
 C:\Users\Codersbay\Downloads\CS-CODERSBAY\9-File_Iinp_Outp-and-exceptions\File_input-output\File_input-output\obj\Debug\net7.0\ref\File_input-output.dll
-C:\Users\Codersbay\Downloads\CS-CODERSBAY\9-File_Iinp_Outp-and-exceptions\File_input-output\File_input-output\bin\Debug\net7.0\2023-03-16-Effectiveness.csv
-C:\Users\Codersbay\Downloads\CS-CODERSBAY\9-File_Iinp_Outp-and-exceptions\File_input-output\File_input-output\bin\Debug\net7.0\2023-03-13-Pokemon.csv
-C:\Users\Codersbay\Downloads\CS-CODERSBAY\9-File_Iinp_Outp-and-exceptions\File_input-output\File_input-output\bin\Debug\net7.0\2023-04-03-Attacks.csv
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\9-File_Iinp_Outp-and-exceptions\File_input-output\File_input-output\bin\Debug\net7.0\Attacks.csv
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\9-File_Iinp_Outp-and-exceptions\File_input-output\File_input-output\bin\Debug\net7.0\Effectiveness.csv
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\9-File_Iinp_Outp-and-exceptions\File_input-output\File_input-output\bin\Debug\net7.0\Pokemons.csv

@@ -20,6 +20,8 @@ namespace _1_Person_management
             {
                 Console.WriteLine($"Error: {ex.Message}");
                 Console.WriteLine("Please enter a valid name. (without any numbers)");
+                Console.WriteLine(ex.StackTrace); // delivers an error message in the console
+                                                  // which leads you to the line where something went wrong
             }
 
             Console.WriteLine("+__+__+__+__+__+__+__+__+__+__+\n me in CODERSBAY PV");
@@ -57,6 +59,8 @@ namespace _1_Person_management
                 {
                     Console.WriteLine($"Error: {ex.Message}");
                     Console.WriteLine("Person not found.");
+                    Console.WriteLine(ex.StackTrace); // delivers an error message in the console
+                                                      // which leads you to the line where something went wrong
                     found = true;
                 }
             } while (found == true);

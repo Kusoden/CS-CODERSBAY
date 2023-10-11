@@ -30,15 +30,15 @@ public class Pokemon
         get { return total; }
     }
 
-    private int hp;
-    public int Hp
+    private double hp;
+    public double Hp
     {
         get { return hp; }
         set { hp = value; }
     }
 
-    private readonly int attack;
-    public int Attack
+    private readonly double attack;
+    public double Attack
     {
         get { return attack; }
     }
@@ -67,8 +67,8 @@ public class Pokemon
         get { return speed; }
     }
 
-    private Attack? attackPrimary;
-    public Attack? AttackPrim
+    private Attack attackPrimary;
+    public Attack AttackPrim
     {
         get { return attackPrimary; }
         set { attackPrimary = value; }

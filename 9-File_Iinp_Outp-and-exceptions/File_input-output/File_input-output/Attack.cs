@@ -32,8 +32,8 @@ public class Attack
         get { return kind; }
     }
 
-    private readonly int power;
-    public int Power
+    private readonly double power;
+    public double Power
     {
         get { return power; }
     }

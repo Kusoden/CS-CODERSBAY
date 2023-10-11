@@ -1,7 +1,7 @@
 ﻿namespace File_input_output;
 public class PokemonDataReader
 {
-    public const string POKEMON_CSV_FILE_PATH = "Pokemon.csv";
+    public const string POKEMON_CSV_FILE_PATH = "Pokemons.csv";
     public const string ATTACK_CSV_FILE_PATH = "Attacks.csv";
 
     private readonly Dictionary<int, Pokemon> pokemons;
