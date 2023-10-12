@@ -19,16 +19,17 @@ public class PersonManager
                 else
                 {*/
         foreach (Person person in personList)
-            Console.WriteLine($"{person.Name} {person.LastName} {person.Birthday} {person.Address} {person.PersonGender}");
+            Console.WriteLine($"{person.FirstName} {person.LastName} {person.Birthday} {person.Address} {person.PersonGender}");
         /*        }*/
     }
 
     // CHANGED FOR SQL
 
-    public void CreatePerson(string name, string lastName)
+    public void CreatePerson(string firstName, string lastName)
     {
-        if (name.Any(char.IsDigit) || lastName.Any(char.IsDigit))
-            throw new InvalidPersonNameException("Invalid name: Name should not contain numbers.");
+        
+        if (firstName.Any(char.IsDigit) || lastName.Any(char.IsDigit))
+            throw new InvalidPersonNameException("Invalid firstName: Name should not contain numbers.");
         else
         {
             using (MySqlConnection connection = new (connectionString))
@@ -36,8 +37,8 @@ public class PersonManager
                 connection.Open();
 
                 string insertQuery = "INSERT INTO Persons (FirstName, LastName) VALUES (@FirstName, @LastName)";
-                MySqlCommand cmd = new MySqlCommand(insertQuery, connection);
-                cmd.Parameters.AddWithValue("@FirstName", name);
+                MySqlCommand cmd = new(insertQuery, connection);
+                cmd.Parameters.AddWithValue("@FirstName", firstName);
                 cmd.Parameters.AddWithValue("@LastName", lastName);
                 cmd.ExecuteNonQuery();
             }
@@ -50,18 +51,17 @@ public class PersonManager
             throw new InvalidPersonNameException("Invalid name: Name should not contain numbers.");
         else
         {
-            using (MySqlConnection connection = new (connectionString))
+            using (MySqlConnection connection = new(connectionString))
             {
                 connection.Open();
 
-                string insertQuery = "INSERT INTO Persons (FirstName, LastName, Birthday, Address, Gender) " +
-                                    "VALUES (@FirstName, @LastName, @Birthday, @Address, @Gender)";
-                MySqlCommand cmd = new MySqlCommand(insertQuery, connection);
+                string insertQuery = "INSERT INTO Persons (FirstName, LastName, Birthday, Address, Gender) VALUES (@FirstName, @LastName, @Birthday, @Address, @Gender)";
+                MySqlCommand cmd = new (insertQuery, connection);
                 cmd.Parameters.AddWithValue("@FirstName", name);
                 cmd.Parameters.AddWithValue("@LastName", lastName);
                 cmd.Parameters.AddWithValue("@Birthday", birthday);
                 cmd.Parameters.AddWithValue("@Address", address.ToString());
-                cmd.Parameters.AddWithValue("@Gender", gender.ToString());
+                cmd.Parameters.AddWithValue("@Gender", gender);
                 cmd.ExecuteNonQuery();
             }
         }
@@ -80,7 +80,7 @@ public class PersonManager
             for (int personIndex = personList.Count - 1; personIndex >= 0; personIndex--)
             {
                 Person p = personList[personIndex];
-                if (p.Name.Equals(name))
+                if (p.FirstName.Equals(name))
                     personList.RemoveAt(personIndex);
             }
         }
@@ -94,7 +94,7 @@ public class PersonManager
     public Person FindPersonByName(string name)
     {
         foreach (Person person in personList)
-            if (person.Name.Equals(name))
+            if (person.FirstName.Equals(name))
                 return person;
         throw new NullReferenceException("Person not found: " + name);
     }

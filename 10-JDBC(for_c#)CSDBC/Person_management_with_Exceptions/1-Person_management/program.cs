@@ -1,5 +1,4 @@
-﻿
-using static _1_Person_management.PersonManager;
+﻿using MySql.Data.MySqlClient;
 
 namespace _1_Person_management
 {
@@ -9,8 +8,7 @@ namespace _1_Person_management
         {
             Database.CallDB();
 
-
-            PersonManager personManager = new PersonManager();
+            PersonManager personManager = new();
 
             while (true)
             {
@@ -25,31 +23,12 @@ namespace _1_Person_management
                 Console.WriteLine("Enter the person's last name:");
                 string lastName = Console.ReadLine().Trim();
 
-                Console.WriteLine("Enter the person's birthday (optional, format: yyyy-MM-dd):");
-                string birthday = Console.ReadLine().Trim();
-
-                Console.WriteLine("Enter the person's address (optional):");
-                string address = Console.ReadLine().Trim();
-
-                Console.WriteLine("Enter the person's gender (Male/Female/Unknown):");
-                string gender = Console.ReadLine().Trim();
-
                 try
                 {
-                    if (!string.IsNullOrEmpty(birthday) && !string.IsNullOrEmpty(address))
-                    {
-                        personManager.CreatePerson(firstName, lastName, birthday, new Address(address), (Person.Gender)Enum.Parse(typeof(Person.Gender), gender));
-                    }
-                    else if (!string.IsNullOrEmpty(birthday))
-                    {
-                        personManager.CreatePerson(firstName, lastName, birthday, null, (Person.Gender)Enum.Parse(typeof(Person.Gender), gender));
-                    }
+                    // Insert the person into the database
+                    InsertPersonIntoDatabase(firstName, lastName);
 
                     Console.WriteLine("Person created and added to the database.");
-                }
-                catch (MySqlException ex)
-                {
-                    Console.WriteLine("MySQL Error: " + ex.Message);
                 }
                 catch (Exception ex)
                 {
@@ -59,9 +38,38 @@ namespace _1_Person_management
 
             Console.WriteLine("All persons in the database:");
             personManager.DisplayAllPersons();
-
         }
 
+        public static void InsertPersonIntoDatabase(string firstName, string lastName)
+        {
+            string connectionString = "server=127.0.0.1;User ID=root;Password=;Database=personmanagerdb";
+
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                // Insert a person into the Persons table
+                Database.InsertPerson(connection, firstName, lastName);
+
+                connection.Close();
+            }
+        }
+        /*        static void Main()
+        {
+            string connectionString = "server=127.0.0.1;User ID=root;Password=;Database=personmanagerdb";
+
+            using (MySqlConnection connection = new(connectionString))
+            {
+                connection.Open();
+
+                // Insert a person into the Persons table
+                InsertPerson(connection, "John", "Doe");
+
+                Console.WriteLine("Person inserted successfully.");
+
+                connection.Close();
+            }
+        }*/
     }
 }
 

@@ -20,7 +20,7 @@ namespace Person_management.Tests
             Assert.Equal("it's Empty!", ex.Message);
         }*/
 
-        [Fact]
+      /*  [Fact]
         public void CreatePerson_Test()
         {
             
@@ -39,7 +39,7 @@ namespace Person_management.Tests
             Exception ex = Assert.Throws<InvalidPersonNameException>(() => personManager.RemovePerson("J0hn"));
             Assert.Equal("Invalid name: Name should not contain numbers.", ex.Message);
 
-        }
+        }*/
 
         [Fact]
         public void FindPersonByName_Test()

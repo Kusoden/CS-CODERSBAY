@@ -4,10 +4,10 @@ namespace _1_Person_management
 {
     public class Person
     {
-        public string Name { get; set; }
+        public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Birthday { get; set; }
-        public Address Address { get; set; }
+        public string Address { get; set; }
         public Gender PersonGender { get; set; }
 
         public enum Gender
@@ -17,20 +17,21 @@ namespace _1_Person_management
             Unknown
         }
 
-        public Person(string name, string lastName) : this(name, lastName, "N/A", null, Gender.Unknown)
+        public Person(string firstName, string lastName) : this(firstName, lastName, "N/A", null, Gender.Unknown)
         { }
 
-        public Person(string name, string lastName, string birthday, Address address, Gender gender)
+        public Person(string firstName, string lastName, string birthday, string address, Gender gender)
         {
-            Name = name;
+            FirstName = firstName;
             LastName = lastName;
             Birthday = birthday;
             Address = address;
             PersonGender = gender;
         }
 
-        public Person(string name, string lastName, Gender gender, string birthday) : this(name,lastName, birthday, null, gender) 
+        public Person(string firstName, string lastName, Gender gender, string birthday) : this(firstName, lastName, birthday, null, gender)
         { }
     }
+
 
 }
