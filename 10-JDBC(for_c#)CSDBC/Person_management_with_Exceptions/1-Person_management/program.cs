@@ -1,4 +1,4 @@
-﻿using _1_Person_management;
+﻿
 using static _1_Person_management.PersonManager;
 
 namespace _1_Person_management
@@ -7,72 +7,59 @@ namespace _1_Person_management
     {
         static void Main()
         {
-            Address address1 = new("kaplanstr", 1, 4020, "Linz");
-            Address address2 = new("Ledererstr", 2, 4020, "Linz");
+            Database.CallDB();
 
-            PersonManager codersBay = new();
 
-            try
+            PersonManager personManager = new PersonManager();
+
+            while (true)
             {
-                codersBay.CreatePerson("Ferzan1", "Abdullahzadeh Narzmes");
-            }
-            catch (InvalidPersonNameException ex)
-            {
-                Console.WriteLine($"Error: {ex.Message}");
-                Console.WriteLine("Please enter a valid name. (without any numbers)");
-                Console.WriteLine(ex.StackTrace); // delivers an error message in the console
-                                                  // which leads you to the line where something went wrong
-            }
+                Console.WriteLine("Enter a person's first name (or type 'exit' to quit):");
+                string firstName = Console.ReadLine().Trim();
 
-            Console.WriteLine("+__+__+__+__+__+__+__+__+__+__+\n me in CODERSBAY PV");
-            codersBay.DisplayAllPersons();
-            Thread.Sleep(1000);
+                if (firstName.ToLower() == "exit")
+                {
+                    break;
+                }
 
-            PersonManager magi = new();
-            magi.CreatePerson("Kamran", "Azizi", "01.01.1995", address1, Person.Gender.Male);
-            magi.CreatePerson("Alex", "Pricher", "02.02.1996", address2, Person.Gender.Male);
-            Console.WriteLine("+__+__+__+__+__+__+__+__+__+__+\nIn MAGISTRAT PV:");
-            magi.DisplayAllPersons();
-            Thread.Sleep(1000);
+                Console.WriteLine("Enter the person's last name:");
+                string lastName = Console.ReadLine().Trim();
 
-            Console.WriteLine();
-            Console.WriteLine("removed Alex + created with only F/Lname:");
-            magi.RemovePerson("Alex");
-            magi.CreatePerson("Beni", "Bjerni");
+                Console.WriteLine("Enter the person's birthday (optional, format: yyyy-MM-dd):");
+                string birthday = Console.ReadLine().Trim();
 
-            // 
+                Console.WriteLine("Enter the person's address (optional):");
+                string address = Console.ReadLine().Trim();
 
-            bool found;
+                Console.WriteLine("Enter the person's gender (Male/Female/Unknown):");
+                string gender = Console.ReadLine().Trim();
 
-            do
-            {
-                Console.WriteLine("Enter a name to search for a person:");
-
-                string searchName = Console.ReadLine();
                 try
                 {
-                    Person foundPerson = magi.FindPersonByName(searchName);
-                    Console.WriteLine("Found person: " + foundPerson.Name +"last Name: "+ foundPerson.LastName);
-                    found = false;
+                    if (!string.IsNullOrEmpty(birthday) && !string.IsNullOrEmpty(address))
+                    {
+                        personManager.CreatePerson(firstName, lastName, birthday, new Address(address), (Person.Gender)Enum.Parse(typeof(Person.Gender), gender));
+                    }
+                    else if (!string.IsNullOrEmpty(birthday))
+                    {
+                        personManager.CreatePerson(firstName, lastName, birthday, null, (Person.Gender)Enum.Parse(typeof(Person.Gender), gender));
+                    }
+
+                    Console.WriteLine("Person created and added to the database.");
                 }
-                catch (NullReferenceException ex)
+                catch (MySqlException ex)
                 {
-                    Console.WriteLine($"Error: {ex.Message}");
-                    Console.WriteLine("Person not found.");
-                    Console.WriteLine(ex.StackTrace); // delivers an error message in the console
-                                                      // which leads you to the line where something went wrong
-                    found = true;
+                    Console.WriteLine("MySQL Error: " + ex.Message);
                 }
-            } while (found == true);
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
+                }
+            }
 
-            PersonManager linz = new();
-            Thread.Sleep(1000);
+            Console.WriteLine("All persons in the database:");
+            personManager.DisplayAllPersons();
 
-            Console.WriteLine();
-            Console.WriteLine("created Öl in Linz PV ");
-            linz.CreatePerson("Oliver", "öl");
-
-            linz.DisplayAllPersons();
         }
 
     }

@@ -2,6 +2,8 @@
 
 public class Address
 {
+    private string address;
+
     public int Plz { get; set; }
     public string Location { get; set; }
     public string StreetName { get; set; }
@@ -13,6 +15,11 @@ public class Address
         HouseNumber = houseNumber;
         Plz = plz;
         Location = location;
+    }
+
+    public Address(string address)
+    {
+        this.address = address;
     }
 
     public override string ToString()

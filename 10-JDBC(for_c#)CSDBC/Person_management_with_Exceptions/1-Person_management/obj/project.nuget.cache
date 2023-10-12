@@ -1,8 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "hYy82YtZpBIJwgsLsKTBbPIeMsuijqw2CoA2J4rXAnrtOQncbk+u0hmbzL0iyKHejqecj+gBgHoO1eIsyQnDNQ==",
+  "dgSpecHash": "ihP+3rgczfOeFvOJpe9Enhn2S9laGbsJhgA5HlEB3zaTU4dSpq5tl7jNpnRooSLoWoegWQmxCn7FDz80wVVqXQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_with_Exceptions\\1-Person_management\\1-Person_management.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Codersbay\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\Codersbay\\.nuget\\packages\\mysqlconnector\\2.2.7\\mysqlconnector.2.2.7.nupkg.sha512",
+    "C:\\Users\\Codersbay\\.nuget\\packages\\system.configuration.configurationmanager\\7.0.0\\system.configuration.configurationmanager.7.0.0.nupkg.sha512",
+    "C:\\Users\\Codersbay\\.nuget\\packages\\system.diagnostics.eventlog\\7.0.0\\system.diagnostics.eventlog.7.0.0.nupkg.sha512",
+    "C:\\Users\\Codersbay\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
+    "C:\\Users\\Codersbay\\.nuget\\packages\\system.security.cryptography.protecteddata\\7.0.0\\system.security.cryptography.protecteddata.7.0.0.nupkg.sha512",
+    "C:\\Users\\Codersbay\\.nuget\\packages\\system.security.permissions\\7.0.0\\system.security.permissions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Codersbay\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

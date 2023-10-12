@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Xml.Linq;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using MySql.Data.MySqlClient;
 
 namespace _1_Person_management;
 
 public class PersonManager
 {
     private readonly List<Person> personList;
+    private string connectionString;
 
     public PersonManager()
     {
@@ -25,14 +23,24 @@ public class PersonManager
         /*        }*/
     }
 
+    // CHANGED FOR SQL
+
     public void CreatePerson(string name, string lastName)
     {
         if (name.Any(char.IsDigit) || lastName.Any(char.IsDigit))
             throw new InvalidPersonNameException("Invalid name: Name should not contain numbers.");
         else
         {
-            Person person = new(name, lastName);
-            personList.Add(person);
+            using (MySqlConnection connection = new (connectionString))
+            {
+                connection.Open();
+
+                string insertQuery = "INSERT INTO Persons (FirstName, LastName) VALUES (@FirstName, @LastName)";
+                MySqlCommand cmd = new MySqlCommand(insertQuery, connection);
+                cmd.Parameters.AddWithValue("@FirstName", name);
+                cmd.Parameters.AddWithValue("@LastName", lastName);
+                cmd.ExecuteNonQuery();
+            }
         }
     }
 
@@ -42,21 +50,23 @@ public class PersonManager
             throw new InvalidPersonNameException("Invalid name: Name should not contain numbers.");
         else
         {
-            Person person = new(name, lastName, birthday, address, gender);
-            personList.Add(person);
+            using (MySqlConnection connection = new (connectionString))
+            {
+                connection.Open();
+
+                string insertQuery = "INSERT INTO Persons (FirstName, LastName, Birthday, Address, Gender) " +
+                                    "VALUES (@FirstName, @LastName, @Birthday, @Address, @Gender)";
+                MySqlCommand cmd = new MySqlCommand(insertQuery, connection);
+                cmd.Parameters.AddWithValue("@FirstName", name);
+                cmd.Parameters.AddWithValue("@LastName", lastName);
+                cmd.Parameters.AddWithValue("@Birthday", birthday);
+                cmd.Parameters.AddWithValue("@Address", address.ToString());
+                cmd.Parameters.AddWithValue("@Gender", gender.ToString());
+                cmd.ExecuteNonQuery();
+            }
         }
     }
 
-    public void CreatePerson(string name, string lastName, Person.Gender gender, string birthday)
-    {
-        if (name.Any(char.IsDigit) || lastName.Any(char.IsDigit))
-            throw new InvalidPersonNameException("Invalid name: Name should not contain numbers.");
-        else
-        {
-            Person person = new(name, lastName, gender, birthday);
-            personList.Add(person);
-        }
-    }
 
 
 
