@@ -1,9 +1,13 @@
 ﻿using MySql.Data.MySqlClient;
+using static _1_Person_management.PersonManager;
 
 namespace _1_Person_management
 {
     class Person_Management
     {
+        private static string? firstName;
+        private static string? lastName;
+
         static void Main()
         {
             Database.CallDB();
@@ -12,48 +16,96 @@ namespace _1_Person_management
 
             while (true)
             {
-                Console.WriteLine("Enter a person's first name (or type 'exit' to quit):");
-                string firstName = Console.ReadLine().Trim();
+                Console.WriteLine("Menu Options:");
+                Console.WriteLine("1. Add a person");
+                Console.WriteLine("2. Display all persons");
+                Console.WriteLine("3. Remove a person");
+                Console.WriteLine("4. Update a person");
+                Console.WriteLine("5. Exit");
 
-                if (firstName.ToLower() == "exit")
+                Console.Write("Enter your choice: ");
+                string choice = Console.ReadLine();
+
+                switch (choice)
                 {
-                    break;
-                }
+                    case "1":
+                        PersonManager.InsertPersonWithDetails();
+                        break;
+                        try
+                        {
+                            InsertPersonIntoDatabase(firstName, lastName);
+                            Console.WriteLine("Person created and added to the database.");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("Error: " + ex.Message);
+                        }
+                        break;
+                    case "2":
+                        Console.WriteLine("All persons in the database:");
+                        DisplayAllPersons();
+                        break;
+                    case "3":
+                        Console.WriteLine("Enter the first name of the person to delete:");
+                        string firstNameToDelete = Console.ReadLine().Trim();
+                        Console.WriteLine("Enter the last name of the person to delete:");
+                        string lastNameToDelete = Console.ReadLine().Trim();
 
-                Console.WriteLine("Enter the person's last name:");
-                string lastName = Console.ReadLine().Trim();
+                        try
+                        {
+                            RemovePerson(firstNameToDelete, lastNameToDelete);
+                            Console.WriteLine("Person removed from the database.");
+                        }
+                        catch (InvalidPersonNameException ex)
+                        {
+                            Console.WriteLine("Error: " + ex.Message);
+                        }
+                        break;
 
-                try
-                {
-                    // Insert the person into the database
-                    InsertPersonIntoDatabase(firstName, lastName);
+                    case "4":
+                        Console.WriteLine("Enter the first name of the person to update:");
+                        string firstNameToUpdate = Console.ReadLine().Trim();
+                        Console.WriteLine("Enter the last name of the person to update:");
+                        string lastNameToUpdate = Console.ReadLine().Trim();
 
-                    Console.WriteLine("Person created and added to the database.");
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Error: " + ex.Message);
+                        if (PersonManager.PersonExists(firstNameToUpdate, lastNameToUpdate))
+                        {
+                            Console.WriteLine("Enter the new first name:");
+                            string newFirstName = Console.ReadLine().Trim();
+                            Console.WriteLine("Enter the new last name:");
+                            string newLastName = Console.ReadLine().Trim();
+
+                            try
+                            {
+                                PersonManager.UpdatePerson(firstNameToUpdate, lastNameToUpdate, newFirstName, newLastName);
+                                Console.WriteLine("Person data updated.");
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine("Error: " + ex.Message);
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Person not found in the database.");
+                        }
+                        break;
+
+                    case "5":
+                        Console.WriteLine("Exiting the program.");
+                        return;
+                    default:
+                        Console.WriteLine("Invalid choice. Please select a valid option.");
+                        break;
                 }
             }
-
-            Console.WriteLine("All persons in the database:");
-            personManager.DisplayAllPersons();
         }
+        
+    }
+}
 
-        public static void InsertPersonIntoDatabase(string firstName, string lastName)
-        {
-            string connectionString = "server=127.0.0.1;User ID=root;Password=;Database=personmanagerdb";
 
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
-            {
-                connection.Open();
 
-                // Insert a person into the Persons table
-                Database.InsertPerson(connection, firstName, lastName);
-
-                connection.Close();
-            }
-        }
         /*        static void Main()
         {
             string connectionString = "server=127.0.0.1;User ID=root;Password=;Database=personmanagerdb";
@@ -70,7 +122,3 @@ namespace _1_Person_management
                 connection.Close();
             }
         }*/
-    }
-}
-
-
