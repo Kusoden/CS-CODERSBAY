@@ -29,12 +29,10 @@ namespace _1_Person_management
                 switch (choice)
                 {
                     case "1":
-                        PersonManager.InsertPersonWithDetails();
-                        break;
                         try
                         {
-                            InsertPersonIntoDatabase(firstName, lastName);
-                            Console.WriteLine("Person created and added to the database.");
+                            PersonManager.InsertPersonWithDetails();
+                            Console.WriteLine("Person created and added to the database.\n");
                         }
                         catch (Exception ex)
                         {
@@ -103,22 +101,3 @@ namespace _1_Person_management
         
     }
 }
-
-
-
-        /*        static void Main()
-        {
-            string connectionString = "server=127.0.0.1;User ID=root;Password=;Database=personmanagerdb";
-
-            using (MySqlConnection connection = new(connectionString))
-            {
-                connection.Open();
-
-                // Insert a person into the Persons table
-                InsertPerson(connection, "John", "Doe");
-
-                Console.WriteLine("Person inserted successfully.");
-
-                connection.Close();
-            }
-        }*/

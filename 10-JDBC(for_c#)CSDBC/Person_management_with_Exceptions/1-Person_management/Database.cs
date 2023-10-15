@@ -15,7 +15,9 @@ namespace _1_Person_management
                 conn = new MySqlConnection(myConnectionString);
                 conn.Open();
                 Console.WriteLine("Connected to the Database.");
+                Household.CreateHouseholdsTable(conn);
                 PersonManager.CreatePersonsTable(conn);
+                PersonManager.CreatePetsTable(conn);
             }
             catch (MySqlException ex)
             {

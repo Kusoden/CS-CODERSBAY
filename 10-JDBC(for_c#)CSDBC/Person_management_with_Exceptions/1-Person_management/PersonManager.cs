@@ -5,7 +5,6 @@ namespace _1_Person_management;
 public class PersonManager
 {
     private readonly List<Person> personList;
-    private string connectionString;
 
     public PersonManager()
     {
@@ -15,42 +14,25 @@ public class PersonManager
     public static void CreatePersonsTable(MySqlConnection connection)
     {
         string createTableQuery = @"
-            CREATE TABLE IF NOT EXISTS Persons (
-                ID INT NOT NULL AUTO_INCREMENT,
-                FirstName VARCHAR(255) NOT NULL,
-                LastName VARCHAR(255) NOT NULL,
-                Birthday DATE,
-                Address VARCHAR(255),
-                Gender VARCHAR(10),
-                PRIMARY KEY (ID)
-            );
-            ";
-
-        MySqlCommand cmd = new MySqlCommand(createTableQuery, connection);
-        cmd.ExecuteNonQuery();
-        Console.WriteLine("Persons table created or already exists.");
-
-        // Add the test query
-        string testQuery = "SELECT 1";
-        MySqlCommand testCmd = new(testQuery, connection);
-        int result = (int)testCmd.ExecuteScalar();
-        Console.WriteLine("Test query result: " + result);
-
-    }
-    public static void CreateHouseholdsTable(MySqlConnection connection)
-    {
-        string createTableQuery = @"
-        CREATE TABLE IF NOT EXISTS Households (
+        CREATE TABLE IF NOT EXISTS Persons (
             ID INT NOT NULL AUTO_INCREMENT,
-            HouseholdName VARCHAR(255) NOT NULL,
-            PRIMARY KEY (ID)
+            FirstName VARCHAR(255) NOT NULL,
+            LastName VARCHAR(255) NOT NULL,
+            Birthday DATE,
+            Address VARCHAR(255),
+            Gender VARCHAR(10),
+            HouseholdID INT,
+            PRIMARY KEY (ID),
+            FOREIGN KEY (HouseholdID) REFERENCES Households(ID)
         );
         ";
 
         MySqlCommand cmd = new MySqlCommand(createTableQuery, connection);
         cmd.ExecuteNonQuery();
-        Console.WriteLine("Households table created or already exists.");
+        Console.WriteLine("Persons table created or already exists.");
     }
+
+
 
     public static void CreatePetsTable(MySqlConnection connection)
     {
@@ -80,7 +62,7 @@ public class PersonManager
             connection.Open();
 
             string sql = "DELETE FROM Persons WHERE FirstName = @FirstName AND LastName = @LastName";
-            using (MySqlCommand cmd = new MySqlCommand(sql, connection))
+            using (MySqlCommand cmd = new (sql, connection))
             {
                 cmd.Parameters.AddWithValue("@FirstName", firstNameToDelete);
                 cmd.Parameters.AddWithValue("@LastName", lastNameToDelete);
@@ -90,7 +72,7 @@ public class PersonManager
             connection.Close();
         }
     }
-    public static void InsertPersonIntoDatabase(string firstName, string lastName)
+    public static void CreatePerson(string firstName, string lastName, int householdID)
     {
         string connectionString = "server=127.0.0.1;User ID=root;Password=;Database=personmanagerdb";
 
@@ -98,11 +80,12 @@ public class PersonManager
         {
             connection.Open();
 
-            string insertQuery = "INSERT INTO Persons (FirstName, LastName) VALUES (@FirstName, @LastName);";
+            string insertQuery = "INSERT INTO Persons (FirstName, LastName, HouseholdID) VALUES (@FirstName, @LastName, @HouseholdID);";
 
             MySqlCommand cmd = new(insertQuery, connection);
             cmd.Parameters.AddWithValue("@FirstName", firstName);
             cmd.Parameters.AddWithValue("@LastName", lastName);
+            cmd.Parameters.AddWithValue("@HouseholdID", householdID);
 
             cmd.ExecuteNonQuery();
 
@@ -110,7 +93,7 @@ public class PersonManager
         }
     }
 
-    public static void InsertPersonIntoDatabase(string firstName, string lastName, string birthday, Person.Gender gender)
+    public static void CreatePerson(string firstName, string lastName, string birthday, Person.Gender gender, int householdID)
     {
         string connectionString = "server=127.0.0.1;User ID=root;Password=;Database=personmanagerdb";
 
@@ -121,11 +104,12 @@ public class PersonManager
             string insertQuery = "INSERT INTO Persons (FirstName, LastName, Birthday, Gender) " +
                                 "VALUES (@FirstName, @LastName, @Birthday, @Gender);";
 
-            MySqlCommand cmd = new MySqlCommand(insertQuery, connection);
+            MySqlCommand cmd = new(insertQuery, connection);
             cmd.Parameters.AddWithValue("@FirstName", firstName);
             cmd.Parameters.AddWithValue("@LastName", lastName);
             cmd.Parameters.AddWithValue("@Birthday", birthday);
-            cmd.Parameters.AddWithValue("@Gender", gender); // Assuming gender is an enum
+            cmd.Parameters.AddWithValue("@Gender", gender);
+            cmd.Parameters.AddWithValue("@HouseholdID", householdID);
 
             cmd.ExecuteNonQuery();
 
@@ -133,7 +117,7 @@ public class PersonManager
         }
     }
 
-    public static void InsertPersonIntoDatabase(string firstName, string lastName, string birthday, Address address, Person.Gender gender)
+    public static void CreatePerson(string firstName, string lastName, string birthday, Address address, Person.Gender gender, int householdID)
     {
         string connectionString = "server=127.0.0.1;User ID=root;Password=;Database=personmanagerdb";
 
@@ -150,6 +134,7 @@ public class PersonManager
             cmd.Parameters.AddWithValue("@Birthday", birthday);
             cmd.Parameters.AddWithValue("@Address", address.ToString()); 
             cmd.Parameters.AddWithValue("@Gender", gender);
+            cmd.Parameters.AddWithValue("@HouseholdID", householdID);
 
             cmd.ExecuteNonQuery();
 
@@ -174,19 +159,25 @@ public class PersonManager
                 string firstName = Console.ReadLine().Trim();
                 Console.WriteLine("Enter the person's last name:");
                 string lastName = Console.ReadLine().Trim();
-                InsertPersonIntoDatabase(firstName, lastName);
+                Console.WriteLine("Enter the household ID (for the person):");
+                int householdID1 = int.Parse(Console.ReadLine());
+                CreatePerson(firstName, lastName, householdID1);
                 break;
             case "2":
                 Console.WriteLine("Enter a person's first name:");
                 string firstName2 = Console.ReadLine().Trim();
                 Console.WriteLine("Enter the person's last name:");
                 string lastName2 = Console.ReadLine().Trim();
-                Console.WriteLine("Enter the person's birthday FORMAT: YYYY-MM-DD (write the lines '-' between them) :");
+                Console.WriteLine("Enter the person's birthday (YYYY-MM-DD):");
                 string birthday2 = Console.ReadLine().Trim();
                 Console.WriteLine("Enter the person's gender (Male or Female):");
                 string genderInput = Console.ReadLine().Trim();
                 if (Enum.TryParse<Person.Gender>(genderInput, out var gender2))
-                    InsertPersonIntoDatabase(firstName2, lastName2, birthday2, gender2);
+                {
+                    Console.WriteLine("Enter the household ID (for the person):");
+                    int householdID2 = int.Parse(Console.ReadLine());
+                    CreatePerson(firstName2, lastName2, birthday2, gender2, householdID2);
+                }
                 else
                     Console.WriteLine("Invalid gender input.");
                 break;
@@ -195,7 +186,7 @@ public class PersonManager
                 string firstName3 = Console.ReadLine().Trim();
                 Console.WriteLine("Enter the person's last name:");
                 string lastName3 = Console.ReadLine().Trim();
-                Console.WriteLine("Enter the person's birthday FORMAT: YYYY-MM-DD (write the lines '-' between them) :");
+                Console.WriteLine("Enter the person's birthday (YYYY-MM-DD):");
                 string birthday3 = Console.ReadLine().Trim();
                 Console.WriteLine("Enter the person's PLZ (Postal Code):");
                 int plz = int.Parse(Console.ReadLine());
@@ -209,8 +200,10 @@ public class PersonManager
                 string genderInput3 = Console.ReadLine().Trim();
                 if (Enum.TryParse<Person.Gender>(genderInput3, out var gender3))
                 {
-                    Address address3 = new (streetName, houseNumber, plz, location);
-                    InsertPersonIntoDatabase(firstName3, lastName3, birthday3, address3, gender3);
+                    Address address3 = new Address(streetName, houseNumber, plz, location);
+                    Console.WriteLine("Enter the household ID (for the person):");
+                    int householdID3 = int.Parse(Console.ReadLine());
+                    CreatePerson(firstName3, lastName3, birthday3, address3, gender3, householdID3);
                 }
                 else
                     Console.WriteLine("Invalid gender input.");
@@ -313,44 +306,3 @@ public class PersonManager
         }
     }
 }
-    /*public void CreatePerson(string firstName, string lastName)
-    {
-        
-        if (firstName.Any(char.IsDigit) || lastName.Any(char.IsDigit))
-            throw new InvalidPersonNameException("Invalid firstName: Name should not contain numbers.");
-        else
-        {
-            using (MySqlConnection connection = new (connectionString))
-            {
-                connection.Open();
-
-                string insertQuery = "INSERT INTO Persons (FirstName, LastName) VALUES (@FirstName, @LastName)";
-                MySqlCommand cmd = new(insertQuery, connection);
-                cmd.Parameters.AddWithValue("@FirstName", firstName);
-                cmd.Parameters.AddWithValue("@LastName", lastName);
-                cmd.ExecuteNonQuery();
-            }
-        }
-    }
-
-    public void CreatePerson(string name, string lastName, string birthday, Address address, Person.Gender gender)
-    {
-        if (name.Any(char.IsDigit) || lastName.Any(char.IsDigit))
-            throw new InvalidPersonNameException("Invalid name: Name should not contain numbers.");
-        else
-        {
-            using (MySqlConnection connection = new(connectionString))
-            {
-                connection.Open();
-
-                string insertQuery = "INSERT INTO Persons (FirstName, LastName, Birthday, Address, Gender) VALUES (@FirstName, @LastName, @Birthday, @Address, @Gender)";
-                MySqlCommand cmd = new (insertQuery, connection);
-                cmd.Parameters.AddWithValue("@FirstName", name);
-                cmd.Parameters.AddWithValue("@LastName", lastName);
-                cmd.Parameters.AddWithValue("@Birthday", birthday);
-                cmd.Parameters.AddWithValue("@Address", address.ToString());
-                cmd.Parameters.AddWithValue("@Gender", gender);
-                cmd.ExecuteNonQuery();
-            }
-        }
-    }*/
