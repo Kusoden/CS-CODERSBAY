@@ -1,7 +1,0 @@
-C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDC\Person_management_CSDBC\PM_CSDBC\PM_CSDBC\obj\Debug\PM_CSDBC.csproj.AssemblyReference.cache
-C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDC\Person_management_CSDBC\PM_CSDBC\PM_CSDBC\obj\Debug\PM_CSDBC.csproj.CoreCompileInputs.cache
-C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDC\Person_management_CSDBC\PM_CSDBC\PM_CSDBC\bin\Debug\PM_CSDBC.exe.config
-C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDC\Person_management_CSDBC\PM_CSDBC\PM_CSDBC\bin\Debug\PM_CSDBC.exe
-C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDC\Person_management_CSDBC\PM_CSDBC\PM_CSDBC\bin\Debug\PM_CSDBC.pdb
-C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDC\Person_management_CSDBC\PM_CSDBC\PM_CSDBC\obj\Debug\PM_CSDBC.exe
-C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDC\Person_management_CSDBC\PM_CSDBC\PM_CSDBC\obj\Debug\PM_CSDBC.pdb
