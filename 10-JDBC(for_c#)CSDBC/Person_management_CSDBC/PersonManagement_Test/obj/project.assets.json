@@ -6593,11 +6593,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Coding_Files_Github\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_with_Exceptions\\PersonManagement_Test\\PersonManagement_Test.csproj",
+      "projectUniqueName": "D:\\Coding_Files_Github\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_CSDBC\\PersonManagement_Test\\PersonManagement_Test.csproj",
       "projectName": "PersonManagement_Test",
-      "projectPath": "D:\\Coding_Files_Github\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_with_Exceptions\\PersonManagement_Test\\PersonManagement_Test.csproj",
+      "projectPath": "D:\\Coding_Files_Github\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_CSDBC\\PersonManagement_Test\\PersonManagement_Test.csproj",
       "packagesPath": "C:\\Users\\Ferzan Abdullahzadeh\\.nuget\\packages\\",
-      "outputPath": "D:\\Coding_Files_Github\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_with_Exceptions\\PersonManagement_Test\\obj\\",
+      "outputPath": "D:\\Coding_Files_Github\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_CSDBC\\PersonManagement_Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6619,8 +6619,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Coding_Files_Github\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_with_Exceptions\\1-Person_management\\1-Person_management.csproj": {
-              "projectPath": "D:\\Coding_Files_Github\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_with_Exceptions\\1-Person_management\\1-Person_management.csproj"
+            "D:\\Coding_Files_Github\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_CSDBC\\1-Person_management\\1-Person_management.csproj": {
+              "projectPath": "D:\\Coding_Files_Github\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_CSDBC\\1-Person_management\\1-Person_management.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1ppEdeR1/QHJZv/LcZa+A/XBv4hg9jAsI30rEIO8oQxDXVWXy2OXtnOwAs4LUWcGJYby9mJTkfT4z4f7v08+Hw==",
+  "dgSpecHash": "fhuVHnibO33Hfj5nCYf/1rbhqpRlPBrcff6eXlFhVMJ9p7CzLWiZxySC/WUYt71gvu+jQ+XLuOhy6uiCj50JsQ==",
   "success": true,
-  "projectFilePath": "D:\\Coding_Files_Github\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_with_Exceptions\\1-Person_management\\1-Person_management.csproj",
+  "projectFilePath": "D:\\Coding_Files_Github\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_CSDBC\\1-Person_management\\1-Person_management.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ferzan Abdullahzadeh\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\Ferzan Abdullahzadeh\\.nuget\\packages\\k4os.compression.lz4\\1.3.5\\k4os.compression.lz4.1.3.5.nupkg.sha512",

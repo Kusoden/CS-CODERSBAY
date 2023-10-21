@@ -33,7 +33,6 @@ namespace _1_Person_management
             Console.WriteLine("Households table created or already exists.");
         }
 
-
         public static void CreateHousehold(MySqlConnection connection, string householdName)
         {
             string insertQuery = "INSERT INTO Households (HouseholdName) VALUES (@HouseholdName);";
@@ -71,7 +70,7 @@ namespace _1_Person_management
         {
             string updateQuery = "UPDATE Households SET HouseholdName = @NewHouseholdName WHERE ID = @ID;";
 
-            using (MySqlCommand cmd = new MySqlCommand(updateQuery, connection))
+            using (MySqlCommand cmd = new(updateQuery, connection))
             {
                 cmd.Parameters.AddWithValue("@NewHouseholdName", newHouseholdName);
                 cmd.Parameters.AddWithValue("@ID", householdID);
@@ -84,7 +83,7 @@ namespace _1_Person_management
         {
             string deleteQuery = "DELETE FROM Households WHERE ID = @ID;";
 
-            using (MySqlCommand cmd = new MySqlCommand(deleteQuery, connection))
+            using (MySqlCommand cmd = new(deleteQuery, connection))
             {
                 cmd.Parameters.AddWithValue("@ID", householdID);
                 cmd.ExecuteNonQuery();
@@ -97,7 +96,7 @@ namespace _1_Person_management
             string selectAllQuery = "SELECT * FROM Households;";
             List<Household> households = new List<Household>();
 
-            using (MySqlCommand cmd = new MySqlCommand(selectAllQuery, connection))
+            using (MySqlCommand cmd = new(selectAllQuery, connection))
             using (MySqlDataReader reader = cmd.ExecuteReader())
             {
                 while (reader.Read())

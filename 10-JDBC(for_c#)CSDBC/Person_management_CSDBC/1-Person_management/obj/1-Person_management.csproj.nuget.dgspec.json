@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Coding_Files_Github\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_with_Exceptions\\1-Person_management\\1-Person_management.csproj": {}
+    "D:\\Coding_Files_Github\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_CSDBC\\1-Person_management\\1-Person_management.csproj": {}
   },
   "projects": {
-    "D:\\Coding_Files_Github\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_with_Exceptions\\1-Person_management\\1-Person_management.csproj": {
+    "D:\\Coding_Files_Github\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_CSDBC\\1-Person_management\\1-Person_management.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Coding_Files_Github\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_with_Exceptions\\1-Person_management\\1-Person_management.csproj",
+        "projectUniqueName": "D:\\Coding_Files_Github\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_CSDBC\\1-Person_management\\1-Person_management.csproj",
         "projectName": "1-Person_management",
-        "projectPath": "D:\\Coding_Files_Github\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_with_Exceptions\\1-Person_management\\1-Person_management.csproj",
+        "projectPath": "D:\\Coding_Files_Github\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_CSDBC\\1-Person_management\\1-Person_management.csproj",
         "packagesPath": "C:\\Users\\Ferzan Abdullahzadeh\\.nuget\\packages\\",
-        "outputPath": "D:\\Coding_Files_Github\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_with_Exceptions\\1-Person_management\\obj\\",
+        "outputPath": "D:\\Coding_Files_Github\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_CSDBC\\1-Person_management\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

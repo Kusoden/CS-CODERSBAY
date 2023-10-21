@@ -5,10 +5,10 @@ namespace _1_Person_management
 {
     class Person_Management
     {
-
-
         static void Main()
         {
+            MySqlConnection connection = new("server=127.0.0.1;User ID=root;Password=;Database=personmanagerdb");
+
             Database.CallDB();
 
             while (true)
@@ -91,13 +91,13 @@ namespace _1_Person_management
                     case "5":
                         Console.WriteLine("Enter the household name:");
                         string householdName = Console.ReadLine().Trim();
-                        Household.CreateHousehold(householdName);
+                        Household.CreateHousehold(connection, householdName);
                         Console.WriteLine("Household created.");
                         break;
 
                     case "6":
                         Console.WriteLine("All households in the database:");
-                        List<Household> households = Household.GetAllHouseholds();
+                        List<Household> households = Household.GetAllHouseholds(connection);
                         foreach (var household in households)
                         {
                             Console.WriteLine($"ID: {household.ID}, Name: {household.HouseholdName}");
