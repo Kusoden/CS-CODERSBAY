@@ -20,7 +20,9 @@ namespace _1_Person_management
                 Console.WriteLine("4. Update a person");
                 Console.WriteLine("5. Create a household");
                 Console.WriteLine("6. Display all households");
-                Console.WriteLine("7. Exit");
+                Console.WriteLine("7. Update Household");
+                Console.WriteLine("8. Delete Household");
+                Console.WriteLine("9. Exit");
 
                 Console.Write("Enter your choice: ");
                 string choice = Console.ReadLine();
@@ -97,14 +99,42 @@ namespace _1_Person_management
 
                     case "6":
                         Console.WriteLine("All households in the database:");
-                        List<Household> households = Household.GetAllHouseholds(connection);
+                        List<Household> households = Household.DisplayHouseholds(connection);
                         foreach (var household in households)
                         {
                             Console.WriteLine($"ID: {household.ID}, Name: {household.HouseholdName}");
                         }
-                        break;
-
+                        break;                    
                     case "7":
+                        Console.WriteLine("Enter the ID of the household to update:");
+                        int householdIDToUpdate = int.Parse(Console.ReadLine());
+                        Console.WriteLine("Enter the new household name:");
+                        string newHouseholdName = Console.ReadLine().Trim();
+
+                        try
+                        {
+                            Household.UpdateHousehold(connection, householdIDToUpdate, newHouseholdName);
+                            Console.WriteLine("Household updated.");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("Error: " + ex.Message);
+                        }
+                        break;
+                    case "8":
+                        Console.WriteLine("Enter the ID of the household to delete:");
+                        int householdIDToDelete = int.Parse(Console.ReadLine());
+                        try
+                        {
+                            Household.DeleteHousehold(connection, householdIDToDelete);
+                            Console.WriteLine("Household deleted.");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("Error: " + ex.Message);
+                        }
+                        break;
+                    case "9":
                         Console.WriteLine("Exiting the program.");
                         return;
                     default:

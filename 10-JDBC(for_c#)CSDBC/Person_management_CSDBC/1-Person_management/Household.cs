@@ -35,6 +35,7 @@ namespace _1_Person_management
 
         public static void CreateHousehold(MySqlConnection connection, string householdName)
         {
+            connection.Open();
             string insertQuery = "INSERT INTO Households (HouseholdName) VALUES (@HouseholdName);";
 
             using (MySqlCommand cmd = new(insertQuery, connection))
@@ -43,10 +44,12 @@ namespace _1_Person_management
                 cmd.ExecuteNonQuery();
                 Console.WriteLine("Household created.");
             }
+            connection.Close();
         }
 
         public static Household ReadHousehold(MySqlConnection connection, int householdID)
         {
+            connection.Open();
             string selectQuery = "SELECT * FROM Households WHERE ID = @ID;";
             using (MySqlCommand cmd = new(selectQuery, connection))
             {
@@ -63,11 +66,14 @@ namespace _1_Person_management
                     }
                 }
             }
+            connection.Close();
             return null;
+
         }
 
         public static void UpdateHousehold(MySqlConnection connection, int householdID, string newHouseholdName)
         {
+            connection.Open();
             string updateQuery = "UPDATE Households SET HouseholdName = @NewHouseholdName WHERE ID = @ID;";
 
             using (MySqlCommand cmd = new(updateQuery, connection))
@@ -77,10 +83,12 @@ namespace _1_Person_management
                 cmd.ExecuteNonQuery();
                 Console.WriteLine("Household updated.");
             }
+            connection.Close();
         }
 
         public static void DeleteHousehold(MySqlConnection connection, int householdID)
         {
+            connection.Open();
             string deleteQuery = "DELETE FROM Households WHERE ID = @ID;";
 
             using (MySqlCommand cmd = new(deleteQuery, connection))
@@ -89,10 +97,12 @@ namespace _1_Person_management
                 cmd.ExecuteNonQuery();
                 Console.WriteLine("Household deleted.");
             }
+            connection.Close();
         }
 
-        public static List<Household> GetAllHouseholds(MySqlConnection connection)
+        public static List<Household> DisplayHouseholds(MySqlConnection connection)
         {
+            connection.Open();
             string selectAllQuery = "SELECT * FROM Households;";
             List<Household> households = new List<Household>();
 
@@ -108,7 +118,7 @@ namespace _1_Person_management
                     });
                 }
             }
-
+            connection.Close();
             return households;
         }
     }

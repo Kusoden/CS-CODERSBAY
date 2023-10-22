@@ -101,8 +101,7 @@ public class PersonManager
         {
             connection.Open();
 
-            string insertQuery = "INSERT INTO Persons (FirstName, LastName, Birthday, Gender) " +
-                                "VALUES (@FirstName, @LastName, @Birthday, @Gender);";
+            string insertQuery = "INSERT INTO Persons (FirstName, LastName, Birthday, Gender, HouseholdID) VALUES (@FirstName, @LastName, @Birthday, @Gender, @HouseholdID);";
 
             MySqlCommand cmd = new(insertQuery, connection);
             cmd.Parameters.AddWithValue("@FirstName", firstName);
@@ -125,8 +124,7 @@ public class PersonManager
         {
             connection.Open();
 
-            string insertQuery = "INSERT INTO Persons (FirstName, LastName, Birthday, Address, PersonGender) " +
-                                "VALUES (@FirstName, @LastName, @Birthday, @Address, @Gender);";
+            string insertQuery = "INSERT INTO Persons (FirstName, LastName, Birthday, Address, PersonGender, HouseholdID) VALUES (@FirstName, @LastName, @Birthday, @Address, @Gender, @HouseholdID);";
 
             MySqlCommand cmd = new(insertQuery, connection);
             cmd.Parameters.AddWithValue("@FirstName", firstName);
@@ -145,9 +143,9 @@ public class PersonManager
     public static void InsertPersonWithDetails()
     {
         Console.WriteLine("Choose the level of detail for creating a person:");
-        Console.WriteLine("1. First Name and Last Name");
-        Console.WriteLine("2. First Name, Last Name, Birthday, and Gender");
-        Console.WriteLine("3. First Name, Last Name, Birthday, Address, and Gender");
+        Console.WriteLine("1. First and Last Name with Household ID");
+        Console.WriteLine("2. First and Last Name, Birthday, and Gender with Household ID");
+        Console.WriteLine("3. First and Last Name, Birthday, Address and Gender with Household ID");
 
         Console.Write("Enter your choice: ");
         string choice = Console.ReadLine();
