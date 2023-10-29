@@ -1,6 +1,4 @@
-﻿using System;
-using MySql.Data.MySqlClient;
-using System.Configuration;
+﻿using MySql.Data.MySqlClient;
 namespace _1_Person_management
 {
     internal class Database

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 
 namespace _1_Person_management
 {
@@ -8,10 +6,6 @@ namespace _1_Person_management
     {
         public int ID { get; set; }
         public string HouseholdName { get; set; }
-
-        public Household()
-        {
-        }
 
         public Household(string householdName)
         {
@@ -47,30 +41,6 @@ namespace _1_Person_management
             connection.Close();
         }
 
-        public static Household ReadHousehold(MySqlConnection connection, int householdID)
-        {
-            connection.Open();
-            string selectQuery = "SELECT * FROM Households WHERE ID = @ID;";
-            using (MySqlCommand cmd = new(selectQuery, connection))
-            {
-                cmd.Parameters.AddWithValue("@ID", householdID);
-                using (MySqlDataReader reader = cmd.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        return new Household
-                        {
-                            ID = reader.GetInt32("ID"),
-                            HouseholdName = reader.GetString("HouseholdName")
-                        };
-                    }
-                }
-            }
-            connection.Close();
-            return null;
-
-        }
-
         public static void UpdateHousehold(MySqlConnection connection, int householdID, string newHouseholdName)
         {
             connection.Open();
@@ -100,11 +70,29 @@ namespace _1_Person_management
             connection.Close();
         }
 
-        public static List<Household> DisplayHouseholds(MySqlConnection connection)
+        public static void DisplayHouseholds(MySqlConnection connection)
         {
             connection.Open();
             string selectAllQuery = "SELECT * FROM Households;";
-            List<Household> households = new List<Household>();
+
+            using (MySqlCommand cmd = new(selectAllQuery, connection))
+            using (MySqlDataReader reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    int id = reader.GetInt32("ID");
+                    string householdName = reader.GetString("HouseholdName");
+
+                    Console.WriteLine($"{id} {householdName}");
+                }
+            }
+            connection.Close();
+        }
+/*        public static List<Household> DisplayHouseholds(MySqlConnection connection)
+        {
+            connection.Open();
+            string selectAllQuery = "SELECT * FROM Households;";
+            List<Household> households = new();
 
             using (MySqlCommand cmd = new(selectAllQuery, connection))
             using (MySqlDataReader reader = cmd.ExecuteReader())
@@ -113,6 +101,7 @@ namespace _1_Person_management
                 {
                     households.Add(new Household
                     {
+
                         ID = reader.GetInt32("ID"),
                         HouseholdName = reader.GetString("HouseholdName")
                     });
@@ -120,6 +109,6 @@ namespace _1_Person_management
             }
             connection.Close();
             return households;
-        }
+        }*/
     }
 }

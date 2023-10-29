@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace _1_Person_management
+﻿namespace _1_Person_management
 {
     public class Person
     {
