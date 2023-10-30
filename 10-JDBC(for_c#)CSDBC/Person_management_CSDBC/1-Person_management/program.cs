@@ -2,16 +2,15 @@
 using static _1_Person_management.PersonManager;
 using static _1_Person_management.Pet;
 using static _1_Person_management.Household;
+using static _1_Person_management.Database;
 
 namespace _1_Person_management
 {
     class Person_Management
     {
         static void Main()
-        {
-            MySqlConnection connection = new("server=127.0.0.1;User ID=root;Password=;Database=personmanagerdb");
-
-            Database.CallDB();
+        {            
+            OpenDB();
 
             while (true)
             {
@@ -40,13 +39,13 @@ namespace _1_Person_management
                     case "1":
                         Console.WriteLine("Enter the household name:");
                         string householdName = Console.ReadLine().Trim();
-                        Household.CreateHousehold(connection, householdName);
+                        CreateHousehold(householdName);
                         Console.WriteLine("Household created.");
                         break;
 
                     case "2":
                         Console.WriteLine("All households in the database:");
-                        DisplayHouseholds(connection);
+                        DisplayHouseholds();
                         break;
                     case "3":
                         Console.WriteLine("Enter the ID of the household to update:");
@@ -56,7 +55,7 @@ namespace _1_Person_management
 
                         try
                         {
-                            Household.UpdateHousehold(connection, householdIDToUpdate, newHouseholdName);
+                            UpdateHousehold(householdIDToUpdate, newHouseholdName);
                             Console.WriteLine("Household updated.");
                         }
                         catch (Exception ex)
@@ -70,7 +69,7 @@ namespace _1_Person_management
                         int householdIDToDelete = int.Parse(Console.ReadLine());
                         try
                         {
-                            Household.DeleteHousehold(connection, householdIDToDelete);
+                            DeleteHousehold(householdIDToDelete);
                             Console.WriteLine("Household deleted.");
                         }
                         catch (Exception ex)
@@ -150,7 +149,7 @@ namespace _1_Person_management
 
                         if (PersonExists(ownerID))
                         {
-                            CreatePet(connection, petName, ownerID);
+                            CreatePet(petName, ownerID);
                             Console.WriteLine("Pet created and associated with the owner.");
                         }
                         else
@@ -161,7 +160,7 @@ namespace _1_Person_management
 
                     case "10":
                         Console.WriteLine("All pets in the database:");
-                        List<Pet> pets = DisplayPets(connection);
+                        List<Pet> pets = DisplayPets();
                         foreach (var pet in pets)
                             Console.WriteLine($"ID: {pet.ID}, Name: {pet.PetName}, Owner: {pet.OwnerID}");
                         break;
@@ -174,7 +173,7 @@ namespace _1_Person_management
 
                         try
                         {
-                            UpdatePet(connection, petIDToUpdate, newPetName);
+                            UpdatePet(petIDToUpdate, newPetName);
                             Console.WriteLine("Pet updated.");
                         }
                         catch (Exception ex)
@@ -188,7 +187,7 @@ namespace _1_Person_management
                         int petIDToDelete = int.Parse(Console.ReadLine());
                         try
                         {
-                            DeletePet(connection, petIDToDelete);
+                            DeletePet(petIDToDelete);
                             Console.WriteLine("Pet deleted.");
                         }
                         catch (Exception ex)
@@ -200,6 +199,7 @@ namespace _1_Person_management
 
                     case "13":
                         Console.WriteLine("Exiting the program.");
+                        CloseDB();
                         return;
 
                     default:

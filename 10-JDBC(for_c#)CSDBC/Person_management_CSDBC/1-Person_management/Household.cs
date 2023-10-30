@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using static _1_Person_management.Database;
 
 namespace _1_Person_management
 {
@@ -12,7 +13,7 @@ namespace _1_Person_management
             HouseholdName = householdName;
         }
 
-        public static void CreateHouseholdsTable(MySqlConnection connection)
+        public static void CreateHouseholdsTable()
         {
             string createTableQuery = @"
                 CREATE TABLE IF NOT EXISTS Households (
@@ -21,61 +22,56 @@ namespace _1_Person_management
                     PRIMARY KEY (ID)
                 );
             ";
-
-            MySqlCommand cmd = new(createTableQuery, connection);
+            try { 
+            MySqlCommand cmd = new(createTableQuery, DBSqlConn);
             cmd.ExecuteNonQuery();
             Console.WriteLine("Households table created or already exists.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
-
-        public static void CreateHousehold(MySqlConnection connection, string householdName)
+        public static void CreateHousehold(string householdName)
         {
-            connection.Open();
             string insertQuery = "INSERT INTO Households (HouseholdName) VALUES (@HouseholdName);";
 
-            using (MySqlCommand cmd = new(insertQuery, connection))
-            {
-                cmd.Parameters.AddWithValue("@HouseholdName", householdName);
-                cmd.ExecuteNonQuery();
-                Console.WriteLine("Household created.");
-            }
-            connection.Close();
+            using MySqlCommand cmd = new(insertQuery, DBSqlConn);
+            cmd.Parameters.AddWithValue("@HouseholdName", householdName);
+            cmd.ExecuteNonQuery();
+            Console.WriteLine("Household created.");
         }
 
-        public static void UpdateHousehold(MySqlConnection connection, int householdID, string newHouseholdName)
+        public static void UpdateHousehold(int householdID, string newHouseholdName)
         {
-            connection.Open();
             string updateQuery = "UPDATE Households SET HouseholdName = @NewHouseholdName WHERE ID = @ID;";
 
-            using (MySqlCommand cmd = new(updateQuery, connection))
+            using (MySqlCommand cmd = new(updateQuery, DBSqlConn))
             {
                 cmd.Parameters.AddWithValue("@NewHouseholdName", newHouseholdName);
                 cmd.Parameters.AddWithValue("@ID", householdID);
                 cmd.ExecuteNonQuery();
                 Console.WriteLine("Household updated.");
             }
-            connection.Close();
         }
 
-        public static void DeleteHousehold(MySqlConnection connection, int householdID)
+        public static void DeleteHousehold(int householdID)
         {
-            connection.Open();
             string deleteQuery = "DELETE FROM Households WHERE ID = @ID;";
 
-            using (MySqlCommand cmd = new(deleteQuery, connection))
+            using (MySqlCommand cmd = new(deleteQuery, DBSqlConn))
             {
                 cmd.Parameters.AddWithValue("@ID", householdID);
                 cmd.ExecuteNonQuery();
                 Console.WriteLine("Household deleted.");
             }
-            connection.Close();
         }
 
-        public static void DisplayHouseholds(MySqlConnection connection)
+        public static void DisplayHouseholds()
         {
-            connection.Open();
             string selectAllQuery = "SELECT * FROM Households;";
 
-            using (MySqlCommand cmd = new(selectAllQuery, connection))
+            using (MySqlCommand cmd = new(selectAllQuery, DBSqlConn))
             using (MySqlDataReader reader = cmd.ExecuteReader())
             {
                 while (reader.Read())
@@ -86,29 +82,28 @@ namespace _1_Person_management
                     Console.WriteLine($"{id} {householdName}");
                 }
             }
-            connection.Close();
         }
-/*        public static List<Household> DisplayHouseholds(MySqlConnection connection)
-        {
-            connection.Open();
-            string selectAllQuery = "SELECT * FROM Households;";
-            List<Household> households = new();
-
-            using (MySqlCommand cmd = new(selectAllQuery, connection))
-            using (MySqlDataReader reader = cmd.ExecuteReader())
-            {
-                while (reader.Read())
+        /*        public static List<Household> DisplayHouseholds(MySqlConnection connection)
                 {
-                    households.Add(new Household
-                    {
+                    connection.Open();
+                    string selectAllQuery = "SELECT * FROM Households;";
+                    List<Household> households = new();
 
-                        ID = reader.GetInt32("ID"),
-                        HouseholdName = reader.GetString("HouseholdName")
-                    });
-                }
-            }
-            connection.Close();
-            return households;
-        }*/
+                    using (MySqlCommand cmd = new(selectAllQuery, connection))
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            households.Add(new Household
+                            {
+
+                                ID = reader.GetInt32("ID"),
+                                HouseholdName = reader.GetString("HouseholdName")
+                            });
+                        }
+                    }
+                    connection.Close();
+                    return households;
+                }*/
     }
 }

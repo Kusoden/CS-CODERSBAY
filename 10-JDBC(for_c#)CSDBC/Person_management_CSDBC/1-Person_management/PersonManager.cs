@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using static _1_Person_management.Database;
 
 namespace _1_Person_management;
 
@@ -11,7 +12,7 @@ public class PersonManager
         personList = new List<Person>();
     }
 
-    public static void CreatePersonsTable(MySqlConnection connection)
+    public static void CreatePersonsTable()
     {
         string createTableQuery = @"
         CREATE TABLE IF NOT EXISTS Persons (
@@ -26,15 +27,21 @@ public class PersonManager
             FOREIGN KEY (HouseholdID) REFERENCES Households(ID)
         );
         ";
-
-        MySqlCommand cmd = new MySqlCommand(createTableQuery, connection);
-        cmd.ExecuteNonQuery();
-        Console.WriteLine("Persons table created or already exists.");
+        try
+        {
+            MySqlCommand cmd = new(createTableQuery, DBSqlConn);
+            cmd.ExecuteNonQuery();
+            Console.WriteLine("Persons table created or already exists.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
     }
 
 
 
-    public static void CreatePetsTable(MySqlConnection connection)
+    public static void CreatePetsTable()
     {
         string createTableQuery = @"
         CREATE TABLE IF NOT EXISTS Pets (
@@ -46,78 +53,82 @@ public class PersonManager
         );
         ";
 
-        MySqlCommand cmd = new MySqlCommand(createTableQuery, connection);
-        cmd.ExecuteNonQuery();
-        Console.WriteLine("Pets table created or already exists.");
+        try
+        {
+            MySqlCommand cmd = new(createTableQuery, DBSqlConn);
+            cmd.ExecuteNonQuery();
+            Console.WriteLine("Pets table created or already exists.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
     }
 
 
 
     public static void RemovePerson(string firstNameToDelete, string lastNameToDelete)
     {
-        string connectionString = "server=127.0.0.1;User ID=root;Password=;Database=personmanagerdb";
-
-        using MySqlConnection connection = new(connectionString);
-        connection.Open();
-
-        string sql = "DELETE FROM Persons WHERE FirstName = @FirstName AND LastName = @LastName";
-        using (MySqlCommand cmd = new(sql, connection))
+        try
         {
-            cmd.Parameters.AddWithValue("@FirstName", firstNameToDelete);
-            cmd.Parameters.AddWithValue("@LastName", lastNameToDelete);
-            cmd.ExecuteNonQuery();
+            string sql = "DELETE FROM Persons WHERE FirstName = @FirstName AND LastName = @LastName";
+            using (MySqlCommand cmd = new(sql, DBSqlConn))
+            {
+                cmd.Parameters.AddWithValue("@FirstName", firstNameToDelete);
+                cmd.Parameters.AddWithValue("@LastName", lastNameToDelete);
+                cmd.ExecuteNonQuery();
+            }
         }
-
-        connection.Close();
+        catch (MySqlException ex)
+        {
+            Console.WriteLine("Failed to connect to the Database: " + ex.Message);
+        }
     }
     public static void CreatePerson(string firstName, string lastName, int householdID)
     {
-        string connectionString = "server=127.0.0.1;User ID=root;Password=;Database=personmanagerdb";
 
-        using MySqlConnection connection = new(connectionString);
-        connection.Open();
+        try
+        {
+            string insertQuery = "INSERT INTO Persons (FirstName, LastName, HouseholdID) VALUES (@FirstName, @LastName, @HouseholdID);";
 
-        string insertQuery = "INSERT INTO Persons (FirstName, LastName, HouseholdID) VALUES (@FirstName, @LastName, @HouseholdID);";
+            MySqlCommand cmd = new(insertQuery, DBSqlConn);
+            cmd.Parameters.AddWithValue("@FirstName", firstName);
+            cmd.Parameters.AddWithValue("@LastName", lastName);
+            cmd.Parameters.AddWithValue("@HouseholdID", householdID);
 
-        MySqlCommand cmd = new(insertQuery, connection);
-        cmd.Parameters.AddWithValue("@FirstName", firstName);
-        cmd.Parameters.AddWithValue("@LastName", lastName);
-        cmd.Parameters.AddWithValue("@HouseholdID", householdID);
-
-        cmd.ExecuteNonQuery();
-
-        connection.Close();
+            cmd.ExecuteNonQuery();
+        }
+        catch (MySqlException ex)
+        {
+            Console.WriteLine("Failed to connect to the Database: " + ex.Message);
+        }
     }
 
     public static void CreatePerson(string firstName, string lastName, string birthday, Person.Gender gender, int householdID)
     {
-        string connectionString = "server=127.0.0.1;User ID=root;Password=;Database=personmanagerdb";
+        try
+        {
+            string insertQuery = "INSERT INTO Persons (FirstName, LastName, Birthday, Gender, HouseholdID) VALUES (@FirstName, @LastName, @Birthday, @Gender, @HouseholdID);";
 
-        using MySqlConnection connection = new(connectionString);
-        connection.Open();
+            MySqlCommand cmd = new(insertQuery, DBSqlConn);
+            cmd.Parameters.AddWithValue("@FirstName", firstName);
+            cmd.Parameters.AddWithValue("@LastName", lastName);
+            cmd.Parameters.AddWithValue("@Birthday", birthday);
+            cmd.Parameters.AddWithValue("@Gender", gender);
+            cmd.Parameters.AddWithValue("@HouseholdID", householdID);
 
-        string insertQuery = "INSERT INTO Persons (FirstName, LastName, Birthday, Gender, HouseholdID) VALUES (@FirstName, @LastName, @Birthday, @Gender, @HouseholdID);";
-
-        MySqlCommand cmd = new(insertQuery, connection);
-        cmd.Parameters.AddWithValue("@FirstName", firstName);
-        cmd.Parameters.AddWithValue("@LastName", lastName);
-        cmd.Parameters.AddWithValue("@Birthday", birthday);
-        cmd.Parameters.AddWithValue("@Gender", gender);
-        cmd.Parameters.AddWithValue("@HouseholdID", householdID);
-
-        cmd.ExecuteNonQuery();
-
-        connection.Close();
+            cmd.ExecuteNonQuery();
+        }
+        catch (MySqlException ex)
+        {
+            Console.WriteLine("Failed to connect to the Database: " + ex.Message);
+        }
     }
 
     public static void CreatePerson(string firstName, string lastName, string birthday, Address address, Person.Gender gender, int householdID)
     {
-        string connectionString = "server=127.0.0.1;User ID=root;Password=;Database=personmanagerdb";
-
-        using (MySqlConnection connection = new(connectionString))
+        try
         {
-            connection.Open();
-
             string insertQuery = "INSERT INTO Persons (FirstName, LastName, Birthday, Address, PersonGender, HouseholdID) VALUES (@FirstName, @LastName, @Birthday, @Address, @Gender, @HouseholdID);";
 
             MySqlCommand cmd = new(insertQuery, connection);
@@ -129,8 +140,10 @@ public class PersonManager
             cmd.Parameters.AddWithValue("@HouseholdID", householdID);
 
             cmd.ExecuteNonQuery();
-
-            connection.Close();
+        }
+        catch (MySqlException ex)
+        {
+            Console.WriteLine("Failed to connect to the Database: " + ex.Message);
         }
     }
 
@@ -222,89 +235,83 @@ public class PersonManager
 
     public static void DisplayAllPersons()
     {
-        string connectionString = "server=127.0.0.1;User ID=root;Password=;Database=personmanagerdb";
-        using (MySqlConnection connection = new(connectionString))
+        try
         {
-            connection.Open();
-
             string sql = "SELECT FirstName, LastName, Birthday, Address, Gender FROM Persons";
-            using (MySqlCommand cmd = new(sql, connection))
+            using MySqlCommand cmd = new(sql, DBSqlConn);
+            using MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
             {
-                using MySqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    string firstName = reader.GetString("FirstName");
-                    string lastName = reader.GetString("LastName");
-                    string birthday = reader.IsDBNull(reader.GetOrdinal("Birthday")) ? "Birthday unknown" : reader.GetString("Birthday");
-                    string address = reader.IsDBNull(reader.GetOrdinal("Address")) ? "Adress unknown" : reader.GetString("Address");
-                    string gender = reader.IsDBNull(reader.GetOrdinal("Gender")) ? "Gender unknown" : reader.GetString("Gender");
+                string firstName = reader.GetString("FirstName");
+                string lastName = reader.GetString("LastName");
+                string birthday = reader.IsDBNull(reader.GetOrdinal("Birthday")) ? "Birthday unknown" : reader.GetString("Birthday");
+                string address = reader.IsDBNull(reader.GetOrdinal("Address")) ? "Adress unknown" : reader.GetString("Address");
+                string gender = reader.IsDBNull(reader.GetOrdinal("Gender")) ? "Gender unknown" : reader.GetString("Gender");
 
-                    Console.WriteLine($"{firstName} {lastName} {birthday} {address} {gender}");
-                }
+                Console.WriteLine($"{firstName} {lastName} {birthday} {address} {gender}");
             }
-
-            connection.Close();
+        }
+        catch (MySqlException ex)
+        {
+            Console.WriteLine("Failed to connect to the Database: " + ex.Message);
         }
     }
 
     public static bool PersonExists(string firstName, string lastName)
     {
-        string connectionString = "server=127.0.0.1;User ID=root;Password=;Database=personmanagerdb";
-        using MySqlConnection connection = new(connectionString);
-        connection.Open();
+        try
+        {
+            string sql = "SELECT COUNT(*) FROM Persons WHERE FirstName = @FirstName AND LastName = @LastName";
+            using MySqlCommand cmd = new(sql, DBSqlConn);
+            cmd.Parameters.AddWithValue("@FirstName", firstName);
+            cmd.Parameters.AddWithValue("@LastName", lastName);
 
-        string sql = "SELECT COUNT(*) FROM Persons WHERE FirstName = @FirstName AND LastName = @LastName";
-        using MySqlCommand cmd = new(sql, connection);
-        cmd.Parameters.AddWithValue("@FirstName", firstName);
-        cmd.Parameters.AddWithValue("@LastName", lastName);
-
-        int count = Convert.ToInt32(cmd.ExecuteScalar());
-        connection.Close();
-        return count > 0;
+            int count = Convert.ToInt32(cmd.ExecuteScalar());
+            return count > 0;
+        }
+        catch (MySqlException ex)
+        {
+            Console.WriteLine("Failed to connect to the Database: " + ex.Message);
+            return false;
+        }
     }
 
     public static bool PersonExists(int ownerID)
     {
-        string connectionString = "server=127.0.0.1;User ID=root;Password=;Database=personmanagerdb";
-        using MySqlConnection connection = new(connectionString);
-        connection.Open();
+        try
+        {
+            string sql = "SELECT COUNT(*) FROM Persons WHERE ID = @ID";
+            using MySqlCommand cmd = new MySqlCommand(sql, connection);
+            cmd.Parameters.AddWithValue("@ID", ownerID);
 
-        string sql = "SELECT COUNT(*) FROM Persons WHERE ID = @ID";
-        using MySqlCommand cmd = new MySqlCommand(sql, connection);
-        cmd.Parameters.AddWithValue("@ID", ownerID);
+            int count = Convert.ToInt32(cmd.ExecuteScalar());
 
-        int count = Convert.ToInt32(cmd.ExecuteScalar());
-
-        connection.Close();
-
-        return count > 0;
+            return count > 0;
+        }
+        catch (MySqlException ex)
+        {
+            Console.WriteLine("Failed to connect to the Database: " + ex.Message);
+            return false;
+        }
     }
 
     public static void UpdatePerson(string currentFirstName, string currentLastName, string newFirstName, string newLastName)
     {
-        string connectionString = "server=127.0.0.1;User ID=root;Password=;Database=personmanagerdb";
-        using (MySqlConnection connection = new(connectionString))
+        if (PersonExists(currentFirstName, currentLastName))
         {
-            connection.Open();
-
-            if (PersonExists(currentFirstName, currentLastName))
+            string sql = "UPDATE Persons SET FirstName = @NewFirstName, LastName = @NewLastName WHERE FirstName = @CurrentFirstName AND LastName = @CurrentLastName";
+            using (MySqlCommand cmd = new(sql, DBSqlConn))
             {
-                string sql = "UPDATE Persons SET FirstName = @NewFirstName, LastName = @NewLastName WHERE FirstName = @CurrentFirstName AND LastName = @CurrentLastName";
-                using (MySqlCommand cmd = new(sql, connection))
-                {
-                    cmd.Parameters.AddWithValue("@NewFirstName", newFirstName);
-                    cmd.Parameters.AddWithValue("@NewLastName", newLastName);
-                    cmd.Parameters.AddWithValue("@CurrentFirstName", currentFirstName);
-                    cmd.Parameters.AddWithValue("@CurrentLastName", currentLastName);
-                    cmd.ExecuteNonQuery();
-                }
-
-                Console.WriteLine("Person data updated.");
+                cmd.Parameters.AddWithValue("@NewFirstName", newFirstName);
+                cmd.Parameters.AddWithValue("@NewLastName", newLastName);
+                cmd.Parameters.AddWithValue("@CurrentFirstName", currentFirstName);
+                cmd.Parameters.AddWithValue("@CurrentLastName", currentLastName);
+                cmd.ExecuteNonQuery();
             }
-            else
-                Console.WriteLine("Person not found in the database.");
 
-            connection.Close();
+            Console.WriteLine("Person data updated.");
         }
+        else
+            Console.WriteLine("Person not found in the database.");
     }
 }

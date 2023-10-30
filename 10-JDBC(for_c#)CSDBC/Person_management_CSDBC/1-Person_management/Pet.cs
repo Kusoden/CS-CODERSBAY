@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using static _1_Person_management.Database;
 namespace _1_Person_management
 {
     public class Pet
@@ -15,17 +16,17 @@ namespace _1_Person_management
             OwnerID = ownerID;
         }
 
-        public static void CreatePet(MySqlConnection connection, string petName, int ownerID)
+        public static void CreatePet(string petName, int ownerID)
         {
             string insertQuery = "INSERT INTO Pets (PetName, OwnerID) VALUES (@PetName, @OwnerID);";
 
-            using MySqlCommand cmd = new(insertQuery, connection);
+            using MySqlCommand cmd = new(insertQuery, DBSqlConn);
             cmd.Parameters.AddWithValue("@PetName", petName);
             cmd.Parameters.AddWithValue("@OwnerID", ownerID);
             cmd.ExecuteNonQuery();
         }
 
-        public static List<Pet> DisplayPets(MySqlConnection connection)
+        public static List<Pet> DisplayPets()
         {
             string selectAllQuery = "SELECT P.ID, P.PetName, P.OwnerID, CONCAT_WS(' ', Per.FirstName, Per.LastName) AS OwnerName " +
                                     "FROM Pets P " +
@@ -33,7 +34,7 @@ namespace _1_Person_management
 
             List<Pet> pets = new List<Pet>();
 
-            using (MySqlCommand cmd = new(selectAllQuery, connection))
+            using (MySqlCommand cmd = new(selectAllQuery, DBSqlConn))
             using (MySqlDataReader reader = cmd.ExecuteReader())
             {
                 while (reader.Read())
@@ -49,21 +50,21 @@ namespace _1_Person_management
             return pets;
         }
 
-        public static void UpdatePet(MySqlConnection connection, int petID, string newPetName)
+        public static void UpdatePet(int petID, string newPetName)
         {
             string updateQuery = "UPDATE Pets SET PetName = @NewPetName WHERE ID = @PetID;";
 
-            using MySqlCommand cmd = new(updateQuery, connection);
+            using MySqlCommand cmd = new(updateQuery, DBSqlConn);
             cmd.Parameters.AddWithValue("@NewPetName", newPetName);
             cmd.Parameters.AddWithValue("@PetID", petID);
             cmd.ExecuteNonQuery();
         }
 
-        public static void DeletePet(MySqlConnection connection, int petID)
+        public static void DeletePet(int petID)
         {
             string deleteQuery = "DELETE FROM Pets WHERE ID = @PetID;";
 
-            using MySqlCommand cmd = new(deleteQuery, connection);
+            using MySqlCommand cmd = new(deleteQuery, DBSqlConn);
             cmd.Parameters.AddWithValue("@PetID", petID);
             cmd.ExecuteNonQuery();
         }
