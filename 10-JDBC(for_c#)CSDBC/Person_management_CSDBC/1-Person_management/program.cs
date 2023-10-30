@@ -9,8 +9,9 @@ namespace _1_Person_management
     class Person_Management
     {
         static void Main()
-        {            
-            OpenDB();
+        {
+            Database database = GetInstance();
+            database.OpenDB();
 
             while (true)
             {
@@ -199,7 +200,7 @@ namespace _1_Person_management
 
                     case "13":
                         Console.WriteLine("Exiting the program.");
-                        CloseDB();
+                        database.CloseDB();
                         return;
 
                     default:

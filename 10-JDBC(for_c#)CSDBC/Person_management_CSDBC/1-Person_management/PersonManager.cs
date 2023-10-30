@@ -131,7 +131,7 @@ public class PersonManager
         {
             string insertQuery = "INSERT INTO Persons (FirstName, LastName, Birthday, Address, PersonGender, HouseholdID) VALUES (@FirstName, @LastName, @Birthday, @Address, @Gender, @HouseholdID);";
 
-            MySqlCommand cmd = new(insertQuery, connection);
+            MySqlCommand cmd = new(insertQuery, DBSqlConn);
             cmd.Parameters.AddWithValue("@FirstName", firstName);
             cmd.Parameters.AddWithValue("@LastName", lastName);
             cmd.Parameters.AddWithValue("@Birthday", birthday);
@@ -281,7 +281,7 @@ public class PersonManager
         try
         {
             string sql = "SELECT COUNT(*) FROM Persons WHERE ID = @ID";
-            using MySqlCommand cmd = new MySqlCommand(sql, connection);
+            using MySqlCommand cmd = new(sql, DBSqlConn);
             cmd.Parameters.AddWithValue("@ID", ownerID);
 
             int count = Convert.ToInt32(cmd.ExecuteScalar());
