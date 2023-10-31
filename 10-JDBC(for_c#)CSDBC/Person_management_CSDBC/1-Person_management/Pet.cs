@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using System.Drawing;
 using static _1_Person_management.Database;
 namespace _1_Person_management
 {
@@ -26,29 +27,28 @@ namespace _1_Person_management
             cmd.ExecuteNonQuery();
         }
 
-        public static List<Pet> DisplayPets()
+        //TODO: Name of the owner instead of ID
+        public static void DisplayPets()
         {
-            string selectAllQuery = "SELECT P.ID, P.PetName, P.OwnerID, CONCAT_WS(' ', Per.FirstName, Per.LastName) AS OwnerName " +
+            string selectAllQuery = "SELECT P.ID, P.PetName, CONCAT_WS(' ', Per.FirstName, Per.LastName) AS OwnerName " +
                                     "FROM Pets P " +
                                     "INNER JOIN Persons Per ON P.OwnerID = Per.ID;";
 
-            List<Pet> pets = new List<Pet>();
-
-            using (MySqlCommand cmd = new(selectAllQuery, DBSqlConn))
+            using (MySqlCommand cmd = new MySqlCommand(selectAllQuery, DBSqlConn))
             using (MySqlDataReader reader = cmd.ExecuteReader())
             {
                 while (reader.Read())
                 {
                     int petID = reader.GetInt32("ID");
                     string petName = reader.GetString("PetName");
-                    int ownerID = reader.GetInt32("OwnerID");
+                    string ownerName = reader.GetString("OwnerName");
 
-                    pets.Add(new Pet(petID, petName, ownerID));
+                    Console.WriteLine($"ID: {petID}, Name: {petName}, Owner: {ownerName}");
                 }
             }
-
-            return pets;
         }
+
+
 
         public static void UpdatePet(int petID, string newPetName)
         {
@@ -62,12 +62,27 @@ namespace _1_Person_management
 
         public static void DeletePet(int petID)
         {
-            string deleteQuery = "DELETE FROM Pets WHERE ID = @PetID;";
+            string checkQuery = "SELECT COUNT(*) FROM Pets WHERE ID = @PetID;";
 
-            using MySqlCommand cmd = new(deleteQuery, DBSqlConn);
-            cmd.Parameters.AddWithValue("@PetID", petID);
-            cmd.ExecuteNonQuery();
+            using MySqlCommand checkCmd = new(checkQuery, DBSqlConn);
+            checkCmd.Parameters.AddWithValue("@PetID", petID);
+
+            int petCount = Convert.ToInt32(checkCmd.ExecuteScalar());
+
+            if (petCount > 0)
+            {
+                string deleteQuery = "DELETE FROM Pets WHERE ID = @PetID;";
+
+                using MySqlCommand deleteCmd = new(deleteQuery, DBSqlConn);
+                deleteCmd.Parameters.AddWithValue("@PetID", petID);
+                deleteCmd.ExecuteNonQuery();
+            }
+            else
+            {
+                Console.WriteLine("Pet with ID " + petID + " does not exist.");
+            }
         }
+
 
     }
 }

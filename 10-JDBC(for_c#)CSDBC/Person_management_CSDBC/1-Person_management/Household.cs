@@ -57,15 +57,27 @@ namespace _1_Person_management
 
         public static void DeleteHousehold(int householdID)
         {
-            string deleteQuery = "DELETE FROM Households WHERE ID = @ID;";
+            string checkExistenceSql = "SELECT 1 FROM Households WHERE ID = @ID";
+            using MySqlCommand checkCmd = new(checkExistenceSql, DBSqlConn);
+            checkCmd.Parameters.AddWithValue("@ID", householdID);
 
-            using (MySqlCommand cmd = new(deleteQuery, DBSqlConn))
+            object result = checkCmd.ExecuteScalar();
+
+            if (result != null)
             {
-                cmd.Parameters.AddWithValue("@ID", householdID);
-                cmd.ExecuteNonQuery();
+                string deleteSql = "DELETE FROM Households WHERE ID = @ID";
+                using MySqlCommand deleteCmd = new(deleteSql, DBSqlConn);
+                deleteCmd.Parameters.AddWithValue("@ID", householdID);
+                deleteCmd.ExecuteNonQuery();
+                
                 Console.WriteLine("Household deleted.");
             }
+            else
+            {
+                Console.WriteLine("Household not found in the database.");
+            }
         }
+
 
         public static void DisplayHouseholds()
         {
@@ -79,31 +91,9 @@ namespace _1_Person_management
                     int id = reader.GetInt32("ID");
                     string householdName = reader.GetString("HouseholdName");
 
-                    Console.WriteLine($"{id} {householdName}");
+                    Console.WriteLine($"housenumber: {id}   house name: {householdName}");
                 }
             }
         }
-        /*        public static List<Household> DisplayHouseholds(MySqlConnection connection)
-                {
-                    connection.Open();
-                    string selectAllQuery = "SELECT * FROM Households;";
-                    List<Household> households = new();
-
-                    using (MySqlCommand cmd = new(selectAllQuery, connection))
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            households.Add(new Household
-                            {
-
-                                ID = reader.GetInt32("ID"),
-                                HouseholdName = reader.GetString("HouseholdName")
-                            });
-                        }
-                    }
-                    connection.Close();
-                    return households;
-                }*/
     }
 }

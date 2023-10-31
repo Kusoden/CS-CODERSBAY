@@ -1,5 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using static _1_Person_management.PersonManager;
+﻿using static _1_Person_management.PersonManager;
 using static _1_Person_management.Pet;
 using static _1_Person_management.Household;
 using static _1_Person_management.Database;
@@ -94,8 +93,8 @@ namespace _1_Person_management
                     case "6":
                         Console.WriteLine("All persons in the database:");
                         DisplayAllPersons();
-                        break; 
-                        
+                        break;
+
                     case "7":
                         Console.WriteLine("Enter the first name of the person to update:");
                         string firstNameToUpdate = Console.ReadLine().Trim();
@@ -131,15 +130,8 @@ namespace _1_Person_management
                         Console.WriteLine("Enter the last name of the person to delete:");
                         string lastNameToDelete = Console.ReadLine().Trim();
 
-                        try
-                        {
-                            RemovePerson(firstNameToDelete, lastNameToDelete);
-                            Console.WriteLine("Person removed from the database.");
-                        }
-                        catch (InvalidPersonNameException ex)
-                        {
-                            Console.WriteLine("Error: " + ex.Message);
-                        }
+                        RemovePerson(firstNameToDelete, lastNameToDelete);
+
                         break;
 
                     case "9":
@@ -161,9 +153,7 @@ namespace _1_Person_management
 
                     case "10":
                         Console.WriteLine("All pets in the database:");
-                        List<Pet> pets = DisplayPets();
-                        foreach (var pet in pets)
-                            Console.WriteLine($"ID: {pet.ID}, Name: {pet.PetName}, Owner: {pet.OwnerID}");
+                        DisplayPets();
                         break;
 
                     case "11":

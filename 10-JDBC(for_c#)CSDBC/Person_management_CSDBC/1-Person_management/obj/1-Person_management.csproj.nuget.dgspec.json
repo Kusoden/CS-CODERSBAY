@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Coding_Files_Github\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_CSDBC\\1-Person_management\\1-Person_management.csproj": {}
+    "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_CSDBC\\1-Person_management\\1-Person_management.csproj": {}
   },
   "projects": {
-    "D:\\Coding_Files_Github\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_CSDBC\\1-Person_management\\1-Person_management.csproj": {
+    "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_CSDBC\\1-Person_management\\1-Person_management.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Coding_Files_Github\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_CSDBC\\1-Person_management\\1-Person_management.csproj",
+        "projectUniqueName": "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_CSDBC\\1-Person_management\\1-Person_management.csproj",
         "projectName": "1-Person_management",
-        "projectPath": "D:\\Coding_Files_Github\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_CSDBC\\1-Person_management\\1-Person_management.csproj",
-        "packagesPath": "C:\\Users\\Ferzan Abdullahzadeh\\.nuget\\packages\\",
-        "outputPath": "D:\\Coding_Files_Github\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_CSDBC\\1-Person_management\\obj\\",
+        "projectPath": "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_CSDBC\\1-Person_management\\1-Person_management.csproj",
+        "packagesPath": "C:\\Users\\Codersbay\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_CSDBC\\1-Person_management\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Ferzan Abdullahzadeh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Codersbay\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -78,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -20,7 +20,6 @@ public class PersonManager
             FirstName VARCHAR(255) NOT NULL,
             LastName VARCHAR(255) NOT NULL,
             Birthday DATE,
-            Address VARCHAR(255),
             Gender VARCHAR(10),
             HouseholdID INT,
             PRIMARY KEY (ID),
@@ -66,24 +65,42 @@ public class PersonManager
     }
 
 
-
     public static void RemovePerson(string firstNameToDelete, string lastNameToDelete)
     {
-        try
+        using MySqlCommand cmd = new("SELECT FirstName, LastName, Birthday, Address, Gender FROM Persons", DBSqlConn);
+        using MySqlDataReader reader = cmd.ExecuteReader();
+
+        bool exists = false;
+
+        while (reader.Read())
         {
-            string sql = "DELETE FROM Persons WHERE FirstName = @FirstName AND LastName = @LastName";
-            using (MySqlCommand cmd = new(sql, DBSqlConn))
+            string firstName = reader.GetString("FirstName");
+            string lastName = reader.GetString("LastName");
+
+            if (firstName == firstNameToDelete && lastName == lastNameToDelete)
             {
-                cmd.Parameters.AddWithValue("@FirstName", firstNameToDelete);
-                cmd.Parameters.AddWithValue("@LastName", lastNameToDelete);
-                cmd.ExecuteNonQuery();
+                exists = true;
+                break;
             }
         }
-        catch (MySqlException ex)
+
+        reader.Close();
+
+        if (exists)
         {
-            Console.WriteLine("Failed to connect to the Database: " + ex.Message);
+            string sql2 = "DELETE FROM Persons WHERE FirstName = @FirstName AND LastName = @LastName";
+            using MySqlCommand deleteCmd = new(sql2, DBSqlConn);
+            deleteCmd.Parameters.AddWithValue("@FirstName", firstNameToDelete);
+            deleteCmd.Parameters.AddWithValue("@LastName", lastNameToDelete);
+            deleteCmd.ExecuteNonQuery();
+            Console.WriteLine("Person removed from the database.");
+        }
+        else
+        {
+            Console.WriteLine("Person not found in the database.");
         }
     }
+
     public static void CreatePerson(string firstName, string lastName, int householdID)
     {
 
@@ -129,13 +146,12 @@ public class PersonManager
     {
         try
         {
-            string insertQuery = "INSERT INTO Persons (FirstName, LastName, Birthday, Address, PersonGender, HouseholdID) VALUES (@FirstName, @LastName, @Birthday, @Address, @Gender, @HouseholdID);";
+            string insertQuery = "INSERT INTO Persons (FirstName, LastName, Birthday, PersonGender, HouseholdID) VALUES (@FirstName, @LastName, @Birthday, @Gender, @HouseholdID);";
 
             MySqlCommand cmd = new(insertQuery, DBSqlConn);
             cmd.Parameters.AddWithValue("@FirstName", firstName);
             cmd.Parameters.AddWithValue("@LastName", lastName);
             cmd.Parameters.AddWithValue("@Birthday", birthday);
-            cmd.Parameters.AddWithValue("@Address", address.ToString());
             cmd.Parameters.AddWithValue("@Gender", gender);
             cmd.Parameters.AddWithValue("@HouseholdID", householdID);
 
@@ -151,11 +167,10 @@ public class PersonManager
     {
         Console.WriteLine("Choose the level of detail for creating a person:");
         Console.WriteLine("1. First and Last Name with Household ID");
-        Console.WriteLine("2. First and Last Name, Birthday, and Gender with Household ID");
-        Console.WriteLine("3. First and Last Name, Birthday, Address and Gender with Household ID");
+        Console.WriteLine("2. First and Last Name, Birthday, Gender and Household ID");
 
         Console.Write("Enter your choice: ");
-        string choice = Console.ReadLine();
+        string? choice = Console.ReadLine();
 
         switch (choice)
         {
@@ -164,7 +179,7 @@ public class PersonManager
                 string firstName = Console.ReadLine().Trim();
                 Console.WriteLine("Enter the person's last name:");
                 string lastName = Console.ReadLine().Trim();
-                Console.WriteLine("Enter the household ID (for the person):");
+                Console.WriteLine("Enter the house number:");
                 int householdID1 = int.Parse(Console.ReadLine());
                 CreatePerson(firstName, lastName, householdID1);
                 break;
@@ -179,36 +194,9 @@ public class PersonManager
                 string genderInput = Console.ReadLine().Trim();
                 if (Enum.TryParse<Person.Gender>(genderInput, out var gender2))
                 {
-                    Console.WriteLine("Enter the household ID (for the person):");
+                    Console.WriteLine("Enter the house number:");
                     int householdID2 = int.Parse(Console.ReadLine());
                     CreatePerson(firstName2, lastName2, birthday2, gender2, householdID2);
-                }
-                else
-                    Console.WriteLine("Invalid gender input.");
-                break;
-            case "3":
-                Console.WriteLine("Enter a person's first name:");
-                string firstName3 = Console.ReadLine().Trim();
-                Console.WriteLine("Enter the person's last name:");
-                string lastName3 = Console.ReadLine().Trim();
-                Console.WriteLine("Enter the person's birthday (YYYY-MM-DD):");
-                string birthday3 = Console.ReadLine().Trim();
-                Console.WriteLine("Enter the person's PLZ (Postal Code):");
-                int plz = int.Parse(Console.ReadLine());
-                Console.WriteLine("Enter the person's Location:");
-                string location = Console.ReadLine().Trim();
-                Console.WriteLine("Enter the person's Street Name:");
-                string streetName = Console.ReadLine().Trim();
-                Console.WriteLine("Enter the person's House Number:");
-                int houseNumber = int.Parse(Console.ReadLine());
-                Console.WriteLine("Enter the person's gender (Male or Female):");
-                string genderInput3 = Console.ReadLine().Trim();
-                if (Enum.TryParse<Person.Gender>(genderInput3, out var gender3))
-                {
-                    Address address3 = new Address(streetName, houseNumber, plz, location);
-                    Console.WriteLine("Enter the household ID (for the person):");
-                    int householdID3 = int.Parse(Console.ReadLine());
-                    CreatePerson(firstName3, lastName3, birthday3, address3, gender3, householdID3);
                 }
                 else
                     Console.WriteLine("Invalid gender input.");
@@ -237,18 +225,18 @@ public class PersonManager
     {
         try
         {
-            string sql = "SELECT FirstName, LastName, Birthday, Address, Gender FROM Persons";
+            string sql = "SELECT FirstName, LastName, Birthday, HouseholdID, Gender FROM Persons";
             using MySqlCommand cmd = new(sql, DBSqlConn);
             using MySqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
                 string firstName = reader.GetString("FirstName");
                 string lastName = reader.GetString("LastName");
-                string birthday = reader.IsDBNull(reader.GetOrdinal("Birthday")) ? "Birthday unknown" : reader.GetString("Birthday");
-                string address = reader.IsDBNull(reader.GetOrdinal("Address")) ? "Adress unknown" : reader.GetString("Address");
-                string gender = reader.IsDBNull(reader.GetOrdinal("Gender")) ? "Gender unknown" : reader.GetString("Gender");
+                string birthday = reader.IsDBNull(reader.GetOrdinal("Birthday")) ? "unknown" : reader.GetString("Birthday");
+                string gender = reader.IsDBNull(reader.GetOrdinal("Gender")) ? "unknown" : reader.GetString("Gender");
+                string address = reader.GetString("HouseholdID");
 
-                Console.WriteLine($"{firstName} {lastName} {birthday} {address} {gender}");
+                Console.WriteLine($"\nFirstname: {firstName} Lastname: {lastName}\nBirthday: {birthday}\nGender: {gender}\nHouse Number: {address}\n");
             }
         }
         catch (MySqlException ex)
