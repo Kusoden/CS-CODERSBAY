@@ -22,10 +22,11 @@ namespace _1_Person_management
                     PRIMARY KEY (ID)
                 );
             ";
-            try { 
-            MySqlCommand cmd = new(createTableQuery, DBSqlConn);
-            cmd.ExecuteNonQuery();
-            Console.WriteLine("Households table created or already exists.");
+            try
+            {
+                MySqlCommand cmd = new(createTableQuery, DBSqlConn);
+                cmd.ExecuteNonQuery();
+                Console.WriteLine("Households table created or already exists.");
             }
             catch (Exception ex)
             {
@@ -35,23 +36,32 @@ namespace _1_Person_management
         public static void CreateHousehold(string householdName)
         {
             string insertQuery = "INSERT INTO Households (HouseholdName) VALUES (@HouseholdName);";
-
-            using MySqlCommand cmd = new(insertQuery, DBSqlConn);
-            cmd.Parameters.AddWithValue("@HouseholdName", householdName);
-            cmd.ExecuteNonQuery();
-            Console.WriteLine("Household created.");
+            try
+            {
+                using MySqlCommand cmd = new(insertQuery, DBSqlConn);
+                cmd.Parameters.AddWithValue("@HouseholdName", householdName);
+                cmd.ExecuteNonQuery();
+                Console.WriteLine("Household created.");
+            }
+            catch (Exception ex) 
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         public static void UpdateHousehold(int householdID, string newHouseholdName)
         {
             string updateQuery = "UPDATE Households SET HouseholdName = @NewHouseholdName WHERE ID = @ID;";
-
-            using (MySqlCommand cmd = new(updateQuery, DBSqlConn))
+            try {
+            using MySqlCommand cmd = new(updateQuery, DBSqlConn);
+            cmd.Parameters.AddWithValue("@NewHouseholdName", newHouseholdName);
+            cmd.Parameters.AddWithValue("@ID", householdID);
+            cmd.ExecuteNonQuery();
+            Console.WriteLine("Household updated.");
+            }
+            catch (Exception ex)
             {
-                cmd.Parameters.AddWithValue("@NewHouseholdName", newHouseholdName);
-                cmd.Parameters.AddWithValue("@ID", householdID);
-                cmd.ExecuteNonQuery();
-                Console.WriteLine("Household updated.");
+                Console.WriteLine(ex.Message);
             }
         }
 
@@ -69,7 +79,7 @@ namespace _1_Person_management
                 using MySqlCommand deleteCmd = new(deleteSql, DBSqlConn);
                 deleteCmd.Parameters.AddWithValue("@ID", householdID);
                 deleteCmd.ExecuteNonQuery();
-                
+
                 Console.WriteLine("Household deleted.");
             }
             else
