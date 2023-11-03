@@ -28,7 +28,7 @@ public class PersonManager
         ";
         try
         {
-            MySqlCommand cmd = new(createTableQuery, DBSqlConn);
+            MySqlCommand cmd = new(createTableQuery, GetInstance());
             cmd.ExecuteNonQuery();
             Console.WriteLine("Persons table created or already exists.");
         }
@@ -39,36 +39,10 @@ public class PersonManager
     }
 
 
-
-    public static void CreatePetsTable()
-    {
-        string createTableQuery = @"
-        CREATE TABLE IF NOT EXISTS Pets (
-            ID INT NOT NULL AUTO_INCREMENT,
-            PetName VARCHAR(255) NOT NULL,
-            OwnerID INT NOT NULL,
-            PRIMARY KEY (ID),
-            FOREIGN KEY (OwnerID) REFERENCES Persons(ID)
-        );
-        ";
-
-        try
-        {
-            MySqlCommand cmd = new(createTableQuery, DBSqlConn);
-            cmd.ExecuteNonQuery();
-            Console.WriteLine("Pets table created or already exists.");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.Message);
-        }
-    }
-
-
     public static void RemovePerson(string firstNameToDelete, string lastNameToDelete)
     {
-        using MySqlCommand cmd = new("SELECT FirstName, LastName, Birthday, Address, Gender FROM Persons", DBSqlConn);
-        using MySqlDataReader reader = cmd.ExecuteReader();
+        MySqlCommand cmd = new("SELECT FirstName, LastName, Birthday, Address, Gender FROM Persons", GetInstance());
+        MySqlDataReader reader = cmd.ExecuteReader();
 
         bool exists = false;
 
@@ -89,7 +63,7 @@ public class PersonManager
         if (exists)
         {
             string sql2 = "DELETE FROM Persons WHERE FirstName = @FirstName AND LastName = @LastName";
-            using MySqlCommand deleteCmd = new(sql2, DBSqlConn);
+            using MySqlCommand deleteCmd = new(sql2, GetInstance());
             deleteCmd.Parameters.AddWithValue("@FirstName", firstNameToDelete);
             deleteCmd.Parameters.AddWithValue("@LastName", lastNameToDelete);
             deleteCmd.ExecuteNonQuery();
@@ -108,7 +82,7 @@ public class PersonManager
         {
             string insertQuery = "INSERT INTO Persons (FirstName, LastName, HouseholdID) VALUES (@FirstName, @LastName, @HouseholdID);";
 
-            MySqlCommand cmd = new(insertQuery, DBSqlConn);
+            MySqlCommand cmd = new(insertQuery, GetInstance());
             cmd.Parameters.AddWithValue("@FirstName", firstName);
             cmd.Parameters.AddWithValue("@LastName", lastName);
             cmd.Parameters.AddWithValue("@HouseholdID", householdID);
@@ -127,28 +101,7 @@ public class PersonManager
         {
             string insertQuery = "INSERT INTO Persons (FirstName, LastName, Birthday, Gender, HouseholdID) VALUES (@FirstName, @LastName, @Birthday, @Gender, @HouseholdID);";
 
-            MySqlCommand cmd = new(insertQuery, DBSqlConn);
-            cmd.Parameters.AddWithValue("@FirstName", firstName);
-            cmd.Parameters.AddWithValue("@LastName", lastName);
-            cmd.Parameters.AddWithValue("@Birthday", birthday);
-            cmd.Parameters.AddWithValue("@Gender", gender);
-            cmd.Parameters.AddWithValue("@HouseholdID", householdID);
-
-            cmd.ExecuteNonQuery();
-        }
-        catch (MySqlException ex)
-        {
-            Console.WriteLine("Failed to connect to the Database: " + ex.Message);
-        }
-    }
-
-    public static void CreatePerson(string firstName, string lastName, string birthday, Address address, Person.Gender gender, int householdID)
-    {
-        try
-        {
-            string insertQuery = "INSERT INTO Persons (FirstName, LastName, Birthday, PersonGender, HouseholdID) VALUES (@FirstName, @LastName, @Birthday, @Gender, @HouseholdID);";
-
-            MySqlCommand cmd = new(insertQuery, DBSqlConn);
+            MySqlCommand cmd = new(insertQuery, GetInstance());
             cmd.Parameters.AddWithValue("@FirstName", firstName);
             cmd.Parameters.AddWithValue("@LastName", lastName);
             cmd.Parameters.AddWithValue("@Birthday", birthday);
@@ -226,7 +179,7 @@ public class PersonManager
         try
         {
             string sql = "SELECT FirstName, LastName, Birthday, HouseholdID, Gender FROM Persons";
-            using MySqlCommand cmd = new(sql, DBSqlConn);
+            using MySqlCommand cmd = new(sql, GetInstance());
             using MySqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
@@ -250,7 +203,7 @@ public class PersonManager
         try
         {
             string sql = "SELECT COUNT(*) FROM Persons WHERE FirstName = @FirstName AND LastName = @LastName";
-            using MySqlCommand cmd = new(sql, DBSqlConn);
+            using MySqlCommand cmd = new(sql, GetInstance());
             cmd.Parameters.AddWithValue("@FirstName", firstName);
             cmd.Parameters.AddWithValue("@LastName", lastName);
 
@@ -269,7 +222,7 @@ public class PersonManager
         try
         {
             string sql = "SELECT COUNT(*) FROM Persons WHERE ID = @ID";
-            using MySqlCommand cmd = new(sql, DBSqlConn);
+            using MySqlCommand cmd = new(sql, GetInstance());
             cmd.Parameters.AddWithValue("@ID", ownerID);
 
             int count = Convert.ToInt32(cmd.ExecuteScalar());
@@ -288,7 +241,7 @@ public class PersonManager
         if (PersonExists(currentFirstName, currentLastName))
         {
             string sql = "UPDATE Persons SET FirstName = @NewFirstName, LastName = @NewLastName WHERE FirstName = @CurrentFirstName AND LastName = @CurrentLastName";
-            using (MySqlCommand cmd = new(sql, DBSqlConn))
+            using (MySqlCommand cmd = new(sql, GetInstance()))
             {
                 cmd.Parameters.AddWithValue("@NewFirstName", newFirstName);
                 cmd.Parameters.AddWithValue("@NewLastName", newLastName);

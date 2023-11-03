@@ -9,8 +9,8 @@ namespace _1_Person_management
     {
         static void Main()
         {
-            Database database = GetInstance();
-            database.OpenDB();
+            /*Database database = GetInstance();
+            database.OpenDB();*/
 
             while (true)
             {
@@ -40,7 +40,6 @@ namespace _1_Person_management
                         Console.WriteLine("Enter the household name:");
                         string householdName = Console.ReadLine().Trim();
                         CreateHousehold(householdName);
-                        Console.WriteLine("Household created.");
                         break;
 
                     case "2":
@@ -190,7 +189,7 @@ namespace _1_Person_management
 
                     case "13":
                         Console.WriteLine("Exiting the program.");
-                        database.CloseDB();
+                        GetInstance().Close();
                         return;
 
                     default:

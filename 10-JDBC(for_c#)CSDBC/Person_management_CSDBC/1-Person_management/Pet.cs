@@ -17,6 +17,30 @@ namespace _1_Person_management
             OwnerID = ownerID;
         }
 
+        public static void CreatePetsTable()
+        {
+            string createTableQuery = @"
+        CREATE TABLE IF NOT EXISTS Pets (
+            ID INT NOT NULL AUTO_INCREMENT,
+            PetName VARCHAR(255) NOT NULL,
+            OwnerID INT NOT NULL,
+            PRIMARY KEY (ID),
+            FOREIGN KEY (OwnerID) REFERENCES Persons(ID)
+        );
+        ";
+
+            try
+            {
+                MySqlCommand cmd = new(createTableQuery, GetInstance());
+                cmd.ExecuteNonQuery();
+                Console.WriteLine("Pets table created or already exists.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
         public static void CreatePet(string petName, int ownerID)
         {
             string insertQuery = "INSERT INTO Pets (PetName, OwnerID) VALUES (@PetName, @OwnerID);";

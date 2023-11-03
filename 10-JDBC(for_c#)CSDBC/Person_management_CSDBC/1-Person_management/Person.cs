@@ -15,19 +15,18 @@
             Unknown
         }
 
-        public Person(string firstName, string lastName) : this(firstName, lastName, "N/A", null, Gender.Unknown)
+        public Person(string firstName, string lastName) : this(firstName, lastName, "N/A", Gender.Unknown)
         { }
 
-        public Person(string firstName, string lastName, string birthday, string address, Gender gender)
+        public Person(string firstName, string lastName, string birthday, Gender gender)
         {
             FirstName = firstName;
             LastName = lastName;
             Birthday = birthday;
-            Address = address;
             PersonGender = gender;
         }
 
-        public Person(string firstName, string lastName, Gender gender, string birthday) : this(firstName, lastName, birthday, null, gender)
+        public Person(string firstName, string lastName, Gender gender, string birthday) : this(firstName, lastName, birthday, gender)
         { }
     }
 

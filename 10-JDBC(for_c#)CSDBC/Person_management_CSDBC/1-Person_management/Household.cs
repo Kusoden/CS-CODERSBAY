@@ -23,7 +23,7 @@ namespace _1_Person_management
                 );
             ";
             try { 
-            MySqlCommand cmd = new(createTableQuery, DBSqlConn);
+            MySqlCommand cmd = new(createTableQuery, GetInstance());
             cmd.ExecuteNonQuery();
             Console.WriteLine("Households table created or already exists.");
             }
@@ -36,7 +36,7 @@ namespace _1_Person_management
         {
             string insertQuery = "INSERT INTO Households (HouseholdName) VALUES (@HouseholdName);";
 
-            using MySqlCommand cmd = new(insertQuery, DBSqlConn);
+            using MySqlCommand cmd = new(insertQuery, GetInstance());
             cmd.Parameters.AddWithValue("@HouseholdName", householdName);
             cmd.ExecuteNonQuery();
             Console.WriteLine("Household created.");
@@ -46,7 +46,7 @@ namespace _1_Person_management
         {
             string updateQuery = "UPDATE Households SET HouseholdName = @NewHouseholdName WHERE ID = @ID;";
 
-            using (MySqlCommand cmd = new(updateQuery, DBSqlConn))
+            using (MySqlCommand cmd = new(updateQuery, GetInstance()))
             {
                 cmd.Parameters.AddWithValue("@NewHouseholdName", newHouseholdName);
                 cmd.Parameters.AddWithValue("@ID", householdID);
@@ -58,7 +58,7 @@ namespace _1_Person_management
         public static void DeleteHousehold(int householdID)
         {
             string checkExistenceSql = "SELECT 1 FROM Households WHERE ID = @ID";
-            using MySqlCommand checkCmd = new(checkExistenceSql, DBSqlConn);
+            using MySqlCommand checkCmd = new(checkExistenceSql, GetInstance());
             checkCmd.Parameters.AddWithValue("@ID", householdID);
 
             object result = checkCmd.ExecuteScalar();
@@ -66,7 +66,7 @@ namespace _1_Person_management
             if (result != null)
             {
                 string deleteSql = "DELETE FROM Households WHERE ID = @ID";
-                using MySqlCommand deleteCmd = new(deleteSql, DBSqlConn);
+                using MySqlCommand deleteCmd = new(deleteSql, GetInstance());
                 deleteCmd.Parameters.AddWithValue("@ID", householdID);
                 deleteCmd.ExecuteNonQuery();
                 
@@ -83,7 +83,7 @@ namespace _1_Person_management
         {
             string selectAllQuery = "SELECT * FROM Households;";
 
-            using (MySqlCommand cmd = new(selectAllQuery, DBSqlConn))
+            using (MySqlCommand cmd = new(selectAllQuery, GetInstance()))
             using (MySqlDataReader reader = cmd.ExecuteReader())
             {
                 while (reader.Read())
