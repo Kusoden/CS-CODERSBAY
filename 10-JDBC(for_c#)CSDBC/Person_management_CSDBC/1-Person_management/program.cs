@@ -1,7 +1,4 @@
-﻿using static _1_Person_management.PersonManager;
-using static _1_Person_management.Pet;
-using static _1_Person_management.Household;
-using static _1_Person_management.Database;
+﻿using static _1_Person_management.Database;
 
 namespace _1_Person_management
 {
@@ -9,11 +6,12 @@ namespace _1_Person_management
     {
         static void Main()
         {
-            Database database = GetInstance();
-            database.OpenDB();
-
             while (true)
             {
+                HouseholdManager householdManager = new HouseholdManager();
+                PersonManager personManager = new PersonManager();
+                PetManager petManager = new PetManager();
+
                 Console.WriteLine("\nThere should be no pets connected to that Person, to be able to delete the Person.");
                 Console.WriteLine("There should be no Person connected to that Household, to be able to delete the Household.\n");
                 Console.WriteLine("Menu Options:");
@@ -39,24 +37,25 @@ namespace _1_Person_management
                     case "1":
                         Console.WriteLine("Enter the household name:");
                         string householdName = Console.ReadLine().Trim();
-                        CreateHousehold(householdName);
-                        Console.WriteLine("Household created.");
+                        Household household = new Household(householdName);
+                        householdManager.CreateHousehold(householdName);
                         break;
 
                     case "2":
                         Console.WriteLine("All households in the database:");
-                        DisplayHouseholds();
+                        householdManager.DisplayHouseholds();
                         break;
+
                     case "3":
                         Console.WriteLine("Enter the ID of the household to update:");
                         int householdIDToUpdate = int.Parse(Console.ReadLine());
+
                         Console.WriteLine("Enter the new household name:");
                         string newHouseholdName = Console.ReadLine().Trim();
 
                         try
                         {
-                            UpdateHousehold(householdIDToUpdate, newHouseholdName);
-                            Console.WriteLine("Household updated.");
+                            householdManager.UpdateHousehold(householdIDToUpdate, newHouseholdName);                            
                         }
                         catch (Exception ex)
                         {
@@ -69,8 +68,7 @@ namespace _1_Person_management
                         int householdIDToDelete = int.Parse(Console.ReadLine());
                         try
                         {
-                            DeleteHousehold(householdIDToDelete);
-                            Console.WriteLine("Household deleted.");
+                            householdManager.DeleteHousehold(householdIDToDelete);                            
                         }
                         catch (Exception ex)
                         {
@@ -81,8 +79,7 @@ namespace _1_Person_management
                     case "5":
                         try
                         {
-                            InsertPersonWithDetails();
-                            Console.WriteLine("Person created and added to the database.\n");
+                            personManager.InsertPersonWithDetails();                            
                         }
                         catch (Exception ex)
                         {
@@ -92,16 +89,17 @@ namespace _1_Person_management
 
                     case "6":
                         Console.WriteLine("All persons in the database:");
-                        DisplayAllPersons();
+                        personManager.DisplayAllPersons();
                         break;
 
                     case "7":
                         Console.WriteLine("Enter the first name of the person to update:");
                         string firstNameToUpdate = Console.ReadLine().Trim();
+
                         Console.WriteLine("Enter the last name of the person to update:");
                         string lastNameToUpdate = Console.ReadLine().Trim();
 
-                        if (PersonExists(firstNameToUpdate, lastNameToUpdate))
+                        if (personManager.PersonExists(firstNameToUpdate, lastNameToUpdate))
                         {
                             Console.WriteLine("Enter the new first name:");
                             string newFirstName = Console.ReadLine().Trim();
@@ -110,8 +108,7 @@ namespace _1_Person_management
 
                             try
                             {
-                                UpdatePerson(firstNameToUpdate, lastNameToUpdate, newFirstName, newLastName);
-                                Console.WriteLine("Person data updated.");
+                                personManager.UpdatePerson(firstNameToUpdate, lastNameToUpdate, newFirstName, newLastName);                                
                             }
                             catch (Exception ex)
                             {
@@ -127,23 +124,24 @@ namespace _1_Person_management
                     case "8":
                         Console.WriteLine("Enter the first name of the person to delete:");
                         string firstNameToDelete = Console.ReadLine().Trim();
+
                         Console.WriteLine("Enter the last name of the person to delete:");
                         string lastNameToDelete = Console.ReadLine().Trim();
 
-                        RemovePerson(firstNameToDelete, lastNameToDelete);
+                        personManager.RemovePerson(firstNameToDelete, lastNameToDelete);
 
                         break;
 
                     case "9":
                         Console.WriteLine("Enter the name of the pet:");
                         string petName = Console.ReadLine().Trim();
+
                         Console.WriteLine("Enter the owner's ID:");
                         int ownerID = Convert.ToInt32(Console.ReadLine());
 
-                        if (PersonExists(ownerID))
+                        if (personManager.PersonExists(ownerID))
                         {
-                            CreatePet(petName, ownerID);
-                            Console.WriteLine("Pet created and associated with the owner.");
+                            petManager.CreatePet(petName, ownerID);                            
                         }
                         else
                         {
@@ -153,18 +151,19 @@ namespace _1_Person_management
 
                     case "10":
                         Console.WriteLine("All pets in the database:");
-                        DisplayPets();
+                        petManager.DisplayPets();
                         break;
 
                     case "11":
                         Console.WriteLine("Enter the ID of the pet to update:");
                         int petIDToUpdate = int.Parse(Console.ReadLine());
+
                         Console.WriteLine("Enter the new pet name:");
                         string newPetName = Console.ReadLine().Trim();
 
                         try
                         {
-                            UpdatePet(petIDToUpdate, newPetName);
+                            petManager.UpdatePet(petIDToUpdate, newPetName);
                             Console.WriteLine("Pet updated.");
                         }
                         catch (Exception ex)
@@ -178,7 +177,7 @@ namespace _1_Person_management
                         int petIDToDelete = int.Parse(Console.ReadLine());
                         try
                         {
-                            DeletePet(petIDToDelete);
+                            petManager.DeletePet(petIDToDelete);
                             Console.WriteLine("Pet deleted.");
                         }
                         catch (Exception ex)
@@ -190,7 +189,7 @@ namespace _1_Person_management
 
                     case "13":
                         Console.WriteLine("Exiting the program.");
-                        database.CloseDB();
+                        GetInstance().Close();
                         return;
 
                     default:

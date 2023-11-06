@@ -9,17 +9,28 @@ namespace _1_Person_management
         {
         }
 
-        private class Singleton
+ /*       private class Singleton
         {
             internal static readonly Database instance = new();
-        }
+        }*/
 
-        public static Database GetInstance()
+        public static MySqlConnection GetInstance()
         {
-            return Singleton.instance;
+            if (DBSqlConn == null)
+            {
+                DBSqlConn = new(DBLink);
+            } else if (DBSqlConn.State == System.Data.ConnectionState.Broken)
+            {
+                DBSqlConn.Close();
+            }
+            if (DBSqlConn.State == System.Data.ConnectionState.Closed)
+            {
+                DBSqlConn.Open();
+            }
+            return DBSqlConn;
         }
 
-        public void OpenDB()
+/*        public void OpenDB()
         {
             try
             {
@@ -34,13 +45,13 @@ namespace _1_Person_management
                 Console.WriteLine("Failed to connect to the Database: " + ex.Message);
             }
         }
-
+*/
         public void CloseDB()
         {
             try
             {
                 DBSqlConn.Close();
-                Console.WriteLine("Disconnected from the Database!");
+                Console.WriteLine("Disconnected from the Da  tabase!");
             }
             catch (MySqlException ex)
             {
