@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 using static _1_Person_management.Database;
 
 namespace _1_Person_management;
@@ -39,7 +40,7 @@ public class PersonManager
     }
 
 
-    public static void RemovePerson(string firstNameToDelete, string lastNameToDelete)
+    public void RemovePerson(string firstNameToDelete, string lastNameToDelete)
     {
         MySqlCommand cmd = new("SELECT FirstName, LastName, Birthday, Address, Gender FROM Persons", GetInstance());
         MySqlDataReader reader = cmd.ExecuteReader();
@@ -75,7 +76,7 @@ public class PersonManager
         }
     }
 
-    public static void CreatePerson(string firstName, string lastName, int householdID)
+    public void CreatePerson(string firstName, string lastName, int householdID)
     {
 
         try
@@ -95,7 +96,7 @@ public class PersonManager
         }
     }
 
-    public static void CreatePerson(string firstName, string lastName, string birthday, Person.Gender gender, int householdID)
+    public void CreatePerson(string firstName, string lastName, string birthday, Person.Gender gender, int householdID)
     {
         try
         {
@@ -107,7 +108,7 @@ public class PersonManager
             cmd.Parameters.AddWithValue("@Birthday", birthday);
             cmd.Parameters.AddWithValue("@Gender", gender);
             cmd.Parameters.AddWithValue("@HouseholdID", householdID);
-
+             
             cmd.ExecuteNonQuery();
         }
         catch (MySqlException ex)
@@ -116,7 +117,7 @@ public class PersonManager
         }
     }
 
-    public static void InsertPersonWithDetails()
+    public void InsertPersonWithDetails()
     {
         Console.WriteLine("Choose the level of detail for creating a person:");
         Console.WriteLine("1. First and Last Name with Household ID");
@@ -130,26 +131,52 @@ public class PersonManager
             case "1":
                 Console.WriteLine("Enter a person's first name:");
                 string firstName = Console.ReadLine().Trim();
+                if (Regex.IsMatch(firstName, @"^[a-zA-Z]+$"))
+                {
+                    Console.WriteLine("The input string consists of only letters.");
+                }
+                else
+                {
+                    Console.WriteLine("The input string contains other characters.");
+                }
+
                 Console.WriteLine("Enter the person's last name:");
                 string lastName = Console.ReadLine().Trim();
+                
+                if (Regex.IsMatch(lastName, @"^[a-zA-Z]+$"))
+                {
+                    Console.WriteLine("The input string consists of only letters.");
+                }
+                else
+                {
+                    Console.WriteLine("The input string contains other characters.");
+                }
+                
                 Console.WriteLine("Enter the house number:");
                 int householdID1 = int.Parse(Console.ReadLine());
                 CreatePerson(firstName, lastName, householdID1);
+
+                Console.WriteLine("Person created and added to the database.\n");
                 break;
             case "2":
                 Console.WriteLine("Enter a person's first name:");
                 string firstName2 = Console.ReadLine().Trim();
+
                 Console.WriteLine("Enter the person's last name:");
                 string lastName2 = Console.ReadLine().Trim();
+
                 Console.WriteLine("Enter the person's birthday (YYYY-MM-DD):");
                 string birthday2 = Console.ReadLine().Trim();
+
                 Console.WriteLine("Enter the person's gender (Male or Female):");
                 string genderInput = Console.ReadLine().Trim();
+
                 if (Enum.TryParse<Person.Gender>(genderInput, out var gender2))
                 {
                     Console.WriteLine("Enter the house number:");
                     int householdID2 = int.Parse(Console.ReadLine());
                     CreatePerson(firstName2, lastName2, birthday2, gender2, householdID2);
+                    Console.WriteLine("Person created and added to the database.\n");
                 }
                 else
                     Console.WriteLine("Invalid gender input.");
@@ -174,7 +201,7 @@ public class PersonManager
         throw new NullReferenceException("Person not found: " + name);
     }
 
-    public static void DisplayAllPersons()
+    public void DisplayAllPersons()
     {
         try
         {
@@ -198,7 +225,7 @@ public class PersonManager
         }
     }
 
-    public static bool PersonExists(string firstName, string lastName)
+    public bool PersonExists(string firstName, string lastName)
     {
         try
         {
@@ -217,7 +244,7 @@ public class PersonManager
         }
     }
 
-    public static bool PersonExists(int ownerID)
+    public bool PersonExists(int ownerID)
     {
         try
         {
@@ -236,7 +263,7 @@ public class PersonManager
         }
     }
 
-    public static void UpdatePerson(string currentFirstName, string currentLastName, string newFirstName, string newLastName)
+    public void UpdatePerson(string currentFirstName, string currentLastName, string newFirstName, string newLastName)
     {
         if (PersonExists(currentFirstName, currentLastName))
         {
