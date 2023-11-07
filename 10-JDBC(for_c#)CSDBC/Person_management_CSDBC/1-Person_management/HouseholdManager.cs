@@ -3,7 +3,7 @@ using static _1_Person_management.Database;
 
 namespace _1_Person_management
 {
-    public class HouseholdManager
+    public class HouseholdManager : HouseholdInterface
     {
         private readonly List<Household> household;
 

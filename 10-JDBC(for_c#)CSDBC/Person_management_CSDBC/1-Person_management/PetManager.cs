@@ -3,7 +3,7 @@ using static _1_Person_management.Database;
 
 namespace _1_Person_management
 {
-    internal class PetManager
+    internal class PetManager : PetInterface
     {
         private readonly List<Pet> pet;
 
@@ -48,7 +48,6 @@ namespace _1_Person_management
             Console.WriteLine("Pet created and associated with the owner.");
         }
 
-        //TODO: Name of the owner instead of ID
         public void DisplayPets()
         {
             string selectAllQuery = "SELECT P.ID, P.PetName, CONCAT_WS(' ', Per.FirstName, Per.LastName) AS OwnerName " +

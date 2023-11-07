@@ -1,4 +1,5 @@
-﻿using static _1_Person_management.Database;
+﻿using System.Linq;
+using static _1_Person_management.Database;
 
 namespace _1_Person_management
 {
@@ -8,9 +9,9 @@ namespace _1_Person_management
         {
             while (true)
             {
-                HouseholdManager householdManager = new HouseholdManager();
-                PersonManager personManager = new PersonManager();
-                PetManager petManager = new PetManager();
+                HouseholdInterface householdManager = new HouseholdManager();
+                PersonInterface personManager = new PersonManager();
+                PetInterface petManager = new PetManager();
 
                 Console.WriteLine("\nThere should be no pets connected to that Person, to be able to delete the Person.");
                 Console.WriteLine("There should be no Person connected to that Household, to be able to delete the Household.\n");
@@ -37,7 +38,6 @@ namespace _1_Person_management
                     case "1":
                         Console.WriteLine("Enter the household name:");
                         string householdName = Console.ReadLine().Trim();
-                        Household household = new Household(householdName);
                         householdManager.CreateHousehold(householdName);
                         break;
 
