@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "+32ch7ALgRl5nGZnkhK1twG3APdRQZ/cD/OagUhIs/Dyc9aipz+MH0ui3W6LN5Cy54vkX9ZDz6fLHQU3QuJsKA==",
+  "dgSpecHash": "BxSX4C+55iz9jL+Y7rMaIKdoIVlUFgJhCT2skfboCSBSOfBz7XgJYV4BV3OywdrHLR3YaxD9NLGZ/kiUcdMOfg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Codersbay\\Downloads\\CS-CODERSBAY\\10-JDBC(for_c#)CSDBC\\Person_management_CSDBC\\1-Person_management\\1-Person_management.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Codersbay\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\Codersbay\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\Codersbay\\.nuget\\packages\\k4os.compression.lz4\\1.3.5\\k4os.compression.lz4.1.3.5.nupkg.sha512",
     "C:\\Users\\Codersbay\\.nuget\\packages\\k4os.compression.lz4.streams\\1.3.5\\k4os.compression.lz4.streams.1.3.5.nupkg.sha512",
@@ -22,9 +23,8 @@
     "C:\\Users\\Codersbay\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\Codersbay\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Codersbay\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
-    "C:\\Users\\Codersbay\\.nuget\\packages\\mysql.data\\8.1.0\\mysql.data.8.1.0.nupkg.sha512",
+    "C:\\Users\\Codersbay\\.nuget\\packages\\mysql.data\\8.2.0\\mysql.data.8.2.0.nupkg.sha512",
     "C:\\Users\\Codersbay\\.nuget\\packages\\mysqlconnector\\2.2.7\\mysqlconnector.2.2.7.nupkg.sha512",
-    "C:\\Users\\Codersbay\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\portable.bouncycastle.1.9.0.nupkg.sha512",
     "C:\\Users\\Codersbay\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Codersbay\\.nuget\\packages\\system.configuration.configurationmanager\\7.0.0\\system.configuration.configurationmanager.7.0.0.nupkg.sha512",
     "C:\\Users\\Codersbay\\.nuget\\packages\\system.diagnostics.diagnosticsource\\7.0.2\\system.diagnostics.diagnosticsource.7.0.2.nupkg.sha512",
