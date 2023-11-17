@@ -21,8 +21,8 @@ namespace _1_Person_management
             OwnerID INT NOT NULL,
             PRIMARY KEY (ID),
             FOREIGN KEY (OwnerID) REFERENCES Persons(ID)
-        );
-        ";
+            );
+            ";
 
             try
             {

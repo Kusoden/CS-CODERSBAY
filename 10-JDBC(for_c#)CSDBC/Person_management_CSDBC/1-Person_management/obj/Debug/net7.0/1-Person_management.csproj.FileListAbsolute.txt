@@ -195,7 +195,6 @@ C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDBC\Person_management
 C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDBC\Person_management_CSDBC\1-Person_management\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDBC\Person_management_CSDBC\1-Person_management\bin\Debug\net7.0\MySql.Data.dll
 C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDBC\Person_management_CSDBC\1-Person_management\bin\Debug\net7.0\MySqlConnector.dll
-C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDBC\Person_management_CSDBC\1-Person_management\bin\Debug\net7.0\BouncyCastle.Crypto.dll
 C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDBC\Person_management_CSDBC\1-Person_management\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
 C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDBC\Person_management_CSDBC\1-Person_management\bin\Debug\net7.0\System.Diagnostics.EventLog.dll
 C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDBC\Person_management_CSDBC\1-Person_management\bin\Debug\net7.0\System.Drawing.Common.dll
@@ -226,3 +225,14 @@ C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDBC\Person_management
 C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDBC\Person_management_CSDBC\1-Person_management\obj\Debug\net7.0\1-Person_management.pdb
 C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDBC\Person_management_CSDBC\1-Person_management\obj\Debug\net7.0\1-Person_management.genruntimeconfig.cache
 C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDBC\Person_management_CSDBC\1-Person_management\obj\Debug\net7.0\ref\1-Person_management.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDBC\Person_management_CSDBC\1-Person_management\bin\Debug\net7.0\BouncyCastle.Cryptography.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDBC\Person_management_CSDBC\1-Person_management\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDBC\Person_management_CSDBC\1-Person_management\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDBC\Person_management_CSDBC\1-Person_management\bin\Debug\net7.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDBC\Person_management_CSDBC\1-Person_management\bin\Debug\net7.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDBC\Person_management_CSDBC\1-Person_management\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDBC\Person_management_CSDBC\1-Person_management\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDBC\Person_management_CSDBC\1-Person_management\bin\Debug\net7.0\Microsoft.Extensions.Logging.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDBC\Person_management_CSDBC\1-Person_management\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDBC\Person_management_CSDBC\1-Person_management\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Users\Codersbay\Downloads\CS-CODERSBAY\10-JDBC(for_c#)CSDBC\Person_management_CSDBC\1-Person_management\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll

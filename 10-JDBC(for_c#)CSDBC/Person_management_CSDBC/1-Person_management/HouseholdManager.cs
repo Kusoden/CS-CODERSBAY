@@ -19,7 +19,7 @@ namespace _1_Person_management
                     HouseholdName VARCHAR(255) NOT NULL,
                     PRIMARY KEY (ID)
                 );
-            ";
+                ";
             try
             {
                 MySqlCommand cmd = new(createTableQuery, GetInstance());
@@ -32,34 +32,57 @@ namespace _1_Person_management
             }
         }
 
-        public void CreateHousehold(string householdName)
+        public void CreateHousehold(string name)
         {
             string insertQuery = "INSERT INTO Households (HouseholdName) VALUES (@HouseholdName);";
 
-            using MySqlCommand cmd = new(insertQuery, GetInstance());
-            cmd.Parameters.AddWithValue("@HouseholdName", householdName);
-            cmd.ExecuteNonQuery();
-            Console.WriteLine("Household created.");
+            try
+            {
+                using MySqlCommand cmd = new(insertQuery, GetInstance());
+                cmd.Parameters.AddWithValue("@HouseholdName", name);
+                cmd.ExecuteNonQuery();
+                Console.WriteLine("Household created.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
-        public void UpdateHousehold(int householdID, string newHouseholdName)
+        public void UpdateHousehold()
         {
             string updateQuery = "UPDATE Households SET HouseholdName = @NewHouseholdName WHERE ID = @ID;";
 
-            using (MySqlCommand cmd = new(updateQuery, GetInstance()))
+            Console.WriteLine("Enter the ID of the household to update:");
+            int householdID = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter the new household name:");
+            string newHouseholdName = Console.ReadLine().Trim();
+
+            try
             {
+                using MySqlCommand cmd = new(updateQuery, GetInstance());
                 cmd.Parameters.AddWithValue("@NewHouseholdName", newHouseholdName);
                 cmd.Parameters.AddWithValue("@ID", householdID);
                 cmd.ExecuteNonQuery();
                 Console.WriteLine("Household updated.");
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
-        public void DeleteHousehold(int householdID)
+        public void DeleteHousehold()
         {
             string checkExistenceSql = "SELECT 1 FROM Households WHERE ID = @ID";
+
+            Console.WriteLine("Enter the ID of the household to delete:");
+            int householdID = int.Parse(Console.ReadLine());
+
             using MySqlCommand checkCmd = new(checkExistenceSql, GetInstance());
             checkCmd.Parameters.AddWithValue("@ID", householdID);
+
 
             object result = checkCmd.ExecuteScalar();
 
@@ -78,13 +101,16 @@ namespace _1_Person_management
             }
         }
 
-        public void DisplayHouseholds()
+        public void GetAllHouseHolds()
         {
             string selectAllQuery = "SELECT * FROM Households;";
 
-            using (MySqlCommand cmd = new(selectAllQuery, GetInstance()))
-            using (MySqlDataReader reader = cmd.ExecuteReader())
+
+            try
             {
+
+                using MySqlCommand cmd = new(selectAllQuery, GetInstance());
+                using MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
                     int id = reader.GetInt32("ID");
@@ -92,6 +118,10 @@ namespace _1_Person_management
 
                     Console.WriteLine($"housenumber: {id}   house name: {householdName}");
                 }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
     }

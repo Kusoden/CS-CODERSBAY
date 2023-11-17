@@ -3,9 +3,9 @@
     public interface HouseholdInterface
     {
         void CreateHouseholdsTable();
-        void CreateHousehold(string householdName);
-        void UpdateHousehold(int householdID, string newHouseholdName);
-        void DeleteHousehold(int householdID);
-        void DisplayHouseholds();
+        void CreateHousehold(string name);
+        void UpdateHousehold();
+        void DeleteHousehold();
+        void GetAllHouseHolds();
     }
 }

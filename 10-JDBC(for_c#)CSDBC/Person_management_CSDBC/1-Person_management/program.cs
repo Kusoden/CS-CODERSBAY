@@ -1,82 +1,39 @@
-﻿using System.Linq;
-using static _1_Person_management.Database;
-
-namespace _1_Person_management
+﻿namespace _1_Person_management
 {
     class Person_Management
     {
         static void Main()
         {
+            HouseholdInterface householdManager = new HouseholdManager();
+            PersonInterface personManager = new PersonManager();
+            PetInterface petManager = new PetManager();
+            Menu menu = new Menu();
+
+            householdManager.CreateHouseholdsTable();
+            personManager.CreatePersonsTable();
+            petManager.CreatePetsTable();
+
             while (true)
             {
-                HouseholdInterface householdManager = new HouseholdManager();
-                PersonInterface personManager = new PersonManager();
-                PetInterface petManager = new PetManager();
 
-                Console.WriteLine("\nThere should be no pets connected to that Person, to be able to delete the Person.");
-                Console.WriteLine("There should be no Person connected to that Household, to be able to delete the Household.\n");
-                Console.WriteLine("Menu Options:");
-                Console.WriteLine("1. Create a household");
-                Console.WriteLine("2. Display all households");
-                Console.WriteLine("3. Update Household");
-                Console.WriteLine("4. Delete Household");
-                Console.WriteLine("5. Add a person");
-                Console.WriteLine("6. Display all persons");
-                Console.WriteLine("7. Update a person");
-                Console.WriteLine("8. delete a person");
-                Console.WriteLine("9. Create a pet");
-                Console.WriteLine("10. Display all pets");
-                Console.WriteLine("11. Update Pet");
-                Console.WriteLine("12. Delete Pet");
-                Console.WriteLine("13. Exit");
-
-                Console.Write("Enter your choice: ");
-                string choice = Console.ReadLine();
+                int choice = menu.MainMenu();
 
                 switch (choice)
                 {
-                    case "1":
-                        Console.WriteLine("Enter the household name:");
-                        string householdName = Console.ReadLine().Trim();
-                        householdManager.CreateHousehold(householdName);
+                    case 1:                        
+                        householdManager.CreateHousehold(menu.GetHouseHoldName());
                         break;
-
-                    case "2":
-                        Console.WriteLine("All households in the database:");
-                        householdManager.DisplayHouseholds();
+                    case 2:
+                        menu.AllHouseholds();
+                        householdManager.GetAllHouseHolds();
                         break;
-
-                    case "3":
-                        Console.WriteLine("Enter the ID of the household to update:");
-                        int householdIDToUpdate = int.Parse(Console.ReadLine());
-
-                        Console.WriteLine("Enter the new household name:");
-                        string newHouseholdName = Console.ReadLine().Trim();
-
-                        try
-                        {
-                            householdManager.UpdateHousehold(householdIDToUpdate, newHouseholdName);                            
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine("Error: " + ex.Message);
-                        }
+                    case 3:
+                        householdManager.UpdateHousehold();
                         break;
-
-                    case "4":
-                        Console.WriteLine("Enter the ID of the household to delete:");
-                        int householdIDToDelete = int.Parse(Console.ReadLine());
-                        try
-                        {
-                            householdManager.DeleteHousehold(householdIDToDelete);                            
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine("Error: " + ex.Message);
-                        }
+                    case 4:
+                        householdManager.DeleteHousehold();
                         break;
-
-                    case "5":
+                    case 5:
                         try
                         {
                             personManager.InsertPersonWithDetails();                            
@@ -87,12 +44,12 @@ namespace _1_Person_management
                         }
                         break;
 
-                    case "6":
+                    case 6:
                         Console.WriteLine("All persons in the database:");
                         personManager.DisplayAllPersons();
                         break;
 
-                    case "7":
+                    case 7:
                         Console.WriteLine("Enter the first name of the person to update:");
                         string firstNameToUpdate = Console.ReadLine().Trim();
 
@@ -121,7 +78,7 @@ namespace _1_Person_management
                         }
                         break;
 
-                    case "8":
+                    case 8:
                         Console.WriteLine("Enter the first name of the person to delete:");
                         string firstNameToDelete = Console.ReadLine().Trim();
 
@@ -132,7 +89,7 @@ namespace _1_Person_management
 
                         break;
 
-                    case "9":
+                    case 9:
                         Console.WriteLine("Enter the name of the pet:");
                         string petName = Console.ReadLine().Trim();
 
@@ -149,12 +106,12 @@ namespace _1_Person_management
                         }
                         break;
 
-                    case "10":
+                    case 10:
                         Console.WriteLine("All pets in the database:");
                         petManager.DisplayPets();
                         break;
 
-                    case "11":
+                    case 11:
                         Console.WriteLine("Enter the ID of the pet to update:");
                         int petIDToUpdate = int.Parse(Console.ReadLine());
 
@@ -172,7 +129,7 @@ namespace _1_Person_management
                         }
                         break;
 
-                    case "12":
+                    case 12:
                         Console.WriteLine("Enter the ID of the pet to delete:");
                         int petIDToDelete = int.Parse(Console.ReadLine());
                         try
@@ -187,9 +144,9 @@ namespace _1_Person_management
                         break;
 
 
-                    case "13":
+                    case 13:
                         Console.WriteLine("Exiting the program.");
-                        GetInstance().Close();
+                        Database.GetInstance().Close();
                         return;
 
                     default:
