@@ -20,9 +20,10 @@
             Console.WriteLine("13. Exit");
 
             Console.Write("Enter your choice: ");
-
-            int choice = Convert.ToInt32(Console.ReadLine());
-
+            int choice;
+            while (!int.TryParse(Console.ReadLine(), out choice) || choice < 1 || choice > 13) { 
+            choice = Convert.ToInt32(Console.ReadLine());
+            }
             return choice;
         }
 
@@ -31,11 +32,6 @@
             Console.WriteLine("Enter the household name:");
             string householdName = Console.ReadLine().Trim();
             return householdName;
-        }
-
-        public void AllHouseholds()
-        {
-            Console.WriteLine("All households in the database:");
         }
     }
 }

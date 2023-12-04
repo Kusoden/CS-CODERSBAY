@@ -3,9 +3,9 @@
     public interface PetInterface
     {
         void CreatePetsTable();
-        void CreatePet(string petName, int ownerID);
+        void CreatePet();
         void DisplayPets();
-        void UpdatePet(int petID, string newPetName);
-        void DeletePet(int petID);
+        void UpdatePet();
+        void DeletePet();
     }
 }

@@ -5,11 +5,11 @@ namespace _1_Person_management
 {
     public class HouseholdManager : HouseholdInterface
     {
-        private readonly List<Household> household;
+        private readonly List<HouseholdConstructor> household;
 
         public HouseholdManager()
         {
-            household = new List<Household>();
+            household = new List<HouseholdConstructor>();
         }
         public void CreateHouseholdsTable()
         {
@@ -103,8 +103,9 @@ namespace _1_Person_management
 
         public void GetAllHouseHolds()
         {
-            string selectAllQuery = "SELECT * FROM Households;";
+            Console.WriteLine("All households in the database:");
 
+            string selectAllQuery = "SELECT * FROM Households;";
 
             try
             {
