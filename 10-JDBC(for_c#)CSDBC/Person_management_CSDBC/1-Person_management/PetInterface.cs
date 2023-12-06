@@ -3,9 +3,9 @@
     public interface PetInterface
     {
         void CreatePetsTable();
-        void CreatePet();
+        void CreatePet(string[] createData);
         void DisplayPets();
-        void UpdatePet();
-        void DeletePet();
+        void UpdatePet(string[] updateData);
+        void DeletePet(int deleteData);
     }
 }

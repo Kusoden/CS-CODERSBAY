@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 using static _1_Person_management.Database;
 
 namespace _1_Person_management
@@ -11,6 +12,8 @@ namespace _1_Person_management
         {
             household = new List<HouseholdConstructor>();
         }
+
+        #region create table
         public void CreateHouseholdsTable()
         {
             string createTableQuery = @"
@@ -31,6 +34,7 @@ namespace _1_Person_management
                 Console.WriteLine(ex.Message);
             }
         }
+        #endregion
 
         public void CreateHousehold(string name)
         {
@@ -49,21 +53,18 @@ namespace _1_Person_management
             }
         }
 
-        public void UpdateHousehold()
+        public void UpdateHousehold(string[] updateData)
         {
+            int HouseHoldnumber = int.Parse(updateData[0]);
+            string newHouseholdName = updateData[1];
+
             string updateQuery = "UPDATE Households SET HouseholdName = @NewHouseholdName WHERE ID = @ID;";
-
-            Console.WriteLine("Enter the ID of the household to update:");
-            int householdID = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("Enter the new household name:");
-            string newHouseholdName = Console.ReadLine().Trim();
 
             try
             {
                 using MySqlCommand cmd = new(updateQuery, GetInstance());
                 cmd.Parameters.AddWithValue("@NewHouseholdName", newHouseholdName);
-                cmd.Parameters.AddWithValue("@ID", householdID);
+                cmd.Parameters.AddWithValue("@ID", HouseHoldnumber);
                 cmd.ExecuteNonQuery();
                 Console.WriteLine("Household updated.");
             }
@@ -73,32 +74,24 @@ namespace _1_Person_management
             }
         }
 
-        public void DeleteHousehold()
+        public void DeleteHousehold(int deleteData)
         {
-            string checkExistenceSql = "SELECT 1 FROM Households WHERE ID = @ID";
+            string deleteSql = "DELETE FROM Households WHERE ID = @ID";
+            using MySqlCommand deleteCmd = new(deleteSql, GetInstance());
+            deleteCmd.Parameters.AddWithValue("@ID", deleteData);
+            deleteCmd.ExecuteNonQuery();
 
-            Console.WriteLine("Enter the ID of the household to delete:");
-            int householdID = int.Parse(Console.ReadLine());
+            int rowsAffected = deleteCmd.ExecuteNonQuery();
 
-            using MySqlCommand checkCmd = new(checkExistenceSql, GetInstance());
-            checkCmd.Parameters.AddWithValue("@ID", householdID);
-
-
-            object result = checkCmd.ExecuteScalar();
-
-            if (result != null)
+            if (rowsAffected > 0)
             {
-                string deleteSql = "DELETE FROM Households WHERE ID = @ID";
-                using MySqlCommand deleteCmd = new(deleteSql, GetInstance());
-                deleteCmd.Parameters.AddWithValue("@ID", householdID);
-                deleteCmd.ExecuteNonQuery();
-
                 Console.WriteLine("Household deleted.");
             }
             else
             {
                 Console.WriteLine("Household not found in the database.");
             }
+
         }
 
         public void GetAllHouseHolds()
@@ -109,7 +102,6 @@ namespace _1_Person_management
 
             try
             {
-
                 using MySqlCommand cmd = new(selectAllQuery, GetInstance());
                 using MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())

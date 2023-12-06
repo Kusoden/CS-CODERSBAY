@@ -5,7 +5,7 @@ namespace _1_Person_management
 {
     internal class PetManager : PetInterface
     {
-        PersonInterface personManager = new PersonManager();
+        Validation validation = new Validation();
 
         private readonly List<PetConstructor> pet;
 
@@ -14,6 +14,7 @@ namespace _1_Person_management
             pet = new List<PetConstructor>();
         }
 
+        #region Create Table
         public void CreatePetsTable()
         {
             string createTableQuery = @"
@@ -37,17 +38,14 @@ namespace _1_Person_management
                 Console.WriteLine(ex.Message);
             }
         }
+        #endregion
 
-        public void CreatePet()
+        public void CreatePet(string[] createData)
         {
+            string petName = createData[0];
+            int ownerID = int.Parse(createData[1]);
 
-            Console.WriteLine("Enter the name of the pet:");
-            string petName = Console.ReadLine().Trim();
-
-            Console.WriteLine("Enter the owner's ID:");
-            int ownerID = Convert.ToInt32(Console.ReadLine());
-
-            if (personManager.PersonExists(ownerID))
+            if (validation.PersonExists(ownerID))
             {
                 string insertQuery = "INSERT INTO Pets (PetName, OwnerID) VALUES (@PetName, @OwnerID);";
 
@@ -67,36 +65,30 @@ namespace _1_Person_management
 
         public void DisplayPets()
         {
-            string selectAllQuery = "SELECT P.ID, P.PetName, CONCAT_WS(' ', Per.FirstName, Per.LastName) AS OwnerName " +
-                                    "FROM Pets P " +
-                                    "INNER JOIN Persons Per ON P.OwnerID = Per.ID;";
+            string selectAllQuery = @"SELECT P.ID, P.PetName FROM Pets P
+                                      INNER JOIN Persons Per ON P.OwnerID = Per.ID;
+";
 
-            using (MySqlCommand cmd = new MySqlCommand(selectAllQuery, GetInstance()))
-            using (MySqlDataReader reader = cmd.ExecuteReader())
+            using MySqlCommand cmd = new MySqlCommand(selectAllQuery, GetInstance());
+            using MySqlDataReader reader = cmd.ExecuteReader();
+
+            Console.WriteLine("All pets in the database:");
+            while (reader.Read())
             {
+                int petID = reader.GetInt32("ID");
+                string petName = reader.GetString("PetName");
+                string ownerName = reader.GetString("OwnerName");
 
-                Console.WriteLine("All pets in the database:");
-                while (reader.Read())
-                {
-                    int petID = reader.GetInt32("ID");
-                    string petName = reader.GetString("PetName");
-                    string ownerName = reader.GetString("OwnerName");
-
-                    Console.WriteLine($"ID: {petID}, Name: {petName}, Owner: {ownerName}");
-                }
+                Console.WriteLine($"ID: {petID}, Name: {petName}, Owner: {ownerName}");
             }
         }
 
 
 
-        public void UpdatePet()
+        public void UpdatePet(string[] updateData)
         {
-
-            Console.WriteLine("Enter the ID of the pet to update:");
-            int petID = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("Enter the new pet name:");
-            string newPetName = Console.ReadLine().Trim();
+            int petID = int.Parse(updateData[0]);
+            string newPetName = updateData[1];
 
             try
             {
@@ -115,33 +107,26 @@ namespace _1_Person_management
             }
         }
 
-        public void DeletePet()
+        public void DeletePet(int deleteData)
         {
-            Console.WriteLine("Enter the ID of the pet to delete:");
-            int petID = int.Parse(Console.ReadLine());
-
             try
             {
-                string checkQuery = "SELECT COUNT(*) FROM Pets WHERE ID = @PetID;";
+                string deleteQuery = "DELETE FROM Pets WHERE ID = @PetID;";
 
-                using MySqlCommand checkCmd = new(checkQuery, GetInstance());
-                checkCmd.Parameters.AddWithValue("@PetID", petID);
+                using MySqlCommand deleteCmd = new(deleteQuery, GetInstance());
+                deleteCmd.Parameters.AddWithValue("@PetID", deleteData);
+                deleteCmd.ExecuteNonQuery();
 
-                int petCount = Convert.ToInt32(checkCmd.ExecuteScalar());
+                int rowsAffected = deleteCmd.ExecuteNonQuery();
 
-                if (petCount > 0)
+                if (rowsAffected > 0)
                 {
-                    string deleteQuery = "DELETE FROM Pets WHERE ID = @PetID;";
-
-                    using MySqlCommand deleteCmd = new(deleteQuery, GetInstance());
-                    deleteCmd.Parameters.AddWithValue("@PetID", petID);
-                    deleteCmd.ExecuteNonQuery();
+                    Console.WriteLine("Household deleted.");
                 }
                 else
                 {
-                    Console.WriteLine("Pet with ID " + petID + " does not exist.");
+                    Console.WriteLine("Household not found in the database.");
                 }
-                Console.WriteLine("Pet deleted.");
             }
             catch (Exception ex)
             {

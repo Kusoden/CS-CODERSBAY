@@ -3,14 +3,10 @@
     public interface PersonInterface
     {
         void CreatePersonsTable();
-        void RemovePerson();
-        void CreatePerson(string firstName, string lastName, int householdID);
-        void CreatePerson(string firstName, string lastName, string birthday, PersonConstructor.Gender gender, int householdID);
-        void InsertPersonWithDetails();
+        void RemovePerson(string[] deleteData);
+        void CreatePerson(PersonConstructor person);
         PersonConstructor FindPersonByName(string name);
         void DisplayAllPersons();
-        bool PersonExists(string firstName, string lastName);
-        bool PersonExists(int ownerID);
-        void UpdatePerson();
+        void UpdatePerson(string[] updateData);
     }
 }

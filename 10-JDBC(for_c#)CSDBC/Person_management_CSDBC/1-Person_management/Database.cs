@@ -5,10 +5,7 @@ namespace _1_Person_management
     {//https://learn.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio
         public static string DBLink = "server=127.0.0.1;User ID=root;Password=;Database=personmanagerdb";
         public static MySqlConnection DBSqlConn = new(DBLink);
-/*        public Database()
-        {
-        }
-*/
+
         public static MySqlConnection GetInstance()
         {
             if (DBSqlConn == null)
@@ -27,7 +24,6 @@ namespace _1_Person_management
 
         public void CloseDB()
         {
-
             Console.WriteLine("Exiting the program...");
             try
             {

@@ -4,6 +4,8 @@ using static _1_Person_management.Database;
 
 namespace _1_Person_management
 {
+    //TODO: return int with a status information and get the cw into the other method
+    //it can be switched out so it can have multiple implementations example: mssql, oracle etc.
     internal class PersonManager : PersonInterface
     {
         private readonly List<PersonConstructor> personList;
@@ -13,6 +15,7 @@ namespace _1_Person_management
             personList = new List<PersonConstructor>();
         }
 
+        #region create table
         public void CreatePersonsTable()
         {
             string createTableQuery = @"
@@ -38,112 +41,20 @@ namespace _1_Person_management
                 Console.WriteLine(ex.Message);
             }
         }
+        #endregion
 
-        public void InsertPersonWithDetails()
-        {
-            Console.WriteLine("Choose the level of detail for creating a person:");
-            Console.WriteLine("1. First and Last Name with Household ID");
-            Console.WriteLine("2. First and Last Name, Birthday, Gender and Household ID");
-
-            Console.Write("Enter your choice: ");
-            string? choice = Console.ReadLine();
-
-            switch (choice)
-            {
-                case "1":
-                    Console.WriteLine("Enter a person's first name:");
-                    
-                    string firstName = Console.ReadLine().Trim();
-                    if (Regex.IsMatch(firstName, @"^[a-zA-Z]+$"))
-                    {
-                        Console.WriteLine("The input string consists of only letters.");
-                    }
-                    else
-                    {
-                        Console.WriteLine("The input string contains other characters.");
-                    }
-
-                    Console.WriteLine("Enter the person's last name:");
-                    string lastName = Console.ReadLine().Trim();
-
-                    if (Regex.IsMatch(lastName, @"^[a-zA-Z]+$"))
-                    {
-                        Console.WriteLine("The input string consists of only letters.");
-                    }
-                    else
-                    {
-                        Console.WriteLine("The input string contains other characters.");
-                    }
-
-                    Console.WriteLine("Enter the house number:");
-                    int householdID1 = int.Parse(Console.ReadLine());
-
-
-                    CreatePerson(firstName, lastName, householdID1);
-
-                    Console.WriteLine("Person created and added to the database.\n");
-                    break;
-                case "2":
-                    Console.WriteLine("Enter a person's first name:");
-                    string firstName2 = Console.ReadLine().Trim();
-
-                    Console.WriteLine("Enter the person's last name:");
-                    string lastName2 = Console.ReadLine().Trim();
-
-                    Console.WriteLine("Enter the person's birthday (YYYY-MM-DD):");
-                    string birthday2 = Console.ReadLine().Trim();
-
-                    Console.WriteLine("Enter the person's gender (Male or Female):");
-                    string genderInput = Console.ReadLine().Trim();
-
-                    if (Enum.TryParse<PersonConstructor.Gender>(genderInput, out var gender2))
-                    {
-                        Console.WriteLine("Enter the house number:");
-                        int householdID2 = int.Parse(Console.ReadLine());
-                        CreatePerson(firstName2, lastName2, birthday2, gender2, householdID2);
-                        Console.WriteLine("Person created and added to the database.\n");
-                    }
-                    else
-                        Console.WriteLine("Invalid gender input.");
-                    break;
-                default:
-                    Console.WriteLine("Invalid choice.");
-                    break;
-            }
-        }
-
-        public void CreatePerson(string firstName, string lastName, int householdID)
-        {
-
-            try
-            {
-                string insertQuery = "INSERT INTO Persons (FirstName, LastName, HouseholdID) VALUES (@FirstName, @LastName, @HouseholdID);";
-
-                MySqlCommand cmd = new(insertQuery, GetInstance());
-                cmd.Parameters.AddWithValue("@FirstName", firstName);
-                cmd.Parameters.AddWithValue("@LastName", lastName);
-                cmd.Parameters.AddWithValue("@HouseholdID", householdID);
-
-                cmd.ExecuteNonQuery();
-            }
-            catch (MySqlException ex)
-            {
-                Console.WriteLine("Failed to connect to the Database: " + ex.Message);
-            }
-        }
-
-        public void CreatePerson(string firstName, string lastName, string birthday, PersonConstructor.Gender gender, int householdID)
+        public void CreatePerson(PersonConstructor person) 
         {
             try
             {
                 string insertQuery = "INSERT INTO Persons (FirstName, LastName, Birthday, Gender, HouseholdID) VALUES (@FirstName, @LastName, @Birthday, @Gender, @HouseholdID);";
 
                 MySqlCommand cmd = new(insertQuery, GetInstance());
-                cmd.Parameters.AddWithValue("@FirstName", firstName);
-                cmd.Parameters.AddWithValue("@LastName", lastName);
-                cmd.Parameters.AddWithValue("@Birthday", birthday);
-                cmd.Parameters.AddWithValue("@Gender", gender);
-                cmd.Parameters.AddWithValue("@HouseholdID", householdID);
+                cmd.Parameters.AddWithValue("@FirstName", person.FirstName);
+                cmd.Parameters.AddWithValue("@LastName", person.LastName);
+                cmd.Parameters.AddWithValue("@Birthday", person.Birthday);
+                cmd.Parameters.AddWithValue("@Gender", person.PersonGender);
+                cmd.Parameters.AddWithValue("@HouseholdID", person.HouseholdID);
 
                 cmd.ExecuteNonQuery();
             }
@@ -163,7 +74,7 @@ namespace _1_Person_management
             foreach (PersonConstructor person in personList)
                 if (person.FirstName.Equals(name))
                     return person;
-            throw new NullReferenceException("Person not found: " + name);
+            throw new NullReferenceException("Person not found: " + name); 
         }
 
         public void DisplayAllPersons()
@@ -193,131 +104,59 @@ namespace _1_Person_management
             }
         }
 
-        public void UpdatePerson()
+        public void UpdatePerson(string[] updateData)
         {
-            Console.WriteLine("Enter the first name of the person to update:");
-            string firstNameToUpdate = Console.ReadLine().Trim();
-
-            Console.WriteLine("Enter the last name of the person to update:");
-            string lastNameToUpdate = Console.ReadLine().Trim();
-
-            if (PersonExists(firstNameToUpdate, lastNameToUpdate))
+            string firstNameToUpdate = updateData[0];
+            string lastNameToUpdate = updateData[1];
+            string newFirstName = updateData[2];
+            string newLastName = updateData[3];
+            try
             {
-                Console.WriteLine("Enter the new first name:");
-                string newFirstName = Console.ReadLine().Trim();
-                Console.WriteLine("Enter the new last name:");
-                string newLastName = Console.ReadLine().Trim();
-
-                try
+                string sql = "UPDATE Persons SET FirstName = @NewFirstName, LastName = @NewLastName WHERE FirstName = @CurrentFirstName AND LastName = @CurrentLastName";
+                using (MySqlCommand cmd = new(sql, GetInstance()))
                 {
-                    if (PersonExists(firstNameToUpdate, lastNameToUpdate))
-                    {
-                        string sql = "UPDATE Persons SET FirstName = @NewFirstName, LastName = @NewLastName WHERE FirstName = @CurrentFirstName AND LastName = @CurrentLastName";
-                        using (MySqlCommand cmd = new(sql, GetInstance()))
-                        {
-                            cmd.Parameters.AddWithValue("@NewFirstName", newFirstName);
-                            cmd.Parameters.AddWithValue("@NewLastName", newLastName);
-                            cmd.Parameters.AddWithValue("@CurrentFirstName", firstNameToUpdate);
-                            cmd.Parameters.AddWithValue("@CurrentLastName", lastNameToUpdate);
-                            cmd.ExecuteNonQuery();
-                        }
+                    cmd.Parameters.AddWithValue("@NewFirstName", newFirstName);
+                    cmd.Parameters.AddWithValue("@NewLastName", newLastName);
+                    cmd.Parameters.AddWithValue("@CurrentFirstName", firstNameToUpdate);
+                    cmd.Parameters.AddWithValue("@CurrentLastName", lastNameToUpdate);
+                    cmd.ExecuteNonQuery();
+                }
 
-                        Console.WriteLine("Person data updated.");
-                    }
-                    else
-                        Console.WriteLine("Person not found in the database.");
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Error: " + ex.Message);
-                }
+                Console.WriteLine("Person data updated.");
             }
-            else
+            catch (Exception ex)
             {
-                Console.WriteLine("Person not found in the database.");
+                Console.WriteLine(ex.Message);
             }
         }
 
-        public void RemovePerson()
+        public void RemovePerson(string[] removeData)
         {
-            MySqlCommand cmd = new("SELECT FirstName, LastName, Birthday, Address, Gender FROM Persons", GetInstance());
-            MySqlDataReader reader = cmd.ExecuteReader();
+            string firstNameToDelete = removeData[0];
+            string lastNameToDelete = removeData[1];
 
-            bool exists = false;
-
-            Console.WriteLine("Enter the first name of the person to delete:");
-            string firstNameToDelete = Console.ReadLine().Trim();
-
-            Console.WriteLine("Enter the last name of the person to delete:");
-            string lastNameToDelete = Console.ReadLine().Trim();
-
-            while (reader.Read())
-            {
-                string firstName = reader.GetString("FirstName");
-                string lastName = reader.GetString("LastName");
-
-                if (firstName == firstNameToDelete && lastName == lastNameToDelete)
-                {
-                    exists = true;
-                    break;
-                }
-            }
-
-            reader.Close();
-
-            if (exists)
+            try
             {
                 string sql2 = "DELETE FROM Persons WHERE FirstName = @FirstName AND LastName = @LastName";
                 using MySqlCommand deleteCmd = new(sql2, GetInstance());
                 deleteCmd.Parameters.AddWithValue("@FirstName", firstNameToDelete);
                 deleteCmd.Parameters.AddWithValue("@LastName", lastNameToDelete);
-                deleteCmd.ExecuteNonQuery();
-                Console.WriteLine("Person removed from the database.");
+
+                int rowsAffected = deleteCmd.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    Console.WriteLine("Person removed from the database.");
+                }
+                else
+                {
+                    Console.WriteLine("Person not found in the database.");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                Console.WriteLine("Person not found in the database.");
+                Console.WriteLine("Error: " + ex.Message);
             }
         }
-
-        public bool PersonExists(string firstName, string lastName)
-        {
-            try
-            {
-                string sql = "SELECT COUNT(*) FROM Persons WHERE FirstName = @FirstName AND LastName = @LastName";
-                using MySqlCommand cmd = new(sql, GetInstance());
-                cmd.Parameters.AddWithValue("@FirstName", firstName);
-                cmd.Parameters.AddWithValue("@LastName", lastName);
-
-                int count = Convert.ToInt32(cmd.ExecuteScalar());
-                return count > 0;
-            }
-            catch (MySqlException ex)
-            {
-                Console.WriteLine("Failed to connect to the Database: " + ex.Message);
-                return false;
-            }
-        }
-
-        public bool PersonExists(int ownerID)
-        {
-            try
-            {
-                string sql = "SELECT COUNT(*) FROM Persons WHERE ID = @ID";
-                using MySqlCommand cmd = new(sql, GetInstance());
-                cmd.Parameters.AddWithValue("@ID", ownerID);
-
-                int count = Convert.ToInt32(cmd.ExecuteScalar());
-
-                return count > 0;
-            }
-            catch (MySqlException ex)
-            {
-                Console.WriteLine("Failed to connect to the Database: " + ex.Message);
-                return false;
-            }
-        }
-
-
     }
 }

@@ -4,8 +4,8 @@
     {
         void CreateHouseholdsTable();
         void CreateHousehold(string name);
-        void UpdateHousehold();
-        void DeleteHousehold();
+        void UpdateHousehold(string[] updateData);
+        void DeleteHousehold(int deleteData);
         void GetAllHouseHolds();
     }
 }

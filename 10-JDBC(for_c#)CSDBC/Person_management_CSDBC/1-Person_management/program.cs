@@ -9,9 +9,11 @@
             PetInterface petManager = new PetManager();
             Menu menu = new Menu();
 
+            #region Create tables from instances
             householdManager.CreateHouseholdsTable();
             personManager.CreatePersonsTable();
             petManager.CreatePetsTable();
+            #endregion
 
             while (true)
             {
@@ -21,40 +23,40 @@
                 switch (choice)
                 {
                     case 1:
-                        householdManager.CreateHousehold(menu.GetHouseHoldName());
+                        householdManager.CreateHousehold(menu.HouseholdNameHandler());
                         break;
                     case 2:
                         householdManager.GetAllHouseHolds();
                         break;
                     case 3:
-                        householdManager.UpdateHousehold();
+                        householdManager.UpdateHousehold(menu.UpdateHouseHoldHandler());
                         break;
                     case 4:
-                        householdManager.DeleteHousehold();
+                        householdManager.DeleteHousehold(menu.DeleteHouseHoldHandler());
                         break;
                     case 5:
-                        personManager.InsertPersonWithDetails();
+                        personManager.CreatePerson(menu.CreatePersonInputHandler());
                         break;
                     case 6:
                         personManager.DisplayAllPersons();
                         break;
                     case 7:
-                        personManager.UpdatePerson();
+                        personManager.UpdatePerson(menu.updatePersonHandler());
                         break;
                     case 8:
-                        personManager.RemovePerson();
+                        personManager.RemovePerson(menu.DeletePersonInputHandler());
                         break;
                     case 9:
-                        petManager.CreatePet();
+                        petManager.CreatePet(menu.CreatePetHandler());
                         break;
                     case 10:
                         petManager.DisplayPets();
                         break;
                     case 11:
-                        petManager.UpdatePet();
+                        petManager.UpdatePet(menu.UpdatePetHandler());
                         break;
                     case 12:
-                        petManager.DeletePet();
+                        petManager.DeletePet(menu.DeletePetHandler());
                         break;
                     case 13:
                         Database.GetInstance().Close();
