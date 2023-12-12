@@ -6,7 +6,7 @@
         void RemovePerson(string[] deleteData);
         void CreatePerson(PersonConstructor person);
         PersonConstructor FindPersonByName(string name);
-        void DisplayAllPersons();
+        void GetAllPersons();
         void UpdatePerson(string[] updateData);
     }
 }

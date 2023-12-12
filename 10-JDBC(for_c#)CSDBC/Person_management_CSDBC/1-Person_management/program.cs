@@ -38,7 +38,7 @@
                         personManager.CreatePerson(menu.CreatePersonInputHandler());
                         break;
                     case 6:
-                        personManager.DisplayAllPersons();
+                        personManager.GetAllPersons();
                         break;
                     case 7:
                         personManager.UpdatePerson(menu.updatePersonHandler());

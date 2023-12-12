@@ -4,8 +4,10 @@ using static _1_Person_management.Database;
 
 namespace _1_Person_management
 {
-    //TODO: return int with a status information and get the cw into the other method
+    //Alex TODO: return int with a status information and get the cw into the other method
     //it can be switched out so it can have multiple implementations example: mssql, oracle etc.
+
+    //Nicolas/Piere TODO: i can have have all of the CW'S inside the same class and have the persistierung area clean.
     internal class PersonManager : PersonInterface
     {
         private readonly List<PersonConstructor> personList;
@@ -77,7 +79,7 @@ namespace _1_Person_management
             throw new NullReferenceException("Person not found: " + name); 
         }
 
-        public void DisplayAllPersons()
+        public void GetAllPersons()
         {
             try
             {
